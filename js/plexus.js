@@ -2,6 +2,7 @@ import { Dot } from "./dot.js";
 
 export class Plexus {
     dots = [];
+    canvasDom;
     canvas;
     dotRadius;
     vw;
@@ -10,7 +11,11 @@ export class Plexus {
     backgroundColor = "#FFFFFF";
     contentColor = "#000000";
 
-    constructor(canvas, dotRadius, vw, vh) {
+    // backgroundColor = getComputedStyle(document.documentElement).getPropertyValue("--accent1");
+    // contentColor = "#FFFFFF";
+
+    constructor(canvasDom, canvas, dotRadius, vw, vh) {
+        this.canvasDom = canvasDom;
         this.canvas = canvas;
         this.dotRadius = dotRadius;
         this.vw = vw;
@@ -44,6 +49,15 @@ export class Plexus {
                 this.dots[i].connectedDots.push(subDot);
             }
         }
+    }
+    
+    setBackgroundColor(backgroundColor) {
+        this.canvasDom.style.backgroundColor = backgroundColor;
+        this.backgroundColor = backgroundColor;
+    }
+
+    setContentColor(contentColor) {
+        this.contentColor = contentColor;
     }
 
     #getDistance(dot1, dot2) {

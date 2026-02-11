@@ -9,8 +9,11 @@ let vh;
 
 function main() {
     resize();
-    plexus = new Plexus(ctx, 3, vw, vh);
-    plexus.generate(50, 4, 2, 0.05, 50, 20);
+    plexus = new Plexus(canvas, ctx, 3, vw, vh);
+    plexus.generate(100, 4, 2, 0.05, 50, 20);
+    const backgroundColor = getComputedStyle(document.documentElement).getPropertyValue("--accent1")
+    plexus.setBackgroundColor(backgroundColor);
+    plexus.setContentColor("#FFFFFF")
     window.requestAnimationFrame(draw);
 }
 
