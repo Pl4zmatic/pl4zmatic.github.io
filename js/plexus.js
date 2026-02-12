@@ -72,6 +72,10 @@ export class Plexus {
         for(const dot of this.dots) {
             dot.x *= xMultiplier
             dot.y *= yMultiplier
+            dot.innerBorder.start.x *= xMultiplier;
+            dot.innerBorder.end.x *= xMultiplier;
+            dot.innerBorder.start.y *= yMultiplier;
+            dot.innerBorder.end.y *= yMultiplier;
             dot.draw(this.canvas, this.dotRadius, this.contentColor);
 
             if(dot.x <= 0 || dot.x >= vw || dot.x <= dot.innerBorder.start.x || dot.x >= dot.innerBorder.end.x) {

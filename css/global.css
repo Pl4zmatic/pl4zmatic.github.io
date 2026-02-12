@@ -5,6 +5,7 @@
     --lowlight: #557C93;
     --accent1: #08203E;
     --accent2: #0B083E;
+    --radius: 10px;
 }
 
 body, html {
@@ -14,9 +15,9 @@ body, html {
 }
 
 main {
-    width: 80%;
+    width: 70%;
     height: 100%;
-    padding: 0 10%;
+    padding: 0 15%;
 }
 
 strong {
