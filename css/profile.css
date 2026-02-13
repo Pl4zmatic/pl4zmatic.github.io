@@ -1,20 +1,9 @@
-.content {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    backdrop-filter: blur(3px);
-    width: calc(100% - 1rem * 2);
-    height: calc(100% - 1rem * 2);
-    padding: 1rem 1rem;
-}
-
 .profile {
     display: flex;
     flex-direction: row;
-    gap: 4rem;
+    gap: var(--gap-content-item);
     justify-content: center;
     align-items: center;
-    width: 100%;
     height: fit-content;
 }
 
@@ -58,7 +47,15 @@
     text-align: center;
 }
 
-.profile p {
+.profile--description h1 {
+    display: flex;
+}
+
+.profile--description h1 div {
+    
+}
+
+.profile--description p {
     font-size: 1.2rem;
 }
 

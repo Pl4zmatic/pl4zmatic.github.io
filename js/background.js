@@ -11,9 +11,7 @@ function main() {
     resize();
     plexus = new Plexus(canvas, ctx, 3, vw, vh);
     plexus.generate(100, 4, 2, 0.05, 50, 20);
-    const backgroundColor = getComputedStyle(document.documentElement).getPropertyValue("--accent1")
-    // plexus.setBackgroundColor(backgroundColor);
-    // plexus.setContentColor("#FFFFFF")
+    changeBackgroundOnScroll(window.scrollY)
     window.requestAnimationFrame(draw);
 }
 
@@ -35,6 +33,24 @@ window.addEventListener("resize", () => {
 function draw() {
     plexus.draw(vw, vh);
     window.requestAnimationFrame(draw);
+}
+
+document.addEventListener("scroll", () => {
+    changeBackgroundOnScroll(window.scrollY)
+})
+
+function changeBackgroundOnScroll(scrollY) {
+    if(scrollY == 0) {
+        const backgroundColor = getComputedStyle(document.documentElement).getPropertyValue("--accent1")
+        plexus.setBackgroundColor("#FFFFFF");
+        plexus.setContentColor("#000000")
+    }
+
+    if(scrollY > 0) {
+        const backgroundColor = getComputedStyle(document.documentElement).getPropertyValue("--accent1")
+        plexus.setBackgroundColor(backgroundColor);
+        plexus.setContentColor("#FFFFFF")
+    }
 }
 
 main();
