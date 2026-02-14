@@ -8,8 +8,8 @@ export class Plexus {
     vw;
     vh;
 
-    backgroundColor = "#FFFFFF";
-    contentColor = "#000000";
+    backgroundColor;
+    contentColor = "#FFFFFF";
 
     // backgroundColor = getComputedStyle(document.documentElement).getPropertyValue("--accent1");
     // contentColor = "#FFFFFF";
@@ -49,6 +49,10 @@ export class Plexus {
                 this.dots[i].connectedDots.push(subDot);
             }
         }
+    }
+
+    setBackgroundImage(backgroundImage) {
+        this.canvasDom.style.backgroundImage = backgroundImage;
     }
     
     setBackgroundColor(backgroundColor) {

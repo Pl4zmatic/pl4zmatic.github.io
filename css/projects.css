@@ -1,6 +1,6 @@
 .projects {
     height: fit-content;
-    background-color: rgba(var(--accent1-rgb), var(--background-opacity));
+    background-color: rgba(var(--primary-2-rgb), var(--background-opacity));
     color: white;
 }
 
