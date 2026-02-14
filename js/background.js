@@ -11,7 +11,6 @@ function main() {
     resize();
     plexus = new Plexus(canvas, ctx, 3, vw, vh);
     plexus.generate(100, 4, 2, 0.05, 50, 20);
-    changeBackgroundOnScroll(window.scrollY)
     window.requestAnimationFrame(draw);
 }
 
@@ -36,16 +35,16 @@ function draw() {
 }
 
 document.addEventListener("scroll", () => {
-    changeBackgroundOnScroll(window.scrollY)
+    changeBackgroundOnScroll(window.scrollY);
 })
 
 function changeBackgroundOnScroll(scrollY) {
     if(scrollY == 0) {
-        plexus.setBackgroundColor(getComputedStyle(document.documentElement).getPropertyValue("--primary-1"))
+        plexus.setBackgroundColor(getComputedStyle(document.documentElement).getPropertyValue("--primary-1"));
     }
 
     if(scrollY > 0) {
-        plexus.setBackgroundColor(getComputedStyle(document.documentElement).getPropertyValue("--primary-2"))
+        plexus.setBackgroundColor(getComputedStyle(document.documentElement).getPropertyValue("--primary-2"));
     }
 }
 

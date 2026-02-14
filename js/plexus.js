@@ -56,12 +56,16 @@ export class Plexus {
     }
     
     setBackgroundColor(backgroundColor) {
-        this.canvasDom.style.backgroundColor = backgroundColor;
-        this.backgroundColor = backgroundColor;
+        if(this.backgroundColor != backgroundColor) {
+            this.canvasDom.style.backgroundColor = backgroundColor;
+            this.backgroundColor = backgroundColor;
+        }
     }
 
     setContentColor(contentColor) {
-        this.contentColor = contentColor;
+        if(this.contentColor != contentColor) {
+            this.contentColor = contentColor;
+        }
     }
 
     #getDistance(dot1, dot2) {
