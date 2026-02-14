@@ -1,7 +1,10 @@
 .projects {
+    display: flex;
+    flex-direction: column;
     height: fit-content;
     background-color: rgba(var(--primary-2-rgb), var(--background-opacity));
     color: white;
+    gap: calc(var(--gap-content-item) * 2);
 }
 
 .projects--item {
