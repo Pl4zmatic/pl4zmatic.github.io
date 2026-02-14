@@ -41,17 +41,11 @@ document.addEventListener("scroll", () => {
 
 function changeBackgroundOnScroll(scrollY) {
     if(scrollY == 0) {
-        document.documentElement.style.color = "#000000";
-        const backgroundColor = getComputedStyle(document.documentElement).getPropertyValue("--accent1")
-        plexus.setBackgroundColor("#FFFFFF");
-        plexus.setContentColor("#000000")
+        plexus.setBackgroundColor(getComputedStyle(document.documentElement).getPropertyValue("--primary-1"))
     }
 
     if(scrollY > 0) {
-        document.documentElement.style.color = "#FFFFFF";
-        const backgroundColor = getComputedStyle(document.documentElement).getPropertyValue("--accent1")
-        plexus.setBackgroundColor(backgroundColor);
-        plexus.setContentColor("#FFFFFF")
+        plexus.setBackgroundColor(getComputedStyle(document.documentElement).getPropertyValue("--primary-2"))
     }
 }
 
