@@ -79,7 +79,7 @@ export class Plexus {
                 document.documentElement.classList.toggle(themeName);
             }
 
-            this.setBackgroundColor(getComputedStyle(document.documentElement).getPropertyValue("--bg-dark-hex"));
+            this.setBackgroundColor(getComputedStyle(document.documentElement).getPropertyValue("--bg-hex"));
             this.setContentColor(getComputedStyle(document.documentElement).getPropertyValue("--primary-hex"));
         }
     }
