@@ -1,11 +1,31 @@
+:root {
+    --bg-hex: #01091d;
+    --primary-hex: #8eb4f1;
+    --profile-bg: 223 92% 6%;
+}
+
 .profile {
+    --bg-dark: hsl(233 100% 4%);
+    --bg: var(--profile-bg);
+    --bg-light: 218 70% 10%;
+    --text: 217 100% 100%;
+    --text-muted: 217 78% 75%;
+    --highlight: 217 42% 43%;
+    --border: 217 54% 32%;
+    --border-muted: 217 79% 21%;
+    --primary: 217 78% 75%;
+    --secondary: 38 55% 61%;
+    --danger: 9 53% 66%;
+    --warning: 51 35% 50%;
+    --success: 149 34% 54%;
+    --info: 217 59% 67%;
+
     display: flex;
     flex-direction: row;
     gap: var(--gap-content-item);
     justify-content: center;
     align-items: center;
     height: fit-content;
-    background-color: rgba(var(--primary-1-rgb), var(--background-opacity));
 }
 
 .profile--person {
@@ -15,15 +35,14 @@
     align-items: center;
     border-radius: var(--radius);
     padding: 0.5rem;
-    box-shadow: 6px 6px 10px rgba(0 0 0 / 10%);
+    background-color: hsl(var(--bg-light) / var(--background-opacity));
 }
 
 .profile--person--image-container {
     aspect-ratio: 1/1;
     height: calc(100vh / 4);
-    background: radial-gradient(circle,rgba(var(--tertiary-2-rgb), 1) 0%, rgba(var(--primary-2-rgb), 1) 70%);
+    background: radial-gradient(circle,hsl(var(--primary)) 0%, hsl(var(--bg-light)) 70%);
     border-radius: 50%;
-    box-shadow: 6px 6px 10px black;
     overflow: hidden;
 }
 
@@ -56,10 +75,6 @@
     
 }
 
-.profile--description p {
-    font-size: 1.2rem;
-}
-
 a {
     display: flex;
     flex-direction: row;
@@ -71,7 +86,7 @@ a {
 
     background-clip: text;
     background-size: 300% 100%;
-    background-image: linear-gradient(90deg,rgba(var(--highlight-dark-rgb), 1) 5%, rgba(var(--highlight-light-rgb), 1) 40%, rgba(255, 255, 255, 0.7) 60%);
+    background-image: linear-gradient(90deg,hsl(var(--primary-highlight)) 20%, hsl(var(--primary)) 50%, hsl(var(--text-muted)) 60%);
     background-position: 100% 0;
     transition: background-position 0.5s linear, color 250ms linear;
 }

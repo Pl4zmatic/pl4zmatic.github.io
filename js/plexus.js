@@ -9,10 +9,9 @@ export class Plexus {
     vh;
 
     backgroundColor;
-    contentColor = "#FFFFFF";
-
-    // backgroundColor = getComputedStyle(document.documentElement).getPropertyValue("--accent1");
-    // contentColor = "#FFFFFF";
+    contentColor = getComputedStyle(document.documentElement).getPropertyValue("--primary-hex");
+    prevThemeName = "";
+    currThemeName = "";
 
     constructor(canvasDom, canvas, dotRadius, vw, vh) {
         this.canvasDom = canvasDom;
@@ -65,6 +64,23 @@ export class Plexus {
     setContentColor(contentColor) {
         if(this.contentColor != contentColor) {
             this.contentColor = contentColor;
+        }
+    }
+
+    setTheme(themeName) {
+        if(this.currThemeName != themeName) {
+            if(this.currThemeName != "") {
+                this.prevThemeName = this.currThemeName;
+                document.documentElement.classList.toggle(this.prevThemeName);
+            }
+
+            this.currThemeName = themeName;
+            if(themeName != "") {
+                document.documentElement.classList.toggle(themeName);
+            }
+
+            this.setBackgroundColor(getComputedStyle(document.documentElement).getPropertyValue("--bg-dark-hex"));
+            this.setContentColor(getComputedStyle(document.documentElement).getPropertyValue("--primary-hex"));
         }
     }
 

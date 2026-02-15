@@ -1,19 +1,11 @@
-* {
+:root {
     font-family: "Lato", sans-serif;
-    --highlight-light: #007BFF;
-    --highlight-light-rgb: 0, 123, 255;
-    --highlight-dark: #4CC9F0;
-    --highlight-dark-rgb: 76, 201, 240;
-    --tertiary-2: #557C93;
-    --tertiary-2-rgb: 85, 124, 147;
-    --primary-1: #294861;
-    --primary-1-rgb: 41, 72, 97;
-    --primary-2: #08203E;
-    --primary-2-rgb: 8, 32, 62;
-    --primary-3: #0B083E;
     --radius: 10px;
     --gap-content-item: 4rem;
-    --background-opacity: 0.4;
+    --background-opacity: 0.6;
+    --golden-ratio: 1.62;
+
+    --gradient-profile-project: linear-gradient(180deg,hsl(var(--profile-bg) / var(--background-opacity)) 0%, hsl(var(--projects-bg) / var(--background-opacity)) 100%);
 }
 
 html {
@@ -34,8 +26,38 @@ main {
 }
 
 canvas {
-    background-color: var(--primary-1);
+    background-color: var(--bg-hex);
     transition: background-color 2s ease;
+}
+
+hr {
+    margin: 0;
+    border-width: 0;
+    border-color: transparent;
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+}
+
+#profile-projects {
+    background-image: var(--gradient-profile-project);
+}
+
+h1 {
+    font-size: calc(1rem * var(--golden-ratio) * 2);
+}
+
+h2 {
+    font-size: calc(1rem * var(--golden-ratio) * 1);
+}
+
+p {
+    font-size: 1rem;
+    line-height: var(--golden-ratio);
+}
+
+mark {
+    background-color: transparent;
+    color: hsl(var(--secondary));
 }
 
 .content {
@@ -56,19 +78,11 @@ canvas {
     width: calc(100% - 2rem * 2);
 }
 
+.content > div {
+    background-color: hsl(var(--bg) / var(--background-opacity));
+}
+
 strong {
-  color: var(--highlight-light);
+  color: hsl(var(--primary));
   font-weight: 700;
-}
-
-hr {
-    margin: 0;
-    border-width: 0;
-    border-color: transparent;
-    padding-top: 2rem !important;
-    padding-bottom: 2rem !important;
-}
-
-#profile-projects {
-    background-image: linear-gradient(180deg,rgba(var(--primary-1-rgb), var(--background-opacity)) 0%, rgba(var(--primary-2-rgb), var(--background-opacity)) 100%);
 }

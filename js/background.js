@@ -40,11 +40,11 @@ document.addEventListener("scroll", () => {
 
 function changeBackgroundOnScroll(scrollY) {
     if(scrollY == 0) {
-        plexus.setBackgroundColor(getComputedStyle(document.documentElement).getPropertyValue("--primary-1"));
+        plexus.setTheme("");
     }
 
     if(scrollY > 0) {
-        plexus.setBackgroundColor(getComputedStyle(document.documentElement).getPropertyValue("--primary-2"));
+        plexus.setTheme("background-projects-theme");
     }
 }
 
