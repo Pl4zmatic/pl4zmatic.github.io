@@ -1,6 +1,7 @@
 :root {
-    font-family: "Lato", sans-serif;
+    font-family: "Chakra Petch", "Quantico", "Turret Road", sans-serif;
     --radius: 10px;
+    --border-width: 1px;
     --gap-content-item: 4rem;
     --background-opacity: 0.6;
     --golden-ratio: 1.62;
@@ -80,6 +81,7 @@ mark {
 
 .content > div {
     background-color: hsl(var(--bg) / var(--background-opacity));
+    /* color: hsl(var(--text)); */
 }
 
 strong {

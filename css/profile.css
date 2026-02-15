@@ -1,32 +1,37 @@
 :root {
-    --bg-hex: #01091d;
-    --primary-hex: #8eb4f1;
-    --profile-bg: 223 92% 6%;
+    --bg-hex: #00050f;
+    --primary-hex: #75bcea;
+    --profile-bg: 210 100% 5%;
 }
 
-.profile {
-    --bg-dark: hsl(233 100% 4%);
+.profile--container {
+    --bg-dark: 222 100% 3%;
     --bg: var(--profile-bg);
-    --bg-light: 218 70% 10%;
-    --text: 217 100% 100%;
-    --text-muted: 217 78% 75%;
-    --highlight: 217 42% 43%;
-    --border: 217 54% 32%;
-    --border-muted: 217 79% 21%;
-    --primary: 217 78% 75%;
-    --secondary: 38 55% 61%;
+    --bg-light: 204 100% 8%;
+    --text: 205 100% 95%;
+    --text-muted: 204 74% 69%;
+    --highlight: 202 66% 36%;
+    --border: 199 100% 20%;
+    --border-muted: 201 100% 13%;
+    --primary: 204 74% 69%;
+    --secondary: 27 65% 66%;
     --danger: 9 53% 66%;
     --warning: 51 35% 50%;
     --success: 149 34% 54%;
     --info: 217 59% 67%;
 
     display: flex;
+    flex-direction: column;
+    gap: var(--gap-content-item);
+}
+
+.profile {
+    display: flex;
     flex-direction: row;
     gap: var(--gap-content-item);
     justify-content: center;
     align-items: center;
     height: fit-content;
-    background-color: rgba(var(--primary-1-rgb), var(--background-opacity));
 }
 
 .profile--person {
@@ -36,7 +41,9 @@
     align-items: center;
     border-radius: var(--radius);
     padding: 0.5rem;
-    background-color: hsl(var(--bg-light) / var(--background-opacity));
+    background-image: linear-gradient(0deg, hsl(var(--bg)) 50%, hsl(var(--bg-light)) 80%);
+    border: var(--border-width) solid hsl(var(--border));
+    border-top-color: hsl(var(--highlight));
 }
 
 .profile--person--image-container {
@@ -47,7 +54,7 @@
     overflow: hidden;
 }
 
-.profile--person--image-container__img {
+.profile--person--image-container img {
     aspect-ratio: 3/4;  
     height: 100%;
     display: block;
@@ -72,22 +79,17 @@
     display: flex;
 }
 
-.profile--description h1 div {
-    
-}
-
 a {
     display: flex;
     flex-direction: row;
     align-items: center;
-    font-size: 1rem;
     gap: 0.5em;
     text-decoration: none;
-    color: rgba(180 180 180 / 70%);
+    color: hsl(var(--text-muted));
 
     background-clip: text;
     background-size: 300% 100%;
-    background-image: linear-gradient(90deg,hsl(var(--primary-highlight)) 20%, hsl(var(--primary)) 50%, hsl(var(--text-muted)) 60%);
+    background-image: linear-gradient(90deg,hsl(var(--secondary)) 20%, hsl(var(--primary)) 50%, hsl(var(--text-muted)) 60%);
     background-position: 100% 0;
     transition: background-position 0.5s linear, color 250ms linear;
 }
@@ -164,4 +166,16 @@ a:hover:nth-child(3) img {
     100% {
         transform: scale(1);
     }
+}
+
+
+
+.profile--experiences {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile--experiences--navbar {
+    align-self: center;
 }

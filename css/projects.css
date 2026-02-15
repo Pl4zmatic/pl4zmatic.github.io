@@ -1,23 +1,23 @@
 :root {
-    --projects-bg: 356 86% 6%;
+    --projects-bg: 168 100% 2%;
 }
 
 .projects {
-    --bg-dark: 355 100% 3%;
+    --bg-dark: 165 100% 0%;
     --bg: var(--projects-bg);
-    --bg-light: 357 58% 10%;
-    --text: 1 100% 100%;
-    --text-muted: 0 66% 75%;
-    --highlight: 359 34% 43%;
-    --border: 357 44% 32%;
-    --border-muted: 353 68% 20%;
-    --primary: 0 66% 75%;
-    --secondary: 183 52% 57%;
+    --bg-light: 170 100% 4%;
+    --text: 168 100% 84%;
+    --text-muted: 169 47% 58%;
+    --highlight: 173 100% 17%;
+    --border: 173 100% 9%;
+    --border-muted: 172 100% 4%;
+    --primary: 169 47% 58%;
+    --secondary: 342 61% 74%;
     --danger: 9 53% 66%;
     --warning: 51 35% 50%;
     --success: 149 34% 54%;
     --info: 217 59% 67%;
-
+    
     display: flex;
     flex-direction: column;
     height: fit-content;
@@ -25,8 +25,8 @@
 }
 
 .background-projects-theme {
-    --bg-hex: #1c0204;
-    --primary-hex: #e99595;
+    --bg-hex: #000000;
+    --primary-hex: #62c6b4;
 }
 
 .projects--item {
