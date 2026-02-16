@@ -31,7 +31,7 @@ canvas {
     transition: background-color 2s ease;
 }
 
-hr {
+.content > hr {
     margin: 0;
     border-width: 0;
     border-color: transparent;
@@ -44,11 +44,15 @@ hr {
 }
 
 h1 {
-    font-size: calc(1rem * var(--golden-ratio) * 2);
+    font-size: calc(1rem * pow(var(--golden-ratio), 2));
 }
 
 h2 {
-    font-size: calc(1rem * var(--golden-ratio) * 1);
+    font-size: calc(1rem * pow(var(--golden-ratio), 1));
+}
+
+h3 {
+    font-size: 1rem;
 }
 
 p {
@@ -94,4 +98,12 @@ strong {
     background-image: linear-gradient(0deg, hsl(var(--bg)) 50%, hsl(var(--bg-light)) 80%);
     border: var(--border-width) solid hsl(var(--border));
     border-top-color: hsl(var(--highlight));
+}
+
+.topic {
+    display: inline-block;
+    background-color: hsl(var(--secondary));
+    padding: 0 0.75em;
+    border-radius: var(--radius);
+    margin: 0.2em 0;
 }
