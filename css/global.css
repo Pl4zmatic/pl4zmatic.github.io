@@ -88,3 +88,10 @@ strong {
   color: hsl(var(--primary));
   font-weight: 700;
 }
+
+.highlighted-card {
+    border-radius: var(--radius);
+    background-image: linear-gradient(0deg, hsl(var(--bg)) 50%, hsl(var(--bg-light)) 80%);
+    border: var(--border-width) solid hsl(var(--border));
+    border-top-color: hsl(var(--highlight));
+}

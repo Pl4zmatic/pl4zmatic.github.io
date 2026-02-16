@@ -39,11 +39,11 @@
     flex-direction: column;
     gap: 0.5rem;
     align-items: center;
-    border-radius: var(--radius);
     padding: 0.5rem;
+    /* border-radius: var(--radius);
     background-image: linear-gradient(0deg, hsl(var(--bg)) 50%, hsl(var(--bg-light)) 80%);
     border: var(--border-width) solid hsl(var(--border));
-    border-top-color: hsl(var(--highlight));
+    border-top-color: hsl(var(--highlight)); */
 }
 
 .profile--person--image-container {
@@ -176,6 +176,32 @@ a:hover:nth-child(3) img {
     flex-direction: column;
 }
 
-.profile--experiences--navbar {
+.profile--experiences--tab {
     align-self: center;
+
+}
+
+.profile--experiences--tab input {
+    display: none;
+}
+
+.profile--experiences--tab label {
+    display: inline-block;
+    box-sizing: content-box;
+    padding: calc(1rem / var(--golden-ratio)) calc(1rem * var(--golden-ratio));
+    border-radius: var(--radius);
+    transition: background-color 500ms ease;
+    color: hsl(var(--text));
+    font-size: 1rem;
+}
+
+.profile--experiences--tab label:hover {
+    background-color: hsl(var(--highlight));
+    cursor: pointer;
+}
+
+.profile--experiences--tab input:checked + label {
+    background-color: hsl(var(--secondary));
+    color: inherit;
+    cursor: default;
 }
