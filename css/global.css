@@ -65,6 +65,19 @@ mark {
     color: hsl(var(--secondary));
 }
 
+details small {
+    color: hsl(var(--text-muted));
+    display: inline-block;
+}
+
+summary {
+    font-size: 1.25em;
+}
+
+summary::marker {
+    display: inline-block !important;
+}
+
 .content {
     display: flex;
     flex-direction: column;
