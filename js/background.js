@@ -34,18 +34,27 @@ function draw() {
     window.requestAnimationFrame(draw);
 }
 
-document.addEventListener("scroll", () => {
-    changeBackgroundOnScroll(window.scrollY);
-})
-
-function changeBackgroundOnScroll(scrollY) {
-    if(scrollY == 0) {
-        plexus.setTheme("");
-    }
-
-    if(scrollY > 0) {
-        plexus.setTheme("background-projects-theme");
-    }
-}
-
 main();
+
+const profileContainer = document.getElementById("profile");
+const projectsContainer = document.getElementById("projects");
+const targets = [
+    {target: projectsContainer, threshold: (vh / 2 / projectsContainer.clientHeight)},
+    {target: profileContainer, threshold: (vh / 2 / profileContainer.clientHeight)}, 
+]
+const observerProfileProject = new IntersectionObserver(changeBackgroundOnEntry, {threshold: targets.map((obj) => obj.threshold)});
+targets.forEach((obj) => observerProfileProject.observe(obj.target))
+
+function changeBackgroundOnEntry(entries, observer) {
+    console.log(observer)
+    entries.forEach((entry, index) => {
+        if(entry.isIntersecting && entry.intersectionRatio > observer.thresholds[index]) {
+            if(entry.target == profileContainer) {
+                plexus.setTheme("");
+            }
+            if(entry.target == projectsContainer) {
+                plexus.setTheme("background-projects-theme");
+            }
+        }
+    })
+}
