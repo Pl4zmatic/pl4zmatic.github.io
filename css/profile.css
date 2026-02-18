@@ -2,6 +2,7 @@
     --bg-hex: #00050f;
     --primary-hex: #75bcea;
     --profile-bg: 210 100% 5%;
+    --profile-primary: 204 74% 69%; 
 }
 
 .profile--container {
@@ -13,7 +14,7 @@
     --highlight: 202 66% 36%;
     --border: 199 100% 20%;
     --border-muted: 201 100% 13%;
-    --primary: 204 74% 69%;
+    --primary: var(--profile-primary);
     --secondary: 27 65% 66%;
     --danger: 9 53% 66%;
     --warning: 51 35% 50%;
@@ -48,7 +49,7 @@
     border-top-color: hsl(var(--highlight)); */
 }
 
-.profile--person--image-container {
+.profile--person--image--container {
     aspect-ratio: 1/1;
     height: calc(100vh / 4);
     background: radial-gradient(circle,hsl(var(--primary)) 0%, hsl(var(--bg-light)) 70%);
@@ -56,7 +57,7 @@
     overflow: hidden;
 }
 
-.profile--person--image-container img {
+.profile--person--image--container img {
     aspect-ratio: 3/4;  
     height: 100%;
     display: block;
@@ -70,10 +71,18 @@
     width: fit-content;
 }
 
-.profile--person h2 {
+#profile--person--name {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+#profile--person--name h2 {
     padding: 0;
     margin: 0;
-    margin-bottom: 0.5rem;
+}
+
+.profile--person h2 {
+    
     text-align: center;
 }
 .profile--description {
@@ -208,7 +217,6 @@ a:hover:nth-child(3) img {
 
 .profile--experiences--tab input:checked + label {
     background-color: hsl(var(--secondary));
-    color: inherit;
     cursor: default;
 }
 
