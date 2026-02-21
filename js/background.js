@@ -36,11 +36,11 @@ function draw() {
 
 main();
 
-const profileContainer = document.getElementById("profile");
+const hero = document.getElementById("hero");
 const projectsContainer = document.getElementById("projects");
 const targets = [
     {target: projectsContainer, threshold: (vh / 2 / projectsContainer.clientHeight)},
-    {target: profileContainer, threshold: (vh / 2 / profileContainer.clientHeight)}, 
+    {target: hero, threshold: (vh / 2 / hero.clientHeight)}, 
 ]
 const observerProfileProject = new IntersectionObserver(changeBackgroundOnEntry, {threshold: targets.map((obj) => obj.threshold)});
 targets.forEach((obj) => observerProfileProject.observe(obj.target))
@@ -49,7 +49,7 @@ function changeBackgroundOnEntry(entries, observer) {
     console.log(observer)
     entries.forEach((entry, index) => {
         if(entry.isIntersecting && entry.intersectionRatio > observer.thresholds[index]) {
-            if(entry.target == profileContainer) {
+            if(entry.target == hero) {
                 plexus.setTheme("");
             }
             if(entry.target == projectsContainer) {

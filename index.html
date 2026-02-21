@@ -6,7 +6,7 @@
     <title>Anthony David - Portfolio</title>
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/background.css">
-    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/hero.css">
     <link rel="stylesheet" href="css/projects.css">
     <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
     <script type="module" src="js/background.js"></script>
@@ -26,18 +26,18 @@
     <header></header>
 
     <main>
-        <div class="content">
-            <div class="profile--container" id="profile">
-                <div class="profile">
-                    <div class="profile--person highlighted-card">
-                        <div class="profile--person--image--container">
-                            <img src="assets/images/Anthony2-nobg.png" alt="">
+        <div id="content">
+            <div id="hero">
+                <div class="flex-row">
+                    <div class="profile">
+                        <div class="profile__picture highlighted-card">
+                            <img src="assets/images/Anthony-nobg.png" alt="">
                         </div>
-                        <div id="profile--person--name">
+                        <div class="profile__title">
                             <h2>Anthony David</h2>
                             Student Developer
                         </div>
-                        <div class="profile--person--contact">
+                        <div class="profile__links">
                             <a href="mailto:susyamongus@email.com">
                                 <img src="assets/icons/mail-send-svgrepo-com.svg" alt="">
                                 Email Me
@@ -52,38 +52,39 @@
                             </a>
                         </div>
                     </div>
-                    <div class="profile--description">
+                    <div class="profile__description">
                         <h1><mark>Hey</mark>&nbsp;There <div>!</div></h1>
                         <p>
                             I am a third-year <strong>bachelor</strong> student, studying <strong>Applied Informatics</strong> with a specialization in <strong>Development</strong>,
-                            currently <strong>living in <b>Zelzate</b></strong> and studying at <strong>College University Ghent</strong> or <strong>HoGent</strong>.
-                            Through my education I have gained experience in both <strong>Front-End</strong> and <strong>Back-End <b>Web Development</b></strong>,
-                            in addition to <strong><b>Application Development</b></strong>.
+                            currently <strong>living in <b>Zelzate</b></strong> and studying at <strong>College University Ghent</strong> or HoGent.
+                            Through my education I have gained experience in both <strong>Front-End</strong> and <strong>Back-End Web Development</strong>,
+                            in addition to <strong>Application Development</strong>.
                         </p>
                     </div>
                 </div>
-                <div class="profile--experiences">
-                    <div class="profile--experiences--tab highlighted-card">
+
+                <div class="experiences">
+                    <div class="tab experiences__tab highlighted-card">
                         <input type="radio" name="tab" id="education" checked>
                         <label for="education">Education</label>
                         <input type="radio" name="tab" id="experience">
                         <label for="experience">Experience</label>
                     </div>
-                    <div class="profile--experiences--content highlighted-card" id="education-content">
-                        <div>
-
-                            <div>
+                    <div class="experiences__content highlighted-card" id="education-content">
+                        <div class="experiences__content__item">
+                            
+                            <div class="experiences__content__item__subsection">
                                 <h3>VLOT! Campus Sint Laurentius</h3>
                                 <small>Lokeren - Prosper Thuysbaertlaan 1</small>
                             </div>
-                            <div>
+                            <div class="experiences__content__item__subsection">
                                 <div>
                                     <strong>Industrial ICT</strong>
                                     <br>
-                                    <small>Secondary Education Degree</small>
+                                    Secondary Education Degree
                                 </div>
                                 <div>
-                                    Skills:
+                                    <small>Skills:</small>
                                     <br>
                                     <span class="topic">c++</span>
                                     <span class="topic">c#</span>
@@ -93,19 +94,23 @@
                                     <span class="topic">PLC Programming</span>
                                 </div>
                             </div>
-                            <hr>
-                            <div>
+
+                        </div>
+                        <hr>
+                        <div class="experiences__content__item">
+
+                            <div class="experiences__content__item__subsection">
                                 <h3>College University Ghent - HoGent</h3>
                                 <small>Gent - Valentin Vaerwyckweg 1 </small>
                             </div>
-                            <div>
+                            <div class="experiences__content__item__subsection">
                                 <div>
                                     <strong>Applied Informatics</strong>
                                     <br>
-                                    <small>Bachelor Degree</small>
+                                    Bachelor Degree
                                 </div>
                                 <div>
-                                    Skills:
+                                    <small>Skills:</small>
                                     <br>
                                     <span class="topic">Three-Tier Architecture</span>
                                     <span class="topic">Design Patterns</span>
@@ -120,9 +125,11 @@
                     </div>
                 </div>
             </div>
+
             <hr id="profile-projects">
-            <div class="projects" id="projects">
-                <div class="projects--item">
+
+            <div id="projects">
+                <div class="flex-row projects__item">
                     <img src="assets/images/kingdomino.png" alt="" class="highlighted-card light-source-shadow">
                     <div>
                         <h2>Kingdomino</h2>
@@ -148,7 +155,7 @@
                     </div>
                 </div>
 
-                <div class="projects--item">
+                <div class="flex-row projects__item">
                     <img src="assets/images/pcompose.png" alt="" class="highlighted-card light-source-shadow">
                     <div>
                         <h2>PCompose</h2>
@@ -175,7 +182,7 @@
                     </div>
                 </div>
 
-                <div class="projects--item">
+                <div class="flex-row projects__item">
                     <img src="assets/images/delaware.png" alt="" class="highlighted-card light-source-shadow">
                     <div>
                         <h2>Delaware Shopfloor App</h2>
@@ -206,7 +213,7 @@
                     </div>
                 </div>
 
-                <div class="projects--item">
+                <div class="flex-row projects__item">
                     <img src="assets/images/rise.png" alt="" class="highlighted-card light-source-shadow">
                     <div>
                         <h2>Campus App</h2>
