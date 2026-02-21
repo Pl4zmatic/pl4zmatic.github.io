@@ -112,6 +112,9 @@ a img {
 #content > div:first-child {
   padding-top: 1rem;
 }
+#content > div:last-child {
+  padding-bottom: 1rem;
+}
 #content > * {
   padding: 0 2rem;
   width: calc(100% - 4rem);

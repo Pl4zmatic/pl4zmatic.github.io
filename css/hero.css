@@ -69,15 +69,13 @@
 }
 
 @keyframes profile-background {}
-.animation-email {
+*:hover > .animation-email {
   animation: slide-mail 2s ease 0s 1 normal forwards;
 }
-
-.animation-linkedin {
+*:hover > .animation-linkedin {
   animation: slam-linkedin 1.5s ease 0s 1 normal forwards;
 }
-
-.animation-github {
+*:hover > .animation-github {
   animation: bow-github 2s linear 0s 1 normal forwards;
 }
 
