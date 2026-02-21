@@ -1,0 +1,206 @@
+:root {
+    --bg-hex: #00050f;
+    --primary-hex: #75bcea;
+    --profile-bg: 210 100% 5%;
+    --profile-primary: 204 74% 69%; 
+}
+
+#hero {
+    --bg-dark: 222 100% 3%;
+    --bg: var(--profile-bg);
+    --bg-light: 204 100% 8%;
+    --text: 205 100% 95%;
+    --text-muted: 204 74% 69%;
+    --highlight: 202 66% 36%;
+    --border: 199 100% 20%;
+    --border-muted: 201 100% 13%;
+    --primary: var(--profile-primary);
+    --secondary: 27 65% 66%;
+    --danger: 9 53% 66%;
+    --warning: 51 35% 50%;
+    --success: 149 34% 54%;
+    --info: 217 59% 67%;
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-content-item);
+}
+
+/* =========== Profile =========== */
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    padding: 0.5rem;
+    height: 100%;
+    width: calc(20% - 0.5rem * 2);
+
+    &__picture {
+        background-image: linear-gradient(200deg, hsl(var(--primary)) 0%, hsl(var(--bg)) 70%);
+        height: calc(100vh / 4);
+        animation: profile-background 5s linear 0s infinite both;
+
+        img {
+            aspect-ratio: 1;  
+            height: 100%;
+            display: block;
+            margin: 0px auto;
+        }
+    }
+
+    &__title {
+        text-align: center;
+        margin-bottom: 0.5rem;
+
+        h2 {
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        width: fit-content;
+    }
+
+    &__description {
+        width: 80%;
+
+        h1 {
+            display: flex;
+        }
+    }
+}
+
+@keyframes profile-background {
+    0% {
+        
+    }
+
+    100% {
+
+    }
+}
+
+.animation-email {
+    animation: slide-mail 2s ease 0s 1 normal forwards;
+}
+
+.animation-linkedin {
+    animation: slam-linkedin 1.5s ease 0s 1 normal forwards;
+}
+
+.animation-github {
+    animation: bow-github 2s linear 0s 1 normal forwards;
+}
+
+@keyframes slide-mail {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-10px);
+    }
+    50% {
+        transform: translateX(-10px) scaleX(-1); 
+    }
+    75% {
+        transform: translateX(0px) scaleX(-1);
+    }
+    100% {
+        transform: translateX(0) scaleX(1);
+    }
+}
+
+@keyframes slam-linkedin {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    60% {
+        transform: rotateZ(45deg);
+    }
+    70% {
+        transform: rotateZ(0deg);
+    }
+    90% {
+        transform: rotateZ(30deg);
+    }
+    100% {
+        transform: rotateZ(0deg);
+    }
+}
+
+@keyframes bow-github {
+    25% {
+        transform: scale(1.5);
+    }
+    50% {
+        transform: scale(1.5) rotateX(-60deg);
+    }
+    75% {
+        transform: scale(1.5) rotateX(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
+/* =========== Experiences =========== */
+
+
+
+.experiences {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    &__tab {
+        align-self: center;
+    }
+
+    &__tab:has(#education:checked) ~ #education-content  {
+        display: block;
+    }
+
+    &__content {
+        align-self: center;
+        width: calc(60% - 1.5em * 2);
+        padding: 0.5em 1.5em;
+
+        hr {
+            border-style: dashed;
+        }
+
+        h3 {
+            margin: 0;
+        }
+
+        h3 + small {
+            color: hsl(var(--text-muted));
+        }
+
+        &__item  {
+            margin: 0.8rem 0;
+
+            &__subsection {
+                margin: 0.3rem 0;
+            }
+        }
+    }
+
+    #education-content {
+        display: none;
+    }
+
+    #experience {
+        
+    }
+}

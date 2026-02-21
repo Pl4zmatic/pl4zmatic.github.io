@@ -88,6 +88,31 @@ strong {
     }
 }
 
+a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5em;
+    text-decoration: none;
+    color: transparent;
+
+    background-clip: text;
+    background-size: 300% 100%;
+    background-image: linear-gradient(90deg,hsl(var(--secondary)) 20%, hsl(var(--primary)) 50%, hsl(var(--text-muted)) 60%);
+    background-position: 100% 0;
+    transition: background-position 0.5s linear;
+
+    &:hover {
+        color: transparent;
+        background-position: 0 0;
+    }
+
+    img {
+        aspect-ratio: 1;
+        height: 1.2em;
+    }
+}
+
 
 
 /* =========== ID's =========== */
