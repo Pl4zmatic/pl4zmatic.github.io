@@ -38,6 +38,7 @@
         gap: calc(var(--gap-content-item) * 2);
 
         &__item {
+            gap: calc(var(--gap-content-item) * 1.5);
             small {
                 color: var(--text-main-muted);
             }

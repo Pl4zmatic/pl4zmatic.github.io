@@ -35,6 +35,9 @@
   height: fit-content;
   gap: calc(var(--gap-content-item) * 2);
 }
+.projects__content__item {
+  gap: calc(var(--gap-content-item) * 1.5);
+}
 .projects__content__item small {
   color: var(--text-main-muted);
 }
