@@ -46,7 +46,6 @@ const observerProfileProject = new IntersectionObserver(changeBackgroundOnEntry,
 targets.forEach((obj) => observerProfileProject.observe(obj.target))
 
 function changeBackgroundOnEntry(entries, observer) {
-    console.log(observer)
     entries.forEach((entry, index) => {
         if(entry.isIntersecting && entry.intersectionRatio > observer.thresholds[index]) {
             if(entry.target == hero) {

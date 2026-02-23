@@ -6,7 +6,7 @@
   --background-opacity: 0.4;
   --golden-ratio: 1.62;
   --text-main: white;
-  --text-main-muted: #dcdcdc;
+  --text-main-muted: rgb(220, 220, 220);
   --gradient-profile-project: linear-gradient(180deg,hsl(var(--profile-bg) / var(--background-opacity)) 0%, hsl(var(--projects-bg) / var(--background-opacity)) 100%);
   --gradient-border-profile-project: linear-gradient(180deg,hsl(var(--profile-primary)) 0%, hsl(var(--projects-primary)) 100%);
 }
@@ -101,6 +101,10 @@ a img {
 }
 
 /* =========== ID's =========== */
+#hero {
+  height: calc(100vh - 2rem);
+}
+
 #content {
   display: flex;
   flex-direction: column;

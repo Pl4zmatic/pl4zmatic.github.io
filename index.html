@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/projects.css">
     <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
     <script type="module" src="js/background.js"></script>
+    <script type="module" src="js/map.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,6 +18,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Turret+Road:wght@200;300;400;500;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <script src='https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.js'></script>
+    <link href='https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.css' rel='stylesheet' />
 
     <meta name="darkreader-lock">
 </head>
@@ -28,38 +32,22 @@
     <main>
         <div id="content">
             <div id="hero">
-                <div class="flex-row">
-                    <div class="profile">
-                        <div class="profile__picture highlighted-card">
+                <div class="profile_container">
+                    <div id='map'></div>
+                    <div class="profile_container_content flex-row">
+                        <span class="profile_container_content_text">
+                            <h1><mark>Hey</mark>&nbsp;There!</h1>
+                            <h2>I'm Anthony David</h2>
+                            <p>
+                                A third-year <strong>bachelor</strong> student, studying <strong>Applied Informatics</strong> with a specialization in <strong>Development</strong>,
+                                currently <strong>living in <b>Zelzate</b></strong> and studying at <strong>College University Ghent</strong> or HoGent.
+                                Through my education I have gained experience in both <strong>Front-End</strong> and <strong>Back-End Web Development</strong>,
+                                in addition to <strong>Application Development</strong>.
+                            </p>
+                        </span>
+                        <div class="profile_container_content_picture highlighted-card">
                             <img src="assets/images/Anthony-nobg.png" alt="">
                         </div>
-                        <div class="profile__title">
-                            <h2>Anthony David</h2>
-                            Student Developer
-                        </div>
-                        <div class="profile__links">
-                            <a href="mailto:susyamongus@email.com">
-                                <img src="assets/icons/mail-send-svgrepo-com.svg" alt="" class="animation-email">
-                                Email Me
-                            </a>
-                            <a href="https://www.linkedin.com/in/anthony-david-777278332/" target=" _blank">
-                                <img src="assets/icons/linkedin-svgrepo-com.svg" alt="" class="animation-linkedin">
-                                LinkedIn
-                            </a>
-                            <a href="https://github.com/Pl4zmatic" target=" _blank">
-                                <img src="assets/icons/github-color-svgrepo-com.svg" alt="" class="animation-github">
-                                Github
-                            </a>
-                        </div>
-                    </div>
-                    <div class="profile__description">
-                        <h1><mark>Hey</mark>&nbsp;There <div>!</div></h1>
-                        <p>
-                            I am a third-year <strong>bachelor</strong> student, studying <strong>Applied Informatics</strong> with a specialization in <strong>Development</strong>,
-                            currently <strong>living in <b>Zelzate</b></strong> and studying at <strong>College University Ghent</strong> or HoGent.
-                            Through my education I have gained experience in both <strong>Front-End</strong> and <strong>Back-End Web Development</strong>,
-                            in addition to <strong>Application Development</strong>.
-                        </p>
                     </div>
                 </div>
 
@@ -200,7 +188,7 @@
                                         A management/information platform where metrics or statuses on production facilities and their machines could be consulted,
                                         created for the company <a href="https://www.delaware.pro" target="_blank">Delaware</a> as a proof of concept.
                                     </span>
-                                </summary>
+                                </summary> 
                                 <small>
                                     My First project where we based <strong>functional requirements</strong> on the descriptions of a <strong>client</strong>. 
                                     Done in <strong>groups of 5</strong>, we had to infer the wishes from verbal <strong>meetings with the client</strong> and gain feedback through 

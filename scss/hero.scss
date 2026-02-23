@@ -20,13 +20,81 @@
     --warning: 51 35% 50%;
     --success: 149 34% 54%;
     --info: 217 59% 67%;
-
+    
     display: flex;
     flex-direction: column;
     gap: var(--gap-content-item);
 }
 
 /* =========== Profile =========== */
+
+.profile_container {
+    width: 100%;
+    height: 50%;
+    position: relative;
+    border-radius: var(--radius);
+    overflow: hidden;
+
+    &_content {
+        width: calc(100% - 1rem * 2);
+        height: 50%;
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+        background-image: linear-gradient(180deg, transparent 0%, hsl(var(--bg)) 60%);
+        padding: 0 1rem;
+        align-items: end;
+        justify-content: space-between;
+
+        &_text {
+            width: 60%;
+            text-shadow: 1px 1px 2px black;
+            h1, h2 {
+                margin: 0;
+            }
+
+            *:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &_picture {
+            height: 100%;
+            width: fit-content;
+            overflow: hidden;
+            img {
+                aspect-ratio: 1;  
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                background-image: linear-gradient(200deg, hsl(var(--primary)) 0%, hsl(var(--bg)) 70%);
+                margin: 0;
+            }
+        }
+    }
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    animation: map_fade_in 2s ease-in 1s 1 normal forwards;
+
+    .maplibregl-ctrl-bottom-right {
+        bottom: auto;
+        top: 0;
+
+        a {
+            display: inline;
+        }
+    }
+}
+
+@keyframes map_fade_in {
+    100% {
+        opacity: 1;
+    }
+}
 
 .profile {
     display: flex;
@@ -40,7 +108,6 @@
     &__picture {
         background-image: linear-gradient(200deg, hsl(var(--primary)) 0%, hsl(var(--bg)) 70%);
         height: calc(100vh / 4);
-        animation: profile-background 5s linear 0s infinite both;
 
         img {
             aspect-ratio: 1;  
@@ -77,31 +144,21 @@
     }
 }
 
-@keyframes profile-background {
-    0% {
-        
-    }
-
-    100% {
-
-    }
-}
-
 *:hover {
     > .animation-email {
-        animation: slide-mail 2s ease 0s 1 normal forwards;
+        animation: slide_mail 2s ease 0s 1 normal forwards;
     }
 
     > .animation-linkedin {
-        animation: slam-linkedin 1.5s ease 0s 1 normal forwards;
+        animation: slam_linkedin 1.5s ease 0s 1 normal forwards;
     }
 
     > .animation-github {
-        animation: bow-github 2s linear 0s 1 normal forwards;
+        animation: bow_github 2s linear 0s 1 normal forwards;
     }
 }
 
-@keyframes slide-mail {
+@keyframes slide_mail {
     0% {
         transform: translateX(0);
     }
@@ -119,7 +176,7 @@
     }
 }
 
-@keyframes slam-linkedin {
+@keyframes slam_linkedin {
     0% {
         transform: rotateZ(0deg);
     }
@@ -137,7 +194,7 @@
     }
 }
 
-@keyframes bow-github {
+@keyframes bow_github {
     25% {
         transform: scale(1.5);
     }
@@ -159,6 +216,7 @@
 
 
 .experiences {
+    height: 50%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -176,6 +234,7 @@
         align-self: center;
         width: calc(60% - 1.5em * 2);
         padding: 0.5em 1.5em;
+        overflow: scroll;
 
         hr {
             border-style: dashed;
