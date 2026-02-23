@@ -1,3 +1,5 @@
+let mapInitialized = false;
+
 var map = new maplibregl.Map({
     container: 'map',
     style: './js/map_style.json', // stylesheet location
@@ -22,6 +24,7 @@ domMap.addEventListener("animationend", () => {
         zoom: 9,
         speed: 0.5,
     });
+    mapInitialized = true;
 })
 
 function round(num, precision) {
@@ -29,7 +32,7 @@ function round(num, precision) {
 }
 
 map.on("moveend", () => {
-    if(round(map.getCenter().lng, 2) != round(3.8097, 2) || round(map.getCenter().lat, 2) != round(51.2024, 2)) {
+    if((round(map.getCenter().lng, 2) != round(3.8097, 2) || round(map.getCenter().lat, 2) != round(51.2024, 2)) && mapInitialized) {
         map.flyTo({
             center: [3.8097, 51.2024],
             essential: true,
