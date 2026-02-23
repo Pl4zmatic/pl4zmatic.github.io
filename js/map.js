@@ -33,6 +33,7 @@ function round(num, precision) {
 
 map.on("moveend", () => {
     if((round(map.getCenter().lng, 2) != round(3.8097, 2) || round(map.getCenter().lat, 2) != round(51.2024, 2)) && mapInitialized) {
+        console.log("fly")
         map.flyTo({
             center: [3.8097, 51.2024],
             essential: true,
