@@ -24,11 +24,17 @@ domMap.addEventListener("animationend", () => {
     });
 })
 
-map.once("moveend", () => {
-    map.flyTo({
-        center: [3.8097, 51.2024],
-        essential: true,
-        zoom: 12,
-        speed: 0.5,
-    });
+function round(num, precision) {
+    return Number.parseFloat(num).toFixed(precision);
+}
+
+map.on("moveend", () => {
+    if(round(map.getCenter().lng, 2) != round(3.8097, 2) || round(map.getCenter().lat, 2) != round(51.2024, 2)) {
+        map.flyTo({
+            center: [3.8097, 51.2024],
+            essential: true,
+            zoom: 12,
+            speed: 0.5,
+        });
+    }
 })
