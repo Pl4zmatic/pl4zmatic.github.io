@@ -38,9 +38,11 @@ main();
 
 const hero = document.getElementById("hero");
 const projectsContainer = document.getElementById("projects");
+const technologies = document.getElementById("technologies");
 const targets = [
+    {target: technologies, threshold: (vh / 2 / technologies.clientHeight)},
     {target: projectsContainer, threshold: (vh / 2 / projectsContainer.clientHeight)},
-    {target: hero, threshold: (vh / 2 / hero.clientHeight)}, 
+    {target: hero, threshold: (vh / 2 / hero.clientHeight)},
 ]
 const observerProfileProject = new IntersectionObserver(changeBackgroundOnEntry, {threshold: targets.map((obj) => obj.threshold)});
 targets.forEach((obj) => observerProfileProject.observe(obj.target))
@@ -53,6 +55,9 @@ function changeBackgroundOnEntry(entries, observer) {
             }
             if(entry.target == projectsContainer) {
                 plexus.setTheme("background-projects-theme");
+            }
+            if(entry.target == technologies) {
+                plexus.setTheme("background-technologies-theme");
             }
         }
     })
