@@ -11,6 +11,9 @@
 
     --gradient-profile-project: linear-gradient(180deg,hsl(var(--profile-bg) / var(--background-opacity)) 0%, hsl(var(--projects-bg) / var(--background-opacity)) 100%);
     --gradient-border-profile-project: linear-gradient(180deg,hsl(var(--profile-primary)) 0%, hsl(var(--projects-primary)) 100%);
+
+    --gradient-project-technologies: linear-gradient(180deg,hsl(var(--projects-bg) / var(--background-opacity)) 0%, hsl(var(--technologies-bg) / var(--background-opacity)) 100%);
+    --gradient-border-project-technologies: linear-gradient(180deg,hsl(var(--projects-primary)) 0%, hsl(var(--technologies-primary)) 100%);
 }
 
 
@@ -156,12 +159,18 @@ a {
         border-color: transparent;
         padding-top: var(--gap-content-item) !important;
         padding-bottom: var(--gap-content-item) !important;
+        border-style: solid;
     }
 
     #profile-projects {
         background-image: var(--gradient-profile-project);
         border-image: var(--gradient-border-profile-project) 1;
-        border-style: solid;
+        
+    }
+
+    #projects-technologies {
+        background-image: var(--gradient-project-technologies);
+        border-image: var(--gradient-border-project-technologies) 1;
     }
 }
 

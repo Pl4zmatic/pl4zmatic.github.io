@@ -1,28 +1,28 @@
 :root {
-    --projects-bg: 242 62% 8%;
+    --projects-bg: 236 41% 6%;
     --projects-primary: 235 71% 79%;
 }
 
-#projects {
-    --bg-dark: 245 90% 4%;
-    --bg: var(--projects-bg);
-    --bg-light: 239 42% 12%;
-    --text: 235 100% 100%;
-    --text-muted: 235 71% 79%;
-    --highlight: 237 27% 48%;
-    --border: 239 33% 36%;
-    --border-muted: 242 44% 26%;
-    --primary: var(--projects-primary);
-    --secondary: 51 42% 57%;
-    --danger: 9 53% 66%;
-    --warning: 51 35% 50%;
-    --success: 149 34% 54%;
-    --info: 217 59% 67%;
+.background-projects-theme {
+    --bg-hex: #090a16;
+    --primary-hex: #a3aaef;
 }
 
-.background-projects-theme {
-    --bg-hex: #090821;
-    --primary-hex: #a3aaef;
+#projects {
+    --bg-dark: 239 61% 3%;
+    --bg: var(--projects-bg);
+    --bg-light: 235 26% 10%;
+    --text: 234 100% 100%;
+    --text-muted: 234 30% 74%;
+    --highlight: 235 16% 43%;
+    --border: 235 20% 32%;
+    --border-muted: 236 27% 22%;
+    --primary: var(--projects-primary);
+    --secondary: 51 42% 57%;
+    --danger: 9 26% 64%;
+    --warning: 52 19% 57%;
+    --success: 146 17% 59%;
+    --info: 217 28% 65%;
 }
 
 .projects {

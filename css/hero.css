@@ -87,47 +87,6 @@
     opacity: 1;
   }
 }
-.profile {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  align-items: center;
-  padding: 0.5rem;
-  height: 100%;
-  width: calc(20% - 1rem);
-}
-.profile__picture {
-  background-image: linear-gradient(200deg, hsl(var(--primary)) 0%, hsl(var(--bg)) 70%);
-  height: 25vh;
-}
-.profile__picture img {
-  aspect-ratio: 1;
-  height: 100%;
-  display: block;
-  margin: 0px auto;
-}
-.profile__title {
-  text-align: center;
-  margin-bottom: 0.5rem;
-}
-.profile__title h2 {
-  padding: 0;
-  margin: 0;
-  text-align: center;
-}
-.profile__links {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  width: fit-content;
-}
-.profile__description {
-  width: 80%;
-}
-.profile__description h1 {
-  display: flex;
-}
-
 *:hover > .animation-email {
   animation: slide_mail 2s ease 0s 1 normal forwards;
 }
