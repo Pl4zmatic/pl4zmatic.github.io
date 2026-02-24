@@ -1,101 +1,101 @@
 .java {
-  --bg-dark: 351 100% 4%;
-  --bg: 358 100% 6%;
-  --bg-light: 6 100% 9%;
-  --highlight: 22 100% 26%;
-  --border: 6 100% 20%;
-  --border-muted: 358 100% 15%;
-  --primary: 24 100% 60%;
+  --bg-dark: 358 100% 3%;
+  --bg: 7 100% 5%;
+  --bg-light: 17 100% 7%;
+  --highlight: 32 100% 25%;
+  --border: 27 100% 18%;
+  --border-muted: 12 100% 13%;
+  --primary: 26 93% 63%;
 }
 
 .mysql {
-  --bg-dark: 351 100% 4%;
-  --bg: 358 100% 6%;
-  --bg-light: 6 100% 9%;
-  --highlight: 22 100% 26%;
-  --border: 6 100% 20%;
-  --border-muted: 358 100% 15%;
-  --primary: 24 100% 60%;
+  --bg-dark: 210 100% 2%;
+  --bg: 199 100% 3%;
+  --bg-light: 194 100% 6%;
+  --highlight: 190 100% 22%;
+  --border: 190 100% 13%;
+  --border-muted: 193 100% 8%;
+  --primary: 194 65% 62%;
 }
 
 .html {
   --bg-dark: 351 100% 4%;
-  --bg: 358 100% 6%;
-  --bg-light: 6 100% 9%;
-  --highlight: 22 100% 26%;
-  --border: 6 100% 20%;
-  --border-muted: 358 100% 15%;
-  --primary: 24 100% 60%;
+  --bg: 357 100% 6%;
+  --bg-light: 5 100% 9%;
+  --highlight: 21 100% 27%;
+  --border: 5 100% 21%;
+  --border-muted: 357 100% 15%;
+  --primary: 21 100% 63%;
 }
 
 .css {
-  --bg-dark: 351 100% 4%;
-  --bg: 358 100% 6%;
-  --bg-light: 6 100% 9%;
-  --highlight: 22 100% 26%;
-  --border: 6 100% 20%;
-  --border-muted: 358 100% 15%;
-  --primary: 24 100% 60%;
+  --bg-dark: 234 100% 5%;
+  --bg: 221 100% 7%;
+  --bg-light: 212 100% 9%;
+  --highlight: 204 100% 32%;
+  --border: 206 100% 22%;
+  --border-muted: 211 100% 17%;
+  --primary: 210 100% 71%;
 }
 
 .javascript {
-  --bg-dark: 351 100% 4%;
-  --bg: 358 100% 6%;
-  --bg-light: 6 100% 9%;
-  --highlight: 22 100% 26%;
-  --border: 6 100% 20%;
-  --border-muted: 358 100% 15%;
-  --primary: 24 100% 60%;
+  --bg-dark: 16 100% 2%;
+  --bg: 31 100% 3%;
+  --bg-light: 43 100% 4%;
+  --highlight: 53 100% 26%;
+  --border: 52 100% 16%;
+  --border-muted: 53 100% 21%;
+  --primary: 52 100% 65%;
 }
 
 .react {
-  --bg-dark: 351 100% 4%;
-  --bg: 358 100% 6%;
-  --bg-light: 6 100% 9%;
-  --highlight: 22 100% 26%;
-  --border: 6 100% 20%;
-  --border-muted: 358 100% 15%;
-  --primary: 24 100% 60%;
+  --bg-dark: 200 70% 4%;
+  --bg: 200 60% 6%;
+  --bg-light: 200 50% 9%;
+  --highlight: 189 80% 22%;
+  --border: 200 40% 20%;
+  --border-muted: 200 40% 15%;
+  --primary: 189 100% 50%;
 }
 
 .prisma {
-  --bg-dark: 351 100% 4%;
-  --bg: 358 100% 6%;
-  --bg-light: 6 100% 9%;
-  --highlight: 22 100% 26%;
-  --border: 6 100% 20%;
-  --border-muted: 358 100% 15%;
-  --primary: 24 100% 60%;
+  --bg-dark: 202 50% 4%;
+  --bg: 202 50% 6%;
+  --bg-light: 202 40% 9%;
+  --highlight: 202 60% 24%;
+  --border: 202 40% 16%;
+  --border-muted: 202 40% 12%;
+  --primary: 202 72% 17%;
 }
 
 .nextjs {
-  --bg-dark: 351 100% 4%;
-  --bg: 358 100% 6%;
-  --bg-light: 6 100% 9%;
-  --highlight: 22 100% 26%;
-  --border: 6 100% 20%;
-  --border-muted: 358 100% 15%;
-  --primary: 24 100% 60%;
+  --bg-dark: 0 0% 0%;
+  --bg: 0 0% 4%;
+  --bg-light: 0 0% 9%;
+  --highlight: 0 0% 15%;
+  --border: 0 0% 20%;
+  --border-muted: 0 0% 12%;
+  --primary: 0 0% 100%;
 }
 
 .blazor {
-  --bg-dark: 351 100% 4%;
-  --bg: 358 100% 6%;
-  --bg-light: 6 100% 9%;
-  --highlight: 22 100% 26%;
-  --border: 6 100% 20%;
-  --border-muted: 358 100% 15%;
-  --primary: 24 100% 60%;
+  --bg-dark: 291 10% 4%;
+  --bg: 291 10% 6%;
+  --bg-light: 291 10% 9%;
+  --highlight: 291 40% 20%;
+  --border: 291 15% 18%;
+  --border-muted: 291 15% 12%;
+  --primary: 291 64% 42%;
 }
 
 .net {
-  --bg-dark: 351 100% 4%;
-  --bg: 358 100% 6%;
-  --bg-light: 6 100% 9%;
-  --highlight: 22 100% 26%;
-  --border: 6 100% 20%;
-  --border-muted: 358 100% 15%;
-  --primary: 24 100% 60%;
+  --bg-dark: 254 10% 4%;
+  --bg: 254 10% 6%;
+  --bg-light: 254 10% 9%;
+  --highlight: 254 30% 20%;
+  --border: 254 15% 18%;
+  --border-muted: 254 15% 12%;
+  --primary: 254 66% 50%;
 }
 
 /*# sourceMappingURL=technologies-palettes.css.map */
