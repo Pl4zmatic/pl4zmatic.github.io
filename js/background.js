@@ -49,7 +49,7 @@ targets.forEach((obj) => observerProfileProject.observe(obj.target))
 
 function changeBackgroundOnEntry(entries, observer) {
     entries.forEach((entry, index) => {
-        if(entry.isIntersecting && entry.intersectionRatio > observer.thresholds[index]) {
+        if(entry.isIntersecting && entry.intersectionRatio > targets.filter((obj) => obj.target == entry.target)[0].threshold) {
             if(entry.target == hero) {
                 plexus.setTheme("");
             }
