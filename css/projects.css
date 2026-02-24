@@ -38,8 +38,13 @@
 .projects__content__item {
   gap: calc(var(--gap-content-item) * 1.5);
 }
-.projects__content__item small {
+.projects__content__item details::details-content {
   color: var(--text-main-muted);
+  opacity: 0;
+  transition: opacity 600ms, content-visibility 600ms allow-discrete;
+}
+.projects__content__item details[open]::details-content {
+  opacity: 1;
 }
 .projects__content__item > * {
   width: 50%;

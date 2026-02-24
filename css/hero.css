@@ -159,6 +159,9 @@
 .experiences__tab:has(#education:checked) ~ #education-content {
   display: block;
 }
+.experiences__tab:has(#experience:checked) ~ #experience-content {
+  display: block;
+}
 .experiences__content {
   align-self: center;
   width: calc(60% - 3em);
@@ -181,6 +184,9 @@
   margin: 0.3rem 0;
 }
 .experiences #education-content {
+  display: none;
+}
+.experiences #experience-content {
   display: none;
 }
 

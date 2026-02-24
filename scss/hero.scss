@@ -182,6 +182,10 @@
         display: block;
     }
 
+    &__tab:has(#experience:checked) ~ #experience-content  {
+        display: block;
+    }
+
     &__content {
         align-self: center;
         width: calc(60% - 1.5em * 2);
@@ -213,7 +217,7 @@
         display: none;
     }
 
-    #experience {
-        
+    #experience-content {
+        display: none;
     }
 }
