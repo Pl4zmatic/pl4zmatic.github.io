@@ -16,9 +16,9 @@ attributionMap[0].classList.toggle("maplibregl-compact-show")
 
 const domMap = document.getElementById("map");
 domMap.addEventListener("animationend", async () => {
-    await flyTo(map, 3.73, 51.05, 9, 0.5);
+    await flyTo(map, 3.73, 51.05, 9, 0.4);
     await flyTo(map, 3.8097, 51.2024, 12, 0.5);
-    await flyTo(map, 3.7745, 51.1372, 9, 0.5);
+    await flyTo(map, 3.7745, 51.1372, 9, 0.25);
 })
 
 function round(num, precision) {
