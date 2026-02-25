@@ -1,3 +1,5 @@
+@use 'global';
+
 :root {
     --bg-hex: #00050f;
     --primary-hex: #75bcea;
@@ -31,19 +33,19 @@
 .profile_container {
     width: 100%;
     height: 50%;
+    margin: 0 auto;
     position: relative;
-    border-radius: var(--radius);
-    overflow: hidden;
 
     &_content {
+        border-radius: var(--radius);
         width: calc(100% - 1rem * 2);
         height: 50%;
         position: absolute;
         bottom: 0;
         z-index: 1;
-        background-image: linear-gradient(180deg, transparent 0%, hsl(var(--bg)) 60%);
+        background-image: linear-gradient(180deg, transparent 0%, hsl(var(--bg-light)) 60%);
         padding: 0 1rem;
-        align-items: end;
+        align-items: center;
         justify-content: space-between;
 
         &_text {
@@ -59,9 +61,10 @@
         }
 
         &_picture {
-            height: 100%;
+            height: 90%;
             width: fit-content;
             overflow: hidden;
+            border: none;
             img {
                 aspect-ratio: 1;  
                 width: 100%;
@@ -78,6 +81,8 @@
     width: 100%;
     height: 100%;
     opacity: 0;
+    border-radius: var(--radius);
+    box-shadow: 0px 0px 5px 5px hsl(var(--highlight) / 40%);
     animation: map_fade_in 2s ease-in 1s 1 normal forwards;
 
     .maplibregl-ctrl-bottom-right {

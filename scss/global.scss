@@ -34,9 +34,8 @@ body {
 }
 
 main {
-    width: 70%;
+    width: 100%;
     height: 100%;
-    padding: 0 15%;
 }
 
 canvas {
@@ -130,7 +129,6 @@ a {
     gap: 0;
     width: 100%;
     height: 100%;
-    backdrop-filter: blur(5px);
 
     > div:first-child {
         padding-top: 1rem;
@@ -140,16 +138,9 @@ a {
         padding-bottom: 1rem;
     }
 
-    > * {
-        padding: 0 2rem;
-        width: calc(100% - 2rem * 2);
-    }
-
     > div {
         background-color: hsl(var(--bg) / var(--background-opacity));
-        border: 0 solid hsl(var(--primary));
-        border-left-width: var(--border-width);
-        border-right-width: var(--border-width);
+        padding: 0 20%;
         /* color: hsl(var(--text)); */
     }
 
@@ -164,13 +155,12 @@ a {
 
     #profile-projects {
         background-image: var(--gradient-profile-project);
-        border-image: var(--gradient-border-profile-project) 1;
-        
+        // border-image: var(--gradient-border-profile-project) 1;
     }
 
     #projects-technologies {
         background-image: var(--gradient-project-technologies);
-        border-image: var(--gradient-border-project-technologies) 1;
+        // border-image: var(--gradient-border-project-technologies) 1;
     }
 }
 

@@ -1,4 +1,194 @@
 :root {
+  font-family: "Chakra Petch", "Quantico", "Turret Road", sans-serif;
+  --radius: 10px;
+  --border-width: 1px;
+  --gap-content-item: 4rem;
+  --background-opacity: 0.4;
+  --golden-ratio: 1.62;
+  --text-main: white;
+  --text-main-muted: rgb(220, 220, 220);
+  --gradient-profile-project: linear-gradient(180deg,hsl(var(--profile-bg) / var(--background-opacity)) 0%, hsl(var(--projects-bg) / var(--background-opacity)) 100%);
+  --gradient-border-profile-project: linear-gradient(180deg,hsl(var(--profile-primary)) 0%, hsl(var(--projects-primary)) 100%);
+  --gradient-project-technologies: linear-gradient(180deg,hsl(var(--projects-bg) / var(--background-opacity)) 0%, hsl(var(--technologies-bg) / var(--background-opacity)) 100%);
+  --gradient-border-project-technologies: linear-gradient(180deg,hsl(var(--projects-primary)) 0%, hsl(var(--technologies-primary)) 100%);
+}
+
+/* =========== elements =========== */
+html {
+  min-height: 100%;
+  color: white;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+}
+
+canvas {
+  background-color: var(--bg-hex);
+  transition: background-color 2s ease;
+}
+
+h1 {
+  font-size: calc(1rem * pow(var(--golden-ratio), 2));
+}
+
+h2 {
+  font-size: calc(1rem * pow(var(--golden-ratio), 1));
+}
+
+h3 {
+  font-size: 1rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: var(--golden-ratio);
+}
+
+mark {
+  background-color: transparent;
+  color: hsl(var(--secondary));
+}
+
+details small {
+  color: hsl(var(--text-muted));
+  display: inline-block;
+  line-height: 1.4em;
+}
+
+summary {
+  font-size: 1.2em;
+}
+summary::marker {
+  display: inline-block !important;
+}
+
+strong {
+  color: hsl(var(--primary));
+  font-weight: 700;
+}
+strong b {
+  color: hsl(var(--secondary));
+}
+
+a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5em;
+  text-decoration: none;
+  color: transparent;
+  background-clip: text;
+  background-size: 300% 100%;
+  background-image: linear-gradient(90deg, hsl(var(--secondary)) 20%, hsl(var(--primary)) 50%, hsl(var(--text-muted)) 60%);
+  background-position: 100% 0;
+  transition: background-position 0.5s linear;
+}
+a:hover {
+  color: transparent;
+  background-position: 0 0;
+}
+a img {
+  aspect-ratio: 1;
+  height: 1.2em;
+}
+
+/* =========== ID's =========== */
+#hero {
+  height: calc(100vh - 2rem);
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+  height: 100%;
+}
+#content > div:first-child {
+  padding-top: 1rem;
+}
+#content > div:last-child {
+  padding-bottom: 1rem;
+}
+#content > div {
+  background-color: hsl(var(--bg)/var(--background-opacity));
+  padding: 0 20%;
+  /* color: hsl(var(--text)); */
+}
+#content > hr {
+  margin: 0;
+  border-width: 0 var(--border-width);
+  border-color: transparent;
+  padding-top: var(--gap-content-item) !important;
+  padding-bottom: var(--gap-content-item) !important;
+  border-style: solid;
+}
+#content #profile-projects {
+  background-image: var(--gradient-profile-project);
+}
+#content #projects-technologies {
+  background-image: var(--gradient-project-technologies);
+}
+
+/* =========== classes =========== */
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  gap: var(--gap-content-item);
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+}
+
+.highlighted-card {
+  border-radius: var(--radius);
+  background-image: linear-gradient(0deg, hsl(var(--bg)) 50%, hsl(var(--bg-light)) 80%);
+  border: var(--border-width) solid hsl(var(--border));
+  border-top-color: hsl(var(--highlight));
+}
+
+.light-source-shadow {
+  box-shadow: 0px 0px 5px 5px hsl(var(--highlight)/40%);
+}
+
+.topic {
+  display: inline-block;
+  background-color: hsl(var(--secondary));
+  padding: 0 0.75em;
+  border-radius: var(--radius);
+  margin: 0.2em 0;
+}
+
+.tab input {
+  display: none;
+}
+.tab label {
+  display: inline-block;
+  padding: calc(1rem / var(--golden-ratio)) calc(1rem * var(--golden-ratio));
+  border-radius: var(--radius);
+  transition: background-color 500ms ease;
+  color: hsl(var(--text));
+  font-size: 1rem;
+}
+.tab label:hover {
+  background-color: hsl(var(--highlight));
+  cursor: pointer;
+}
+.tab input:checked + label {
+  background-color: hsl(var(--secondary));
+  cursor: default;
+}
+
+:root {
   --bg-hex: #00050f;
   --primary-hex: #75bcea;
   --profile-bg: 210 100% 5%;
@@ -29,19 +219,19 @@
 .profile_container {
   width: 100%;
   height: 50%;
+  margin: 0 auto;
   position: relative;
-  border-radius: var(--radius);
-  overflow: hidden;
 }
 .profile_container_content {
+  border-radius: var(--radius);
   width: calc(100% - 2rem);
   height: 50%;
   position: absolute;
   bottom: 0;
   z-index: 1;
-  background-image: linear-gradient(180deg, transparent 0%, hsl(var(--bg)) 60%);
+  background-image: linear-gradient(180deg, transparent 0%, hsl(var(--bg-light)) 60%);
   padding: 0 1rem;
-  align-items: end;
+  align-items: center;
   justify-content: space-between;
 }
 .profile_container_content_text {
@@ -55,9 +245,10 @@
   margin-bottom: 0;
 }
 .profile_container_content_picture {
-  height: 100%;
+  height: 90%;
   width: fit-content;
   overflow: hidden;
+  border: none;
 }
 .profile_container_content_picture img {
   aspect-ratio: 1;
@@ -72,6 +263,8 @@
   width: 100%;
   height: 100%;
   opacity: 0;
+  border-radius: var(--radius);
+  box-shadow: 0px 0px 5px 5px hsl(var(--highlight)/40%);
   animation: map_fade_in 2s ease-in 1s 1 normal forwards;
 }
 #map .maplibregl-ctrl-bottom-right {
