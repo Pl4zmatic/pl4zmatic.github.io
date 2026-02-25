@@ -3,6 +3,7 @@
   --radius: 10px;
   --border-width: 1px;
   --gap-content-item: 4rem;
+  --header-height: 4rem;
   --background-opacity: 0.4;
   --golden-ratio: 1.62;
   --text-main: white;
@@ -11,6 +12,31 @@
   --gradient-border-profile-project: linear-gradient(180deg,hsl(var(--profile-primary)) 0%, hsl(var(--projects-primary)) 100%);
   --gradient-project-technologies: linear-gradient(180deg,hsl(var(--projects-bg) / var(--background-opacity)) 0%, hsl(var(--technologies-bg) / var(--background-opacity)) 100%);
   --gradient-border-project-technologies: linear-gradient(180deg,hsl(var(--projects-primary)) 0%, hsl(var(--technologies-primary)) 100%);
+  scrollbar-color: #888 transparent;
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 /* =========== elements =========== */
@@ -81,7 +107,7 @@ strong b {
 
 /* =========== ID's =========== */
 #hero {
-  height: calc(100vh - 2rem);
+  height: calc(100vh - var(--header-height) - 2rem);
 }
 
 #content {

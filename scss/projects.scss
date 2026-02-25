@@ -42,14 +42,6 @@
 
             details::details-content {
                 color: var(--text-main-muted);
-                opacity: 0;
-                transition:
-                    opacity 600ms,
-                    content-visibility 600ms allow-discrete;
-            }
-
-            details[open]::details-content {
-                opacity: 1;
             }
 
             > * {

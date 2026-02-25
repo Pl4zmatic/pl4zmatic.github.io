@@ -80,7 +80,6 @@ function changeBackgroundOnEntry(entries, observer) {
 
 sectionButtons.forEach((obj) => {
     obj.button.addEventListener("change", () => {
-        console.log("fire")
         window.scrollTo({
             top: obj.target.getBoundingClientRect().top + window.scrollY - header.clientHeight,
             behavior: "smooth",
