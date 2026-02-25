@@ -35,9 +35,7 @@ function flyTo(Map, lng, lat, zoom, speed) {
         });
 
         Map.on("moveend", () => {
-            console.log('move end')
             if(round(Map.getCenter().lng, 2) == round(lng, 2) && round(Map.getCenter().lat, 2) == round(lat, 2)) {
-                console.log('resolve')
                 resolve();
             }
         })

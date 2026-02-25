@@ -79,28 +79,6 @@ strong b {
   color: hsl(var(--secondary));
 }
 
-a {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 0.5em;
-  text-decoration: none;
-  color: transparent;
-  background-clip: text;
-  background-size: 300% 100%;
-  background-image: linear-gradient(90deg, hsl(var(--secondary)) 20%, hsl(var(--primary)) 50%, hsl(var(--text-muted)) 60%);
-  background-position: 100% 0;
-  transition: background-position 0.5s linear;
-}
-a:hover {
-  color: transparent;
-  background-position: 0 0;
-}
-a img {
-  aspect-ratio: 1;
-  height: 1.2em;
-}
-
 /* =========== ID's =========== */
 #hero {
   height: calc(100vh - 2rem);
@@ -114,15 +92,36 @@ a img {
   height: 100%;
 }
 #content > div:first-child {
-  padding-top: 1rem;
+  padding-top: 5rem;
 }
 #content > div:last-child {
-  padding-bottom: 1rem;
+  padding-bottom: 5rem;
 }
 #content > div {
   background-color: hsl(var(--bg)/var(--background-opacity));
   padding: 0 20%;
   /* color: hsl(var(--text)); */
+}
+#content a {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5em;
+  text-decoration: none;
+  color: transparent;
+  background-clip: text;
+  background-size: 300% 100%;
+  background-image: linear-gradient(90deg, hsl(var(--secondary)) 20%, hsl(var(--primary)) 50%, hsl(var(--text-muted)) 60%);
+  background-position: 100% 0;
+  transition: background-position 0.5s linear;
+}
+#content a:hover {
+  color: transparent;
+  background-position: 0 0;
+}
+#content a img {
+  aspect-ratio: 1;
+  height: 1.2em;
 }
 #content > hr {
   margin: 0;

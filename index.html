@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/projects.css">
     <link rel="stylesheet" href="css/technologies.css">
     <link rel="stylesheet" href="css/technologies-palettes.css">
+    <link rel="stylesheet" href="css/header.css">
     <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
     <script type="module" src="js/background.js"></script>
     <script type="module" src="js/map.js"></script>
@@ -29,7 +30,23 @@
 <body>
     <canvas id="background"></canvas>
 
-    <header></header>
+    <header id="header">
+        <a href="" class="icon-button"><img src="assets/icons/mail-open-alt-svgrepo-com.svg" alt="" class="animation-email"></a>
+        <a href="" class="icon-button"><img src="assets/icons/linkedin-svgrepo-com.svg" alt="" class="animation-linkedin"></a>
+
+        <div>
+            <input type="radio" name="section" id="button-hero" checked>
+            <label for="button-hero">Hero</label>
+
+            <input type="radio" name="section" id="button-projects">
+            <label for="button-projects">Projects</label>
+
+            <input type="radio" name="section" id="button-technologies">
+            <label for="button-technologies">Technologies</label>
+        </div>
+
+        <a href="" class="icon-button"><img src="assets/icons/github-svgrepo-com.svg" alt="" class="animation-github"></a>
+    </header>
 
     <main>
         <div id="content">

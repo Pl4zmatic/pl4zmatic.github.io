@@ -1,0 +1,105 @@
+header {
+  height: 4rem;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+}
+header .icon-button {
+  display: inline-block;
+  margin: 0 0.5rem;
+  height: fit-content;
+}
+header img {
+  aspect-ratio: 1;
+  height: 2rem;
+  object-fit: contain;
+}
+header > div {
+  height: 70%;
+  margin: 0 auto;
+  backdrop-filter: blur(20px);
+  border-radius: var(--radius);
+  min-height: fit-content;
+}
+header > div input {
+  display: none;
+}
+header > div input:checked + label {
+  border: 2px solid var(--text-main);
+}
+header > div label {
+  box-sizing: border-box;
+  padding: 0 0.5rem;
+  display: inline-flex;
+  border-radius: var(--radius);
+  height: 100%;
+  align-items: center;
+  text-shadow: 1px 1px 2px black;
+}
+header > div label:hover {
+  cursor: pointer;
+  border: var(--border-width) solid var(--text-main-muted);
+}
+
+a:hover > .animation-email {
+  animation: slide_mail 2s ease 0s 1 normal forwards;
+}
+a:hover > .animation-linkedin {
+  animation: slam_linkedin 1.5s ease 0s 1 normal forwards;
+}
+a:hover > .animation-github {
+  animation: bow_github 2s linear 0s 1 normal forwards;
+}
+
+@keyframes slide_mail {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(-10px) scaleX(-1);
+  }
+  75% {
+    transform: translateX(0px) scaleX(-1);
+  }
+  100% {
+    transform: translateX(0) scaleX(1);
+  }
+}
+@keyframes slam_linkedin {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  60% {
+    transform: rotateZ(45deg);
+  }
+  70% {
+    transform: rotateZ(0deg);
+  }
+  90% {
+    transform: rotateZ(30deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+@keyframes bow_github {
+  25% {
+    transform: scale(1.5);
+  }
+  50% {
+    transform: scale(1.5) rotateX(-60deg);
+  }
+  75% {
+    transform: scale(1.5) rotateX(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/*# sourceMappingURL=header.css.map */

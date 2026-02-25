@@ -36,9 +36,21 @@ function draw() {
 
 main();
 
+const header = document.getElementById("header")
+const buttonHero = document.getElementById("button-hero");
+const buttonProjects = document.getElementById("button-projects");
+const buttonTechnologies = document.getElementById("button-technologies");
+
 const hero = document.getElementById("hero");
 const projectsContainer = document.getElementById("projects");
 const technologies = document.getElementById("technologies");
+
+const sectionButtons = [
+    {target: hero, button: buttonHero},
+    {target: projectsContainer, button: buttonProjects},
+    {target: technologies, button: buttonTechnologies}
+];
+
 const targets = [
     {target: technologies, threshold: (vh / 2 / technologies.clientHeight)},
     {target: projectsContainer, threshold: (vh / 2 / projectsContainer.clientHeight)},
@@ -51,14 +63,27 @@ function changeBackgroundOnEntry(entries, observer) {
     entries.forEach((entry, index) => {
         if(entry.isIntersecting && entry.intersectionRatio > targets.filter((obj) => obj.target == entry.target)[0].threshold) {
             if(entry.target == hero) {
+                buttonHero.checked = true;
                 plexus.setTheme("");
             }
             if(entry.target == projectsContainer) {
+                buttonProjects.checked = true;
                 plexus.setTheme("background-projects-theme");
             }
             if(entry.target == technologies) {
+                buttonTechnologies.checked = true;
                 plexus.setTheme("background-technologies-theme");
             }
         }
     })
 }
+
+sectionButtons.forEach((obj) => {
+    obj.button.addEventListener("change", () => {
+        console.log("fire")
+        window.scrollTo({
+            top: obj.target.getBoundingClientRect().top + window.scrollY - header.clientHeight,
+            behavior: "smooth",
+        })
+    })
+})
