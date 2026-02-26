@@ -85,7 +85,7 @@ mark {
 }
 
 details small {
-  color: hsl(var(--text-muted));
+  color: hsl(var(--text-main-muted));
   display: inline-block;
   line-height: 1.4em;
 }
