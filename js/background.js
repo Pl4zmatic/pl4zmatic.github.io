@@ -37,18 +37,19 @@ function draw() {
 main();
 
 const header = document.getElementById("header")
-const buttonHero = document.getElementById("button-hero");
-const buttonProjects = document.getElementById("button-projects");
-const buttonTechnologies = document.getElementById("button-technologies");
+const headerButtonHero = document.getElementById("button-hero");
+const headerButtonProjects = document.getElementById("button-projects");
+const headerButtonTechnologies = document.getElementById("button-technologies");
+let headerButtonPressed = false;
 
 const hero = document.getElementById("hero");
 const projectsContainer = document.getElementById("projects");
 const technologies = document.getElementById("technologies");
 
 const sectionButtons = [
-    {target: hero, button: buttonHero},
-    {target: projectsContainer, button: buttonProjects},
-    {target: technologies, button: buttonTechnologies}
+    {target: hero, button: headerButtonHero},
+    {target: projectsContainer, button: headerButtonProjects},
+    {target: technologies, button: headerButtonTechnologies}
 ];
 
 const targets = [
@@ -63,15 +64,18 @@ function changeBackgroundOnEntry(entries, observer) {
     entries.forEach((entry, index) => {
         if(entry.isIntersecting && entry.intersectionRatio > targets.filter((obj) => obj.target == entry.target)[0].threshold) {
             if(entry.target == hero) {
-                buttonHero.checked = true;
+                if(!headerButtonPressed)
+                    headerButtonHero.checked = true;
                 plexus.setTheme("");
             }
             if(entry.target == projectsContainer) {
-                buttonProjects.checked = true;
+                if(!headerButtonPressed)
+                    headerButtonProjects.checked = true;
                 plexus.setTheme("background-projects-theme");
             }
             if(entry.target == technologies) {
-                buttonTechnologies.checked = true;
+                if(!headerButtonPressed)
+                    headerButtonTechnologies.checked = true;
                 plexus.setTheme("background-technologies-theme");
             }
         }
@@ -80,9 +84,15 @@ function changeBackgroundOnEntry(entries, observer) {
 
 sectionButtons.forEach((obj) => {
     obj.button.addEventListener("change", () => {
+        headerButtonPressed = true;
+        const scrollTarget = obj.target.getBoundingClientRect().top + window.scrollY - header.clientHeight;
         window.scrollTo({
-            top: obj.target.getBoundingClientRect().top + window.scrollY - header.clientHeight,
+            top: scrollTarget,
             behavior: "smooth",
         })
+
+        window.addEventListener("scrollend", () => {
+            headerButtonPressed = false;
+        }, {once: true})
     })
 })

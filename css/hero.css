@@ -106,10 +106,6 @@ strong b {
 }
 
 /* =========== ID's =========== */
-#hero {
-  height: calc(100vh - var(--header-height) - 2rem);
-}
-
 #content {
   display: flex;
   flex-direction: column;
@@ -118,10 +114,12 @@ strong b {
   height: 100%;
 }
 #content > div:first-child {
-  padding-top: 5rem;
+  padding-top: calc(var(--header-height) + 1rem);
+  padding-bottom: 1rem;
 }
 #content > div:last-child {
-  padding-bottom: 5rem;
+  padding-top: 1rem;
+  padding-bottom: calc(var(--header-height) + 1rem);
 }
 #content > div {
   background-color: hsl(var(--bg)/var(--background-opacity));
@@ -238,6 +236,8 @@ strong b {
   display: flex;
   flex-direction: column;
   gap: calc(var(--gap-content-item) / 2);
+  box-sizing: border-box;
+  height: 100vh;
 }
 
 /* =========== Profile =========== */
