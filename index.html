@@ -1,521 +1,514 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anthony David - Portfolio</title>
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/background.css">
-    <link rel="stylesheet" href="css/hero.css">
-    <link rel="stylesheet" href="css/projects.css">
-    <link rel="stylesheet" href="css/technologies.css">
-    <link rel="stylesheet" href="css/technologies-palettes.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
-    <script type="module" src="js/background.js"></script>
-    <script type="module" src="js/map.js"></script>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Anthony David - Portfolio</title>
+        <link rel="stylesheet" href="css/global.css" />
+        <link rel="stylesheet" href="css/background.css" />
+        <link rel="stylesheet" href="css/hero.css" />
+        <link rel="stylesheet" href="css/projects.css" />
+        <link rel="stylesheet" href="css/technologies.css" />
+        <link rel="stylesheet" href="css/technologies-palettes.css" />
+        <link rel="stylesheet" href="css/header.css" />
+        <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico" />
+        <script type="module" src="js/background.js"></script>
+        <script type="module" src="js/map.js"></script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rationale&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Turret+Road:wght@200;300;400;500;700;800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Rationale&display=swap" rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+            rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Turret+Road:wght@200;300;400;500;700;800&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
 
-    <script src='https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.js'></script>
-    <link href='https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.css' rel='stylesheet' />
+        <script src="https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.js"></script>
+        <link href="https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.css" rel="stylesheet" />
 
-    <meta name="darkreader-lock">
-</head>
-<body>
-    <canvas id="background"></canvas>
+        <meta name="darkreader-lock" />
+    </head>
+    <body>
+        <canvas id="background"></canvas>
 
-    <header id="header">
-        <a href="" class="icon-button"><img src="assets/icons/mail-open-alt-svgrepo-com.svg" alt="" class="animation-email"></a>
-        <a href="https://www.linkedin.com/in/anthony-david-777278332" class="icon-button"><img src="assets/icons/linkedin-svgrepo-com.svg" alt="" class="animation-linkedin"></a>
+        <header id="header">
+            <a href="" class="icon-button" target="_blank"><img src="assets/icons/mail-open-alt-svgrepo-com.svg" alt="" class="animation-email" /></a>
+            <a href="https://www.linkedin.com/in/anthony-david-777278332" class="icon-button" target="_blank">
+                <img src="assets/icons/linkedin-svgrepo-com.svg" alt="" class="animation-linkedin" target="_blank" />
+            </a>
 
-        <div>
-            <input type="radio" name="section" id="button-hero" checked>
-            <label for="button-hero">Home</label>
+            <div>
+                <input type="radio" name="section" id="button-hero" checked />
+                <label for="button-hero">Home</label>
 
-            <input type="radio" name="section" id="button-projects">
-            <label for="button-projects">Projects</label>
+                <input type="radio" name="section" id="button-projects" />
+                <label for="button-projects">Projects</label>
 
-            <input type="radio" name="section" id="button-technologies">
-            <label for="button-technologies">Technologies</label>
-        </div>
+                <input type="radio" name="section" id="button-technologies" />
+                <label for="button-technologies">Technologies</label>
+            </div>
 
-        <a href="https://github.com/Pl4zmatic" class="icon-button"><img src="assets/icons/github-svgrepo-com.svg" alt="" class="animation-github"></a>
-    </header>
+            <a href="https://github.com/Pl4zmatic" class="icon-button" target="_blank">
+                <img src="assets/icons/github-svgrepo-com.svg" alt="" class="animation-github" />
+            </a>
+        </header>
 
-    <main>
-        <div id="content">
-            <div id="hero">
-                <div class="profile_container">
-                    <div id='map'></div>
-                    <div class="profile_container_content flex-row">
-                        <span class="profile_container_content_text">
-                            <h1><mark>Hey</mark>&nbsp;There!</h1>
-                            <h2>I'm Anthony David</h2>
-                            <p>
-                                A third-year <strong>bachelor</strong> student, studying <strong>Applied Informatics</strong> with a specialization in <strong>Development</strong>,
-                                currently <strong>living in <b>Zelzate</b></strong> and studying at <strong>College University Ghent</strong> or HoGent.
-                                Through my education I have gained experience in both <strong>Front-End</strong> and <strong>Back-End Web Development</strong>,
-                                in addition to <strong>Application Development</strong>.
-                            </p>
-                        </span>
-                        <div class="profile_container_content_picture highlighted-card">
-                            <img src="assets/images/Anthony-nobg.png" alt="">
+        <main>
+            <div id="content">
+                <div id="hero">
+                    <div class="profile_container">
+                        <div id="map"></div>
+                        <div class="profile_container_content flex-row">
+                            <span class="profile_container_content_text">
+                                <h1><mark>Hey</mark>&nbsp;There!</h1>
+                                <h2>I'm Anthony David</h2>
+                                <p>
+                                    A third-year <strong>bachelor</strong> student, studying <strong>Applied Informatics</strong> with a specialization in
+                                    <strong>Development</strong>, currently <strong>living in <b>Zelzate</b></strong> and studying at
+                                    <strong>College University Ghent</strong> or HoGent. Through my education I have gained experience in both
+                                    <strong>Front-End</strong> and <strong>Back-End Web Development</strong>, in addition to
+                                    <strong>Application Development</strong>.
+                                </p>
+                            </span>
+                            <div class="profile_container_content_picture highlighted-card">
+                                <img src="assets/images/Anthony-nobg.png" alt="" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="experiences_container">
+                        <div class="experiences">
+                            <div class="tab experiences__tab highlighted-card">
+                                <div>
+                                    <input type="radio" name="tab" id="education" checked />
+                                    <label for="education">Education</label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="tab" id="experience" />
+                                    <label for="experience">Experience</label>
+                                </div>
+                            </div>
+                            <div class="experiences__content" id="education-content">
+                                <div class="experiences__content__item">
+                                    <div class="experiences__content__item__subsection">
+                                        <h3>VLOT! Campus Sint Laurentius</h3>
+                                        <small>Lokeren - Prosper Thuysbaertlaan 1</small>
+                                    </div>
+                                    <div class="experiences__content__item__subsection">
+                                        <div>
+                                            <strong>Industrial ICT</strong>
+                                            <br />
+                                            Secondary Education Degree
+                                        </div>
+                                        <div>
+                                            <small>Skills:</small>
+                                            <br />
+                                            <span class="topic">c++</span>
+                                            <span class="topic">c#</span>
+                                            <span class="topic">Visual Basic</span>
+                                            <span class="topic">Assembly</span>
+                                            <span class="topic">Electronics</span>
+                                            <span class="topic">PLC Programming</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <hr />
+
+                                <div class="experiences__content__item">
+                                    <div class="experiences__content__item__subsection">
+                                        <h3>College University Ghent - HoGent</h3>
+                                        <small>Ghent - Valentin Vaerwyckweg 1 </small>
+                                    </div>
+                                    <div class="experiences__content__item__subsection">
+                                        <div>
+                                            <strong>Applied Informatics</strong>
+                                            <br />
+                                            Bachelor Degree
+                                        </div>
+                                        <div>
+                                            <small>Skills:</small>
+                                            <br />
+                                            <span class="topic">Three-Tier Architecture</span>
+                                            <span class="topic">Design Patterns</span>
+                                            <span class="topic">System Management</span>
+                                            <span class="topic">Collaborative Development</span>
+                                            <span class="topic">Web Development</span>
+                                            <span class="topic">App Development</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="experiences__content" id="experience-content">
+                                <div class="experiences__content__item">
+                                    <div class="experiences__content__item__subsection">
+                                        <h3>Arcelor Mittal</h3>
+                                        <small>Ghent - John Kennedylaan 51</small>
+                                    </div>
+                                    <div class="experiences__content__item__subsection">
+                                        <div>
+                                            <strong>Intership Industrial ICT</strong>
+                                            <br />
+                                            Following installment and maintenance of PLC machines.
+                                        </div>
+                                        <div>
+                                            <small>Topics:</small>
+                                            <br />
+                                            <span class="topic">Networks</span>
+                                            <span class="topic">Electronics</span>
+                                            <span class="topic">PLC Programming</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="experiences">
-                    <div class="tab experiences__tab highlighted-card">
-                        <input type="radio" name="tab" id="education" checked>
-                        <label for="education">Education</label>
-                        <input type="radio" name="tab" id="experience">
-                        <label for="experience">Experience</label>
-                    </div>
-                    <div class="experiences__content highlighted-card" id="education-content">
-                        <div class="experiences__content__item">
-                            
-                            <div class="experiences__content__item__subsection">
-                                <h3>VLOT! Campus Sint Laurentius</h3>
-                                <small>Lokeren - Prosper Thuysbaertlaan 1</small>
-                            </div>
-                            <div class="experiences__content__item__subsection">
-                                <div>
-                                    <strong>Industrial ICT</strong>
-                                    <br>
-                                    Secondary Education Degree
-                                </div>
-                                <div>
-                                    <small>Skills:</small>
-                                    <br>
-                                    <span class="topic">c++</span>
-                                    <span class="topic">c#</span>
-                                    <span class="topic">Visual Basic</span>
-                                    <span class="topic">Assembly</span>
-                                    <span class="topic">Electronics</span>
-                                    <span class="topic">PLC Programming</span>
-                                </div>
-                            </div>
+                <hr id="profile-projects" />
 
+                <div id="projects" class="projects">
+                    <div><h1>Projects</h1></div>
+                    <div class="projects__content">
+                        <div class="flex-row projects__content__item">
+                            <div>
+                                <img src="assets/images/kingdomino.png" alt="" class="highlighted-card light-source-shadow" />
+                            </div>
+                            <div>
+                                <h2>Kingdomino</h2>
+                                <details>
+                                    <summary>
+                                        <span>
+                                            A digitised board game, where 3-4 players aim to expand their kingdom efficiently by strategically placing
+                                            randomized tiles adjacent to its castle or other connected tiles.
+                                        </span>
+                                    </summary>
+                                    <small>
+                                        This is a school project I <strong>co-developed</strong> in a <strong>group of 4</strong> total during my second
+                                        semester of my first year at HoGent, following the course Applied Informatics. Created based on
+                                        <strong>processing Use Cases</strong>, which were partially given by lecturers, this tested our ability to perform broad
+                                        <strong>analysis</strong> on expectations of <strong>features</strong> and documenting them for smooth
+                                        <strong>collaboration</strong>. The tech stack consisted of <strong>Java</strong> and <strong>MySQL</strong>, where
+                                        <strong>JavaFX</strong> was used for the <strong>GUI</strong>, to create a desktop application emulating the board game
+                                        Kingdomino.
+                                    </small>
+                                </details>
+                                <div>
+                                    <span class="topic">Java</span>
+                                    <span class="topic">MySql</span>
+                                    <span class="topic">JavaFX</span>
+                                </div>
+                            </div>
                         </div>
 
-                        <hr>
-
-                        <div class="experiences__content__item">
-
-                            <div class="experiences__content__item__subsection">
-                                <h3>College University Ghent - HoGent</h3>
-                                <small>Ghent - Valentin Vaerwyckweg 1 </small>
+                        <div class="flex-row projects__content__item">
+                            <div>
+                                <img src="assets/images/pcompose.png" alt="" class="highlighted-card light-source-shadow" />
                             </div>
-                            <div class="experiences__content__item__subsection">
+                            <div>
+                                <h2>PCompose</h2>
+                                <details>
+                                    <summary>
+                                        <span>
+                                            A project with the goal of creating a tool to compose a plan for a self built computer by selecting individual parts
+                                            sourced from different sites to find the best offer easily and ensuring part compatibility.
+                                        </span>
+                                    </summary>
+                                    <small>
+                                        My first <strong>web development project</strong> assigned in semester one of year 2 at HoGent. This project was solo
+                                        and free to choose in subject, it was used as vehicle to learn about <strong>API</strong>’s,
+                                        <strong>RESTful principles</strong> and in general <strong>web architecture</strong> with the use of popular frameworks
+                                        such as: <strong>React, Koa, Prisma</strong>. A highlight of this project is the use of
+                                        <strong>Puppeteer to scrape E-commerce sites</strong> to gather data.
+                                    </small>
+                                </details>
                                 <div>
-                                    <strong>Applied Informatics</strong>
-                                    <br>
-                                    Bachelor Degree
-                                </div>
-                                <div>
-                                    <small>Skills:</small>
-                                    <br>
-                                    <span class="topic">Three-Tier Architecture</span>
-                                    <span class="topic">Design Patterns</span>
-                                    <span class="topic">System Management</span>
-                                    <span class="topic">Collaborative Development</span>
-                                    <span class="topic">Web Development</span>
-                                    <span class="topic">App Development</span>
+                                    <span class="topic">React</span>
+                                    <span class="topic">Koa</span>
+                                    <span class="topic">Prisma</span>
+                                    <span class="topic">Puppeteer</span>
                                 </div>
                             </div>
-                            
                         </div>
 
-                    </div>
-
-                    <div class="experiences__content highlighted-card" id="experience-content">
-                        <div class="experiences__content__item">
-                            <div class="experiences__content__item__subsection">
-                                <h3>Arcelor Mittal</h3>
-                                <small>Ghent - John Kennedylaan 51</small>
+                        <div class="flex-row projects__content__item">
+                            <div>
+                                <img src="assets/images/delaware.png" alt="" class="highlighted-card light-source-shadow" />
                             </div>
-                            <div class="experiences__content__item__subsection">
+                            <div>
+                                <h2>Delaware Shopfloor App</h2>
+                                <details>
+                                    <summary>
+                                        <span>
+                                            A management/information platform where metrics or statuses on production facilities and their machines could be
+                                            consulted, created for the company <a href="https://www.delaware.pro" target="_blank">Delaware</a> as a proof of
+                                            concept.
+                                        </span>
+                                    </summary>
+                                    <small>
+                                        My First project where we based <strong>functional requirements</strong> on the descriptions of a
+                                        <strong>client</strong>. Done in <strong>groups of 5</strong>, we had to infer the wishes from verbal
+                                        <strong>meetings with the client</strong> and gain feedback through <strong>presented demo’s</strong>. The core of this
+                                        project was experiencing a small part of <strong>corporate structure</strong> to development, wherein we followed a
+                                        <strong>scrum schedule</strong>. Working in <strong>sprints</strong> of 2 weeks, <strong>delivering features</strong> at
+                                        the end of each and setting new goals for the next, and <strong>presenting</strong> them to the
+                                        <strong>client</strong> to garner feedback and insights on the clients true wishes was the core of this project. What we
+                                        delivered was available in two forms, as web app and desktop app. The <strong>web app</strong> was created with
+                                        <strong>NextJS, Koa and Prisma,</strong> whilst the <strong>desktop app</strong> with
+                                        <strong>JavaFX and Jakarta</strong>.
+                                    </small>
+                                </details>
                                 <div>
-                                    <strong>Intership Industrial ICT</strong>
-                                    <br>
-                                    Following installment and maintenance of PLC machines.
+                                    <span class="topic">NextJS</span>
+                                    <span class="topic">Koa</span>
+                                    <span class="topic">Prisma</span>
+                                    <span class="topic">JavaFX</span>
+                                    <span class="topic">JDBC</span>
                                 </div>
+                            </div>
+                        </div>
+
+                        <div class="flex-row projects__content__item">
+                            <div>
+                                <img src="assets/images/rise.png" alt="" class="highlighted-card light-source-shadow" />
+                            </div>
+                            <div>
+                                <h2>Campus App</h2>
+                                <details>
+                                    <summary>
+                                        <span>
+                                            An information application designed and created by students for students. Presented as a proof of concept to the
+                                            college itself as a means to streamline the experience of new and current students when searching info.
+                                        </span>
+                                    </summary>
+                                    <small>
+                                        The final web development project at Applied Informatics, completed in semester 1 of year 3. Developed in
+                                        <strong>groups of 6 devs, 1 business analyst and 4 system engineers</strong>. This project served as a simulation of how
+                                        <strong>development</strong> would be <strong>structured</strong> in a <strong>real world</strong> scenario. We
+                                        collaborated with a real client, who wanted a proof of concept for a campus app, from which
+                                        <strong>features and requirements</strong> would be <strong>analyzed</strong>. Analyses consisted of a procedure of
+                                        <strong>eliciting information</strong> and converting it to <strong>user stories</strong> through talks between the
+                                        <strong>business analyst</strong> and <strong>devs</strong>, to then be developed as a web app. In cooperation with the
+                                        <strong>system engineers</strong>, this app would be hosted and backed by a robust <strong>CI/CD pipeline</strong>. This
+                                        app was created in the .Net ecosystem through: <strong>Blazor, ASP.NET and Entity Framework</strong>.
+                                        <strong>Jira</strong> was also used for <strong>collaboration management</strong> and structuring as wel as
+                                        <strong>documenting user stories</strong>.
+                                    </small>
+                                </details>
                                 <div>
-                                    <small>Topics:</small>
-                                    <br>
-                                    <span class="topic">Networks</span>
-                                    <span class="topic">Electronics</span>
-                                    <span class="topic">PLC Programming</span>
+                                    <span class="topic">Blazor</span>
+                                    <span class="topic">ASP.NET</span>
+                                    <span class="topic">Entity Framework</span>
+                                    <span class="topic">PWA</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr id="projects-technologies" />
+
+                <div id="technologies">
+                    <h1>Technologies</h1>
+                    <div class="grid">
+                        <div class="tech-card highlighted-card light-source-shadow java">
+                            <img src="assets/icons/java-svgrepo-com.svg" alt="" />
+                            <b>Java</b>
+                            <p></p>
+                            <div class="flex-row">
+                                <div class="tech-card-info">
+                                    <small>Learnt At</small>
+                                    <div><img src="assets/icons/school-svgrepo-com.svg" alt="" /></div>
+                                </div>
+                                <div class="tech-card-info">
+                                    <small>Usage</small>
+                                    <div>4 sem.</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tech-card highlighted-card light-source-shadow mysql">
+                            <img src="assets/icons/mysql-svgrepo-com.svg" alt="" />
+                            <b>MySQL</b>
+                            <p></p>
+                            <div class="flex-row">
+                                <div class="tech-card-info">
+                                    <small>Learnt At</small>
+                                    <div><img src="assets/icons/school-svgrepo-com.svg" alt="" /></div>
+                                </div>
+                                <div class="tech-card-info">
+                                    <small>Usage</small>
+                                    <div>4 sem.</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tech-card highlighted-card light-source-shadow html">
+                            <img src="assets/icons/html-5-svgrepo-com.svg" alt="" />
+                            <b>HTML</b>
+                            <p></p>
+                            <div class="flex-row">
+                                <div class="tech-card-info">
+                                    <small>Learnt At</small>
+                                    <div><img src="assets/icons/school-svgrepo-com.svg" alt="" /></div>
+                                </div>
+                                <div class="tech-card-info">
+                                    <small>Usage</small>
+                                    <div>4 sem.</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tech-card highlighted-card light-source-shadow css">
+                            <img src="assets/icons/css-3-svgrepo-com.svg" alt="" />
+                            <b>CSS</b>
+                            <p></p>
+                            <div class="flex-row">
+                                <div class="tech-card-info">
+                                    <small>Learnt At</small>
+                                    <div><img src="assets/icons/school-svgrepo-com.svg" alt="" /></div>
+                                </div>
+                                <div class="tech-card-info">
+                                    <small>Usage</small>
+                                    <div>4 sem.</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tech-card highlighted-card light-source-shadow javascript">
+                            <img src="assets/icons/js-svgrepo-com.svg" alt="" />
+                            <b>Javascript</b>
+                            <p></p>
+                            <div class="flex-row">
+                                <div class="tech-card-info">
+                                    <small>Learnt At</small>
+                                    <div><img src="assets/icons/school-svgrepo-com.svg" alt="" /></div>
+                                </div>
+                                <div class="tech-card-info">
+                                    <small>Usage</small>
+                                    <div>3 sem.</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tech-card highlighted-card light-source-shadow">
+                            <img src="assets/icons/koa-svgrepo-com.svg" alt="" />
+                            <b>Koa</b>
+                            <p></p>
+                            <div class="flex-row">
+                                <div class="tech-card-info">
+                                    <small>Learnt At</small>
+                                    <div><img src="assets/icons/school-svgrepo-com.svg" alt="" /></div>
+                                </div>
+                                <div class="tech-card-info">
+                                    <small>Usage</small>
+                                    <div>2 sem.</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tech-card highlighted-card light-source-shadow prisma">
+                            <img src="assets/icons/light-prisma-svgrepo-com.svg" alt="" />
+                            <b>Prisma</b>
+                            <p></p>
+                            <div class="flex-row">
+                                <div class="tech-card-info">
+                                    <small>Learnt At</small>
+                                    <div><img src="assets/icons/school-svgrepo-com.svg" alt="" /></div>
+                                </div>
+                                <div class="tech-card-info">
+                                    <small>Usage</small>
+                                    <div>2 sem.</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tech-card highlighted-card light-source-shadow react">
+                            <img src="assets/icons/react-svgrepo-com.svg" alt="" />
+                            <b>React</b>
+                            <p></p>
+                            <div class="flex-row">
+                                <div class="tech-card-info">
+                                    <small>Learnt At</small>
+                                    <div><img src="assets/icons/school-svgrepo-com.svg" alt="" /></div>
+                                </div>
+                                <div class="tech-card-info">
+                                    <small>Usage</small>
+                                    <div>1 sem.</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tech-card highlighted-card light-source-shadow nextjs">
+                            <img src="assets/icons/nextjs-icon-svgrepo-com.svg" alt="" />
+                            <b>NextJS</b>
+                            <p></p>
+                            <div class="flex-row">
+                                <div class="tech-card-info">
+                                    <small>Learnt At</small>
+                                    <div><img src="assets/icons/school-svgrepo-com.svg" alt="" /></div>
+                                </div>
+                                <div class="tech-card-info">
+                                    <small>Usage</small>
+                                    <div>1 sem.</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tech-card highlighted-card light-source-shadow blazor">
+                            <img src="assets/icons/blazor-svgrepo-com.svg" alt="" />
+                            <b>Blazor<br />WASM</b>
+                            <p></p>
+                            <div class="flex-row">
+                                <div class="tech-card-info">
+                                    <small>Learnt At</small>
+                                    <div><img src="assets/icons/school-svgrepo-com.svg" alt="" /></div>
+                                </div>
+                                <div class="tech-card-info">
+                                    <small>Usage</small>
+                                    <div>1 sem.</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tech-card highlighted-card light-source-shadow net">
+                            <img src="assets/icons/aspnet-svgrepo-com.svg" alt="" />
+                            <b>ASP.Net<br />Core</b>
+                            <p></p>
+                            <div class="flex-row">
+                                <div class="tech-card-info">
+                                    <small>Learnt At</small>
+                                    <div><img src="assets/icons/school-svgrepo-com.svg" alt="" /></div>
+                                </div>
+                                <div class="tech-card-info">
+                                    <small>Usage</small>
+                                    <div>1 sem.</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tech-card highlighted-card light-source-shadow net">
+                            <img src="assets/icons/database-svgrepo-com.svg" alt="" />
+                            <b>Entity<br />Framework<br />Core</b>
+                            <p></p>
+                            <div class="flex-row">
+                                <div class="tech-card-info">
+                                    <small>Learnt At</small>
+                                    <div><img src="assets/icons/school-svgrepo-com.svg" alt="" /></div>
+                                </div>
+                                <div class="tech-card-info">
+                                    <small>Usage</small>
+                                    <div>1 sem.</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </main>
 
-            <hr id="profile-projects">
-
-            <div id="projects" class="projects">
-                <div><h1>Projects</h1></div>
-                <div class="projects__content">
-                    <div class="flex-row projects__content__item">
-                        <div>
-                            <img src="assets/images/kingdomino.png" alt="" class="highlighted-card light-source-shadow">
-                        </div>
-                        <div>
-                            <h2>Kingdomino</h2>
-                            <details>
-                                <summary>
-                                    <span>
-                                        A digitised board game, where 3-4 players aim to expand their kingdom efficiently by strategically placing randomized tiles adjacent to its castle or other connected tiles.
-                                    </span>
-                                </summary>
-                                <small>
-                                    This is a school project I <strong>co-developed</strong> in a <strong>group of 4</strong> total during my second semester of my first year at HoGent, following the course Applied Informatics. 
-                                    Created based on <strong>processing Use Cases</strong>, which were partially given by lecturers, 
-                                    this tested our ability to perform broad <strong>analysis</strong> on expectations of <strong>features</strong> and documenting them for smooth <strong>collaboration</strong>. 
-                                    The tech stack consisted of <strong>Java</strong> and <strong>MySQL</strong>, where <strong>JavaFX</strong> was used for the <strong>GUI</strong>, 
-                                    to create a desktop application emulating the board game Kingdomino.
-                                </small>
-                            </details>
-                            <div>
-                                <span class="topic">Java</span>
-                                <span class="topic">MySql</span>
-                                <span class="topic">JavaFX</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="flex-row projects__content__item">
-                        <div>
-                            <img src="assets/images/pcompose.png" alt="" class="highlighted-card light-source-shadow">
-                        </div>
-                        <div>
-                            <h2>PCompose</h2>
-                            <details>
-                                <summary>
-                                    <span>
-                                        A project with the goal of creating a tool to compose a plan for a self built computer by selecting individual 
-                                        parts sourced from different sites to find the best offer easily and ensuring part compatibility.
-                                    </span>
-                                </summary>
-                                <small>
-                                    My first <strong>web development project</strong> assigned in semester one of year 2 at HoGent. 
-                                    This project was solo and free to choose in subject, it was used as vehicle to learn about <strong>API</strong>’s, 
-                                    <strong>RESTful principles</strong> and in general <strong>web architecture</strong> with the use of popular frameworks such as: 
-                                    <strong>React, Koa, Prisma</strong>. A highlight of this project is the use of <strong>Puppeteer to scrape E-commerce sites</strong> to gather data. 
-                                </small>
-                            </details>
-                            <div>
-                                <span class="topic">React</span>
-                                <span class="topic">Koa</span>
-                                <span class="topic">Prisma</span>
-                                <span class="topic">Puppeteer</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="flex-row projects__content__item">
-                        <div>
-                            <img src="assets/images/delaware.png" alt="" class="highlighted-card light-source-shadow">
-                        </div>
-                        <div>
-                            <h2>Delaware Shopfloor App</h2>
-                            <details>
-                                <summary>
-                                    <span>
-                                        A management/information platform where metrics or statuses on production facilities and their machines could be consulted,
-                                        created for the company <a href="https://www.delaware.pro" target="_blank">Delaware</a> as a proof of concept.
-                                    </span>
-                                </summary> 
-                                <small>
-                                    My First project where we based <strong>functional requirements</strong> on the descriptions of a <strong>client</strong>. 
-                                    Done in <strong>groups of 5</strong>, we had to infer the wishes from verbal <strong>meetings with the client</strong> and gain feedback through 
-                                    <strong>presented demo’s</strong>. The core of this project was experiencing a small part of <strong>corporate structure</strong> to development, 
-                                    wherein we followed a <strong>scrum schedule</strong>. Working in <strong>sprints</strong> of 2 weeks, <strong>delivering features</strong> at the end of each and 
-                                    setting new goals for the next, and <strong>presenting</strong> them to the <strong>client</strong> to garner feedback and insights on the clients 
-                                    true wishes was the core of this project. What we delivered was available in two forms, as web app and desktop app.
-                                    The <strong>web app</strong> was created with <strong>NextJS, Koa and Prisma,</strong> whilst the <strong>desktop app</strong> with <strong>JavaFX and Jakarta</strong>.
-                                </small>
-                            </details>
-                            <div>
-                                <span class="topic">NextJS</span>
-                                <span class="topic">Koa</span>
-                                <span class="topic">Prisma</span>
-                                <span class="topic">JavaFX</span>
-                                <span class="topic">JDBC</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="flex-row projects__content__item">
-                        <div>
-                            <img src="assets/images/rise.png" alt="" class="highlighted-card light-source-shadow">
-                        </div>
-                        <div>
-                            <h2>Campus App</h2>
-                            <details>
-                                <summary>
-                                    <span>
-                                        An information application designed and created by students for students. Presented as a proof of concept to the college itself
-                                        as a means to streamline the experience of new and current students when searching info.
-                                    </span>
-                                </summary>
-                                <small>
-                                    The final web development project at Applied Informatics, completed in semester 1 of year 3. 
-                                    Developed in <strong>groups of 6 devs, 1 business analyst and 4 system engineers</strong>. This project served as a simulation of 
-                                    how <strong>development</strong> would be <strong>structured</strong> in a <strong>real world</strong> scenario. We collaborated with a real client, who wanted a 
-                                    proof of concept for a campus app, from which <strong>features and requirements</strong> would be <strong>analyzed</strong>. Analyses consisted of 
-                                    a procedure of <strong>eliciting information</strong> and converting it to <strong>user stories</strong> through talks between the <strong>business analyst</strong> 
-                                    and <strong>devs</strong>, to then be developed as a web app. In cooperation with the <strong>system engineers</strong>, this app would be hosted 
-                                    and backed by a robust <strong>CI/CD pipeline</strong>. This app was created in the .Net ecosystem through: <strong>Blazor, ASP.NET and Entity Framework</strong>.
-                                    <strong>Jira</strong> was also used for <strong>collaboration management</strong> and structuring as wel as <strong>documenting user stories</strong>.
-                                </small>
-                            </details>
-                            <div>
-                                <span class="topic">Blazor</span>
-                                <span class="topic">ASP.NET</span>
-                                <span class="topic">Entity Framework</span>
-                                <span class="topic">PWA</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            
-            </div>
-
-            <hr id="projects-technologies">
-
-            <div id="technologies">
-                <h1>Technologies</h1>
-                <div class="grid">
-                    <div class="tech-card highlighted-card light-source-shadow java">
-                        <img src="assets/icons/java-svgrepo-com.svg" alt="">
-                        <b>Java</b>
-                        <p>
-
-                        </p>
-                        <div class="flex-row">
-                            <div class="tech-card-info">
-                                <small>Learnt At</small>
-                                <div><img src="assets/icons/school-svgrepo-com.svg" alt=""></div>
-                            </div>
-                            <div class="tech-card-info">
-                                <small>Usage</small>
-                                <div>4 sem.</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="tech-card highlighted-card light-source-shadow mysql">
-                        <img src="assets/icons/mysql-svgrepo-com.svg" alt="">
-                        <b>MySQL</b>
-                        <p>
-
-                        </p>
-                        <div class="flex-row">
-                            <div class="tech-card-info">
-                                <small>Learnt At</small>
-                                <div><img src="assets/icons/school-svgrepo-com.svg" alt=""></div>
-                            </div>
-                            <div class="tech-card-info">
-                                <small>Usage</small>
-                                <div>4 sem.</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="tech-card highlighted-card light-source-shadow html">
-                        <img src="assets/icons/html-5-svgrepo-com.svg" alt="">
-                        <b>HTML</b>
-                        <p>
-
-                        </p>
-                        <div class="flex-row">
-                            <div class="tech-card-info">
-                                <small>Learnt At</small>
-                                <div><img src="assets/icons/school-svgrepo-com.svg" alt=""></div>
-                            </div>
-                            <div class="tech-card-info">
-                                <small>Usage</small>
-                                <div>4 sem.</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="tech-card highlighted-card light-source-shadow css">
-                        <img src="assets/icons/css-3-svgrepo-com.svg" alt="">
-                        <b>CSS</b>
-                        <p>
-
-                        </p>
-                        <div class="flex-row">
-                            <div class="tech-card-info">
-                                <small>Learnt At</small>
-                                <div><img src="assets/icons/school-svgrepo-com.svg" alt=""></div>
-                            </div>
-                            <div class="tech-card-info">
-                                <small>Usage</small>
-                                <div>4 sem.</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="tech-card highlighted-card light-source-shadow javascript">
-                        <img src="assets/icons/js-svgrepo-com.svg" alt="">
-                        <b>Javascript</b>
-                        <p>
-
-                        </p>
-                        <div class="flex-row">
-                            <div class="tech-card-info">
-                                <small>Learnt At</small>
-                                <div><img src="assets/icons/school-svgrepo-com.svg" alt=""></div>
-                            </div>
-                            <div class="tech-card-info">
-                                <small>Usage</small>
-                                <div>3 sem.</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="tech-card highlighted-card light-source-shadow">
-                        <img src="assets/icons/koa-svgrepo-com.svg" alt="">
-                        <b>Koa</b>
-                        <p>
-
-                        </p>
-                        <div class="flex-row">
-                            <div class="tech-card-info">
-                                <small>Learnt At</small>
-                                <div><img src="assets/icons/school-svgrepo-com.svg" alt=""></div>
-                            </div>
-                            <div class="tech-card-info">
-                                <small>Usage</small>
-                                <div>2 sem.</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="tech-card highlighted-card light-source-shadow prisma">
-                        <img src="assets/icons/light-prisma-svgrepo-com.svg" alt="">
-                        <b>Prisma</b>
-                        <p>
-
-                        </p>
-                        <div class="flex-row">
-                            <div class="tech-card-info">
-                                <small>Learnt At</small>
-                                <div><img src="assets/icons/school-svgrepo-com.svg" alt=""></div>
-                            </div>
-                            <div class="tech-card-info">
-                                <small>Usage</small>
-                                <div>2 sem.</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="tech-card highlighted-card light-source-shadow react">
-                        <img src="assets/icons/react-svgrepo-com.svg" alt="">
-                        <b>React</b>
-                        <p>
-
-                        </p>
-                        <div class="flex-row">
-                            <div class="tech-card-info">
-                                <small>Learnt At</small>
-                                <div><img src="assets/icons/school-svgrepo-com.svg" alt=""></div>
-                            </div>
-                            <div class="tech-card-info">
-                                <small>Usage</small>
-                                <div>1 sem.</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="tech-card highlighted-card light-source-shadow nextjs">
-                        <img src="assets/icons/nextjs-icon-svgrepo-com.svg" alt="">
-                        <b>NextJS</b>
-                        <p>
-
-                        </p>
-                        <div class="flex-row">
-                            <div class="tech-card-info">
-                                <small>Learnt At</small>
-                                <div><img src="assets/icons/school-svgrepo-com.svg" alt=""></div>
-                            </div>
-                            <div class="tech-card-info">
-                                <small>Usage</small>
-                                <div>1 sem.</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="tech-card highlighted-card light-source-shadow blazor">
-                        <img src="assets/icons/blazor-svgrepo-com.svg" alt="">
-                        <b>Blazor<br>WASM</b>
-                        <p>
-
-                        </p>
-                        <div class="flex-row">
-                            <div class="tech-card-info">
-                                <small>Learnt At</small>
-                                <div><img src="assets/icons/school-svgrepo-com.svg" alt=""></div>
-                            </div>
-                            <div class="tech-card-info">
-                                <small>Usage</small>
-                                <div>1 sem.</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="tech-card highlighted-card light-source-shadow net">
-                        <img src="assets/icons/aspnet-svgrepo-com.svg" alt="">
-                        <b>ASP.Net<br>Core</b>
-                        <p>
-
-                        </p>
-                        <div class="flex-row">
-                            <div class="tech-card-info">
-                                <small>Learnt At</small>
-                                <div><img src="assets/icons/school-svgrepo-com.svg" alt=""></div>
-                            </div>
-                            <div class="tech-card-info">
-                                <small>Usage</small>
-                                <div>1 sem.</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="tech-card highlighted-card light-source-shadow net">
-                        <img src="assets/icons/database-svgrepo-com.svg" alt="">
-                        <b>Entity<br>Framework<br>Core</b>
-                        <p>
-
-                        </p>
-                        <div class="flex-row">
-                            <div class="tech-card-info">
-                                <small>Learnt At</small>
-                                <div><img src="assets/icons/school-svgrepo-com.svg" alt=""></div>
-                            </div>
-                            <div class="tech-card-info">
-                                <small>Usage</small>
-                                <div>1 sem.</div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <footer></footer>
-</body>
+        <footer></footer>
+    </body>
 </html>

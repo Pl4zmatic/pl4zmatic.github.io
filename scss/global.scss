@@ -1,52 +1,62 @@
 :root {
-    font-family: "Chakra Petch", "Quantico", "Turret Road", sans-serif;
+    --font-size: 16px;
+    --font-family: "Chakra Petch", "Quantico", "Turret Road", sans-serif;
+    font-family: var(--font-family);
+    font-size: var(--font-size);
     --radius: 10px;
     --border-width: 1px;
     --gap-content-item: 4rem;
     --header-height: 4rem;
     --background-opacity: 0.4;
     --golden-ratio: 1.62;
+    --blur-heavy: 20px;
+    --blur-light: 5px;
 
     --text-main: white;
     --text-main-muted: rgb(220, 220, 220);
 
-    --gradient-profile-project: linear-gradient(180deg,hsl(var(--profile-bg) / var(--background-opacity)) 0%, hsl(var(--projects-bg) / var(--background-opacity)) 100%);
-    --gradient-border-profile-project: linear-gradient(180deg,hsl(var(--profile-primary)) 0%, hsl(var(--projects-primary)) 100%);
+    --gradient-profile-project: linear-gradient(
+        180deg,
+        hsl(var(--profile-bg) / var(--background-opacity)) 0%,
+        hsl(var(--projects-bg) / var(--background-opacity)) 100%
+    );
+    --gradient-border-profile-project: linear-gradient(180deg, hsl(var(--profile-primary)) 0%, hsl(var(--projects-primary)) 100%);
 
-    --gradient-project-technologies: linear-gradient(180deg,hsl(var(--projects-bg) / var(--background-opacity)) 0%, hsl(var(--technologies-bg) / var(--background-opacity)) 100%);
-    --gradient-border-project-technologies: linear-gradient(180deg,hsl(var(--projects-primary)) 0%, hsl(var(--technologies-primary)) 100%);
+    --gradient-project-technologies: linear-gradient(
+        180deg,
+        hsl(var(--projects-bg) / var(--background-opacity)) 0%,
+        hsl(var(--technologies-bg) / var(--background-opacity)) 100%
+    );
+    --gradient-border-project-technologies: linear-gradient(180deg, hsl(var(--projects-primary)) 0%, hsl(var(--technologies-primary)) 100%);
 
     scrollbar-color: #888 transparent;
     scrollbar-width: thin;
 }
 
 ::-webkit-scrollbar {
-  width: 8px; 
-  height: 8px; 
-  background: transparent; 
+    width: 8px;
+    height: 8px;
+    background: transparent;
 }
 
 ::-webkit-scrollbar-button {
-  display: none; 
+    display: none;
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent; 
+    background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #888; 
-  border-radius: 4px; 
+    background: #888;
+    border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555; 
+    background: #555;
 }
 
-
 /* =========== elements =========== */
-
-
 
 html {
     min-height: 100%;
@@ -54,7 +64,8 @@ html {
 }
 
 body {
-    margin: 0; padding: 0;
+    margin: 0;
+    padding: 0;
     width: 100%;
     height: 100%;
 }
@@ -116,7 +127,6 @@ strong {
     }
 }
 
-
 /* =========== ID's =========== */
 
 #content {
@@ -152,7 +162,7 @@ strong {
 
         background-clip: text;
         background-size: 300% 100%;
-        background-image: linear-gradient(90deg,hsl(var(--secondary)) 20%, hsl(var(--primary)) 50%, hsl(var(--text-muted)) 60%);
+        background-image: linear-gradient(90deg, hsl(var(--secondary)) 20%, hsl(var(--primary)) 50%, hsl(var(--text-muted)) 60%);
         background-position: 100% 0;
         transition: background-position 0.5s linear;
 
@@ -166,7 +176,6 @@ strong {
             height: 1.2em;
         }
     }
-
 
     > hr {
         margin: 0;
@@ -188,11 +197,7 @@ strong {
     }
 }
 
-
-
 /* =========== classes =========== */
-
-
 
 .flex-row {
     display: flex;
@@ -223,26 +228,71 @@ strong {
 }
 
 .tab {
-    input {
-        display: none;
-    }
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    overflow: hidden;
 
-    label {
-        display: inline-block;
-        padding: calc(1rem / var(--golden-ratio)) calc(1rem * var(--golden-ratio));
-        border-radius: var(--radius);
-        transition: background-color 500ms ease;
-        color: hsl(var(--text));
-        font-size: 1rem;
+    div {
+        padding: var(--border-width) 0;
+        width: 100%;
 
-        &:hover {
-            background-color: hsl(var(--highlight));
+        box-sizing: border-box;
+
+        &:hover label {
+            border-bottom: var(--border-width) solid hsl(var(--text-muted));
             cursor: pointer;
         }
-    }
 
-    input:checked + label {
-        background-color: hsl(var(--secondary));
-        cursor: default;
+        input {
+            display: none;
+        }
+
+        label {
+            display: inline-block;
+            width: calc(100% - 1rem * 2);
+            padding: 0.5rem 0;
+            margin: 0 1rem;
+            box-sizing: border-box;
+            opacity: 0.6;
+
+            transition: opacity 250ms linear;
+
+            color: hsl(var(--text));
+            font-size: 1rem;
+        }
+
+        input:checked + label {
+            border-bottom: var(--border-width) solid hsl(var(--text));
+            opacity: 1;
+            cursor: default;
+        }
+    }
+}
+
+/* =========== media queries =========== */
+
+@media screen and (width >= 320px) {
+    :root {
+        --font-size: 8px;
+    }
+}
+
+@media screen and (width >= 768px) {
+    :root {
+        --font-size: 12px;
+    }
+}
+
+@media screen and (width >= 1024px) {
+    :root {
+        --font-size: 14px;
+    }
+}
+
+@media screen and (width >= 1280px) {
+    :root {
+        --font-size: 16px;
     }
 }

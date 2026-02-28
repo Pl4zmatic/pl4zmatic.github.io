@@ -21,7 +21,7 @@ header {
     > div {
         height: 70%;
         margin: 0 auto;
-        backdrop-filter: blur(20px);
+        backdrop-filter: blur(var(--blur-heavy));
         border-radius: var(--radius);
         min-height: fit-content;
 

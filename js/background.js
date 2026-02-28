@@ -53,12 +53,16 @@ const sectionButtons = [
 ];
 
 const targets = [
-    {target: technologies, threshold: (vh / 2 / technologies.clientHeight)},
-    {target: projectsContainer, threshold: (vh / 2 / projectsContainer.clientHeight)},
-    {target: hero, threshold: (vh / 2 / hero.clientHeight)},
+    {target: technologies, threshold: getIntersectionThreshold(technologies.clientHeight)},
+    {target: projectsContainer, threshold: getIntersectionThreshold(projectsContainer.clientHeight)},
+    {target: hero, threshold: getIntersectionThreshold(hero.clientHeight)},
 ]
 const observerProfileProject = new IntersectionObserver(changeBackgroundOnEntry, {threshold: targets.map((obj) => obj.threshold)});
 targets.forEach((obj) => observerProfileProject.observe(obj.target))
+
+function getIntersectionThreshold(clientHeight) {
+    return Math.min(vh / 2 / clientHeight, 1)
+}
 
 function changeBackgroundOnEntry(entries, observer) {
     entries.forEach((entry, index) => {
