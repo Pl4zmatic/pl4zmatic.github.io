@@ -3,6 +3,7 @@
     --primary-hex: #75bcea;
     --profile-bg: 210 100% 5%;
     --profile-primary: 204 74% 69%;
+    --profile-picture-max-height: 200px;
 }
 
 .hero_palette {
@@ -75,7 +76,7 @@
 
         &_picture {
             height: 100%;
-            max-height: 200px;
+            max-height: var(--profile-picture-max-height);
             width: fit-content;
             overflow: hidden;
             border: none;
@@ -180,5 +181,17 @@
 
     #experience-content {
         display: none;
+    }
+}
+
+@media screen and (width < 320px) {
+    :root {
+        --profile-picture-max-height: 75px;
+    }
+}
+
+@media screen and (width < 768px) {
+    :root {
+        --profile-picture-max-height: 100px;
     }
 }

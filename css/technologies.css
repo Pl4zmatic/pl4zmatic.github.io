@@ -102,12 +102,12 @@
 
 @media screen and (width < 320px) {
   :root {
-    --font-size: 50px;
+    --tech-card-size: 75px;
   }
 }
 @media screen and (width < 768px) {
   :root {
-    --tech-card-size: 75px;
+    --tech-card-size: 100px;
   }
 }
 
