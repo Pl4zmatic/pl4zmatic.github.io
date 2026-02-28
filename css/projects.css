@@ -8,7 +8,7 @@
   --primary-hex: #a3aaef;
 }
 
-#projects {
+.projects_palette {
   --bg-dark: 239 61% 3%;
   --bg: var(--projects-bg);
   --bg-light: 235 26% 10%;
@@ -25,6 +25,10 @@
   --info: 217 28% 65%;
 }
 
+.content_section:has(#projects) {
+  box-sizing: border-box;
+}
+
 .projects h1 {
   text-align: center;
   margin-top: 0;
@@ -36,7 +40,7 @@
   gap: calc(var(--gap-content-item) * 2);
 }
 .projects__content__item {
-  gap: calc(var(--gap-content-item) * 1.5);
+  gap: calc(var(--gap-content-item));
 }
 .projects__content__item details::details-content {
   color: var(--text-main-muted);

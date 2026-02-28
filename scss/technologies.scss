@@ -1,6 +1,7 @@
 :root {
     --technologies-bg: 330 0% 4%;
     --technologies-primary: 0 0% 95%;
+    --tech-card-size: 150px;
 }
 
 .background-technologies-theme {
@@ -8,7 +9,7 @@
     --primary-hex: #f2f2f2;
 }
 
-#technologies {
+.technologies_palette {
     --bg-dark: 336 0% 1%;
     --bg: var(--technologies-bg);
     --bg-light: 0 0% 9%;
@@ -16,7 +17,13 @@
     --border: 0 0% 28%;
     --border-muted: 300 0% 18%;
     --primary: var(--technologies-primary);
+}
 
+.content_section:has(#technologies) {
+    box-sizing: border-box;
+}
+
+#technologies {
     h1 {
         margin-top: 0;
         text-align: center;
@@ -26,9 +33,9 @@
 .grid {
     margin: 0 auto;
     display: grid;
-    width: 70%;
+    width: 100%;
     height: fit-content;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(var(--tech-card-size), 1fr));
     grid-auto-rows: repeat(auto-fill, 1fr);
     gap: 2rem;
 }
@@ -53,7 +60,7 @@
         left: 0.5rem;
         fill: var(--primary);
     }
-    
+
     b {
         display: block;
         text-align: right;
@@ -98,5 +105,17 @@
                 object-fit: contain;
             }
         }
+    }
+}
+
+@media screen and (width < 320px) {
+    :root {
+        --font-size: 50px;
+    }
+}
+
+@media screen and (width < 768px) {
+    :root {
+        --tech-card-size: 75px;
     }
 }

@@ -16,6 +16,8 @@ header {
         aspect-ratio: 1;
         height: 2rem;
         object-fit: contain;
+        backdrop-filter: blur(var(--blur-heavy));
+        border-radius: var(--radius);
     }
 
     > div {
@@ -41,7 +43,7 @@ header {
             height: 100%;
             align-items: center;
             text-shadow: 1px 1px 2px black;
-            
+
             &:hover {
                 cursor: pointer;
                 border: var(--border-width) solid var(--text-main-muted);
@@ -72,7 +74,7 @@ a:hover {
         transform: translateX(-10px);
     }
     50% {
-        transform: translateX(-10px) scaleX(-1); 
+        transform: translateX(-10px) scaleX(-1);
     }
     75% {
         transform: translateX(0px) scaleX(-1);
