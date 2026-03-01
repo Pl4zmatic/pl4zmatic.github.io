@@ -79,3 +79,19 @@
         }
     }
 }
+
+@media screen and (width < 320px) {
+}
+
+@media screen and (width < 480px) {
+    .projects__content__item {
+        text-align: left !important;
+        flex-direction: column !important;
+        > * {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (width < 768px) {
+}

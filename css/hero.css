@@ -4,6 +4,7 @@
   --profile-bg: 210 100% 5%;
   --profile-primary: 204 74% 69%;
   --profile-picture-max-height: 200px;
+  --hero-items-height: calc((100vh - var(--header-height) - var(--header-gap) * 3) / 2);
 }
 
 .hero_palette {
@@ -24,31 +25,53 @@
 }
 
 .content_section:has(#hero) {
-  height: 100vh;
-  box-sizing: border-box;
+  height: fit-content;
+  box-sizing: content-box;
 }
 
 #hero {
   display: flex;
   flex-direction: column;
   gap: calc(var(--gap-content-item) / 2);
-  height: 100%;
+  height: var(--hero-items-height);
+  width: 100%;
+  box-sizing: content-box;
+  position: relative;
 }
 
 /* =========== Profile =========== */
-.profile_container {
+#map {
   width: 100%;
-  height: 50%;
-  min-height: 0;
-  margin: 0 auto;
-  position: relative;
+  height: 100%;
+  opacity: 0;
+  border-radius: var(--radius);
+  box-shadow: 0px 0px 5px 5px hsl(var(--highlight)/40%);
+  animation: map_fade_in 2s ease-in 1s 1 normal forwards;
+}
+#map .maplibregl-ctrl-bottom-right {
+  bottom: auto;
+  top: 0;
+}
+#map .maplibregl-ctrl-bottom-right a {
+  display: inline;
+}
+
+@keyframes map_fade_in {
+  100% {
+    opacity: 1;
+  }
+}
+.profile_container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--header-gap);
 }
 .profile_container_content {
   border-radius: var(--radius);
   width: 100%;
   height: calc(100% - 44px);
-  box-sizing: border-box;
   padding: 0 1rem 1rem 1rem;
+  box-sizing: border-box;
   position: absolute;
   bottom: 0;
   z-index: 1;
@@ -83,37 +106,17 @@
   margin: 0;
 }
 
-#map {
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  border-radius: var(--radius);
-  box-shadow: 0px 0px 5px 5px hsl(var(--highlight)/40%);
-  animation: map_fade_in 2s ease-in 1s 1 normal forwards;
-}
-#map .maplibregl-ctrl-bottom-right {
-  bottom: auto;
-  top: 0;
-}
-#map .maplibregl-ctrl-bottom-right a {
-  display: inline;
-}
-
-@keyframes map_fade_in {
-  100% {
-    opacity: 1;
-  }
-}
 /* =========== Experiences =========== */
 .experiences_container {
-  height: 50%;
-  min-height: 0;
+  max-height: var(--hero-items-height);
+  height: var(--hero-items-height);
   width: 100%;
   display: flex;
   align-items: center;
 }
 
 .experiences {
+  max-height: 100%;
   width: 100%;
   border-radius: var(--radius);
   display: flex;
@@ -121,6 +124,7 @@
   backdrop-filter: blur(var(--blur-light));
 }
 .experiences__tab {
+  box-sizing: border-box;
   align-self: center;
 }
 .experiences__tab:has(#education:checked) ~ #education-content {
@@ -158,9 +162,15 @@
   display: none;
 }
 
-@media screen and (width < 320px) {
+@media screen and (width < 480px) {
   :root {
-    --profile-picture-max-height: 75px;
+    --hero-items-height: calc(100vh - var(--header-height) - var(--header-gap) * 2);
+  }
+  .profile_container_content_text {
+    width: 100%;
+  }
+  .profile_container_content_picture {
+    display: none;
   }
 }
 @media screen and (width < 768px) {

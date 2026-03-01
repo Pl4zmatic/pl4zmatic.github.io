@@ -67,4 +67,14 @@
   color: hsl(var(--text));
 }
 
+@media screen and (width < 480px) {
+  .projects__content__item {
+    text-align: left !important;
+    flex-direction: column !important;
+  }
+  .projects__content__item > * {
+    width: 100%;
+  }
+}
+
 /*# sourceMappingURL=projects.css.map */
