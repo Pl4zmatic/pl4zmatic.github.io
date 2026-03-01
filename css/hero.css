@@ -105,6 +105,10 @@
   background-image: linear-gradient(200deg, hsl(var(--primary)) 0%, hsl(var(--bg)) 70%);
   margin: 0;
 }
+.profile_container_content_picture-icon {
+  background-image: linear-gradient(200deg, hsl(var(--primary)) 0%, hsl(var(--bg)) 70%);
+  display: none;
+}
 
 /* =========== Experiences =========== */
 .experiences_container {
@@ -171,6 +175,9 @@
   }
   .profile_container_content_picture {
     display: none;
+  }
+  .inline-icon.profile_container_content_picture-icon {
+    display: inline-block;
   }
 }
 @media screen and (width < 768px) {

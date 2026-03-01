@@ -249,6 +249,25 @@ strong b {
   cursor: default;
 }
 
+.inline-icon {
+  display: inline-block;
+  aspect-ratio: 1;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.inline-icon img {
+  height: 100%;
+  width: 100%;
+}
+
+*:has(> .inline-icon) {
+  display: inline-flex;
+  align-items: center;
+  height: 2em;
+}
+
 /* =========== media queries =========== */
 @media screen and (width < 320px) {
   :root {

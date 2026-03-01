@@ -104,5 +104,10 @@ a:hover > .animation-github {
     transform: scale(1);
   }
 }
+@media screen and (width < 480px) {
+  header .icon-button {
+    display: none;
+  }
+}
 
 /*# sourceMappingURL=header.css.map */

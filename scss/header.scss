@@ -117,3 +117,9 @@ a:hover {
         transform: scale(1);
     }
 }
+
+@media screen and (width < 480px) {
+    header .icon-button {
+        display: none;
+    }
+}

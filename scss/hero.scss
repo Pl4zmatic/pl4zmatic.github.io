@@ -115,6 +115,11 @@
                 margin: 0;
             }
         }
+
+        &_picture-icon {
+            background-image: linear-gradient(200deg, hsl(var(--primary)) 0%, hsl(var(--bg)) 70%);
+            display: none;
+        }
     }
 }
 
@@ -202,6 +207,10 @@
 
     .profile_container_content_picture {
         display: none;
+    }
+
+    .inline-icon.profile_container_content_picture-icon {
+        display: inline-block;
     }
 }
 
