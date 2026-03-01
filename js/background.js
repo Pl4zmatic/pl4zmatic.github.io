@@ -15,8 +15,8 @@ function main() {
 }
 
 function resize() {
-    vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
-    vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
+    vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+    vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
     canvas.width = vw;
     canvas.height = vh;
     canvas.style.width = vw;
@@ -36,54 +36,51 @@ function draw() {
 
 main();
 
-const header = document.getElementById("header")
-const headerButtonHero = document.getElementById("button-hero");
+const header = document.getElementById("header");
+const headerButtonProfile = document.getElementById("button-profile");
 const headerButtonProjects = document.getElementById("button-projects");
 const headerButtonTechnologies = document.getElementById("button-technologies");
 let headerButtonPressed = false;
 
-const hero = document.getElementById("hero");
+const profile = document.getElementById("profile");
 const projectsContainer = document.getElementById("projects");
 const technologies = document.getElementById("technologies");
 
 const sectionButtons = [
-    {target: hero, button: headerButtonHero},
-    {target: projectsContainer, button: headerButtonProjects},
-    {target: technologies, button: headerButtonTechnologies}
+    { target: profile, button: headerButtonProfile },
+    { target: projectsContainer, button: headerButtonProjects },
+    { target: technologies, button: headerButtonTechnologies },
 ];
 
 const targets = [
-    {target: technologies, threshold: getIntersectionThreshold(technologies.clientHeight)},
-    {target: projectsContainer, threshold: getIntersectionThreshold(projectsContainer.clientHeight)},
-    {target: hero, threshold: getIntersectionThreshold(hero.clientHeight)},
-]
-const observerProfileProject = new IntersectionObserver(changeBackgroundOnEntry, {threshold: targets.map((obj) => obj.threshold)});
-targets.forEach((obj) => observerProfileProject.observe(obj.target))
+    { target: technologies, threshold: getIntersectionThreshold(technologies.clientHeight) },
+    { target: projectsContainer, threshold: getIntersectionThreshold(projectsContainer.clientHeight) },
+    { target: profile, threshold: getIntersectionThreshold(profile.clientHeight) },
+];
+const observerProfileProject = new IntersectionObserver(changeBackgroundOnEntry, { threshold: targets.map((obj) => obj.threshold) });
+targets.forEach((obj) => observerProfileProject.observe(obj.target));
 
 function getIntersectionThreshold(clientHeight) {
-    return Math.min(vh / 2 / clientHeight, 1)
+    return Math.min(vh / 2 / clientHeight, 1);
 }
 
 function changeBackgroundOnEntry(entries, observer) {
     entries.forEach((entry, index) => {
-        if(entry.isIntersecting && entry.intersectionRatio > targets.filter((obj) => obj.target == entry.target)[0].threshold) {
-            if(entry.target == hero) {
-                if(!headerButtonPressed)
-                    headerButtonHero.checked = true;
+        if (entry.isIntersecting && entry.intersectionRatio > targets.filter((obj) => obj.target == entry.target)[0].threshold) {
+            if (entry.target == profile) {
+                if (!headerButtonPressed) headerButtonProfile.checked = true;
                 plexus.setTheme("");
             }
-            if(entry.target == projectsContainer) {
-                if(!headerButtonPressed)
-                    headerButtonProjects.checked = true;
+            if (entry.target == projectsContainer) {
+                if (!headerButtonPressed) headerButtonProjects.checked = true;
                 plexus.setTheme("background-projects-theme");
             }
-            if(entry.target == technologies) {
-                if(!headerButtonPressed)
-                    headerButtonTechnologies.checked = true;
+            if (entry.target == technologies) {
+                if (!headerButtonPressed) headerButtonTechnologies.checked = true;
                 plexus.setTheme("background-technologies-theme");
             }
         }
-    })
+    });
 }
 
 sectionButtons.forEach((obj) => {
@@ -93,10 +90,14 @@ sectionButtons.forEach((obj) => {
         window.scrollTo({
             top: scrollTarget,
             behavior: "smooth",
-        })
+        });
 
-        window.addEventListener("scrollend", () => {
-            headerButtonPressed = false;
-        }, {once: true})
-    })
-})
+        window.addEventListener(
+            "scrollend",
+            () => {
+                headerButtonPressed = false;
+            },
+            { once: true },
+        );
+    });
+});

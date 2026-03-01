@@ -150,6 +150,10 @@ strong {
         padding-bottom: calc(var(--header-height) + var(--header-gap));
     }
 
+    > div:last-child {
+        padding-bottom: var(--header-gap);
+    }
+
     .content_section {
         background-color: hsl(var(--bg) / var(--background-opacity));
 
