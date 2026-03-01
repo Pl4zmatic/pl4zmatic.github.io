@@ -1,0 +1,9 @@
+#links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.5rem;
+    a {
+        background-image: linear-gradient(90deg, var(--text-main) 20%, var(--text-main-muted) 60%);
+    }
+}
