@@ -245,7 +245,6 @@ strong {
     display: flex;
     justify-content: space-around;
     text-align: center;
-    overflow: hidden;
 
     div {
         padding: var(--border-width) 0;
@@ -267,7 +266,6 @@ strong {
             width: calc(100% - 1rem * 2);
             padding: 0.5rem 0;
             margin: 0 1rem;
-            box-sizing: border-box;
             opacity: 0.6;
 
             transition: opacity 250ms linear;
