@@ -48,7 +48,8 @@
 .projects__content__item > * {
   width: 50%;
 }
-.projects__content__item img {
+.projects__content__item img,
+.projects__content__item video {
   display: block;
   aspect-ratio: 16/9;
   width: 100%;
