@@ -7,16 +7,7 @@ header {
   z-index: 10;
 }
 header .icon-button {
-  display: inline-block;
   margin: 0 0.5rem;
-  height: fit-content;
-}
-header img {
-  aspect-ratio: 1;
-  height: 2rem;
-  object-fit: contain;
-  backdrop-filter: blur(var(--blur-heavy));
-  border-radius: var(--radius);
 }
 header > div {
   height: 70%;

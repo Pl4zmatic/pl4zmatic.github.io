@@ -170,7 +170,7 @@ strong {
 
         img {
             aspect-ratio: 1;
-            height: 1.2em;
+            backdrop-filter: unset;
         }
     }
 
@@ -283,6 +283,30 @@ strong {
     display: inline-flex;
     align-items: center;
     height: 2em;
+}
+
+.hover-up {
+    transition: transform 300ms ease;
+}
+
+.hover-up:hover {
+    cursor: pointer;
+    transform: translateY(-0.5em);
+}
+
+.icon-button {
+    display: inline-block;
+    height: fit-content;
+
+    img {
+        aspect-ratio: 1;
+        height: 3rem;
+        box-sizing: border-box;
+        padding: 0.5rem;
+        object-fit: contain;
+        backdrop-filter: blur(var(--blur-heavy));
+        border-radius: var(--radius);
+    }
 }
 
 /* =========== media queries =========== */

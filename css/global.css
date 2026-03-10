@@ -156,7 +156,7 @@ strong b {
 }
 #content a img {
   aspect-ratio: 1;
-  height: 1.2em;
+  backdrop-filter: unset;
 }
 #content > hr {
   margin: 0;
@@ -253,6 +253,29 @@ strong b {
   display: inline-flex;
   align-items: center;
   height: 2em;
+}
+
+.hover-up {
+  transition: transform 300ms ease;
+}
+
+.hover-up:hover {
+  cursor: pointer;
+  transform: translateY(-0.5em);
+}
+
+.icon-button {
+  display: inline-block;
+  height: fit-content;
+}
+.icon-button img {
+  aspect-ratio: 1;
+  height: 3rem;
+  box-sizing: border-box;
+  padding: 0.5rem;
+  object-fit: contain;
+  backdrop-filter: blur(var(--blur-heavy));
+  border-radius: var(--radius);
 }
 
 /* =========== media queries =========== */
