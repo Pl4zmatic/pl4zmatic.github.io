@@ -81,6 +81,27 @@
     }
 }
 
+.projects details {
+    &:hover {
+        cursor: pointer;
+    }
+
+    summary {
+        transition: transform 0.3s ease;
+        font-size: 1.2em;
+    }
+
+    &:hover > summary {
+        transform: translateY(-0.5rem);
+    }
+
+    small {
+        color: hsl(var(--text-main-muted));
+        display: inline-block;
+        line-height: 1.4em;
+    }
+}
+
 @media screen and (width < 320px) {
 }
 

@@ -68,6 +68,22 @@
   color: hsl(var(--text));
 }
 
+.projects details:hover {
+  cursor: pointer;
+}
+.projects details summary {
+  transition: transform 0.3s ease;
+  font-size: 1.2em;
+}
+.projects details:hover > summary {
+  transform: translateY(-0.5rem);
+}
+.projects details small {
+  color: hsl(var(--text-main-muted));
+  display: inline-block;
+  line-height: 1.4em;
+}
+
 @media screen and (width < 480px) {
   .projects__content__item {
     text-align: left !important;

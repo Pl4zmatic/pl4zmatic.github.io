@@ -106,22 +106,6 @@ mark {
     color: hsl(var(--secondary));
 }
 
-details {
-    small {
-        color: hsl(var(--text-main-muted));
-        display: inline-block;
-        line-height: 1.4em;
-    }
-}
-
-summary {
-    font-size: 1.2em;
-
-    &::marker {
-        display: inline-block !important;
-    }
-}
-
 strong {
     color: hsl(var(--primary));
     font-weight: 700;
