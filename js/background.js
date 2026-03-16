@@ -9,7 +9,7 @@ let vh;
 
 function main() {
     resize();
-    plexus = new Plexus(canvas, ctx, 3, vw, vh);
+    plexus = new Plexus(canvas, ctx, 2, vw, vh);
     plexus.generate(100, 4, 2, 0.05, 50, 20);
     window.requestAnimationFrame(draw);
 }

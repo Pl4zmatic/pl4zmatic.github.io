@@ -15,6 +15,7 @@
         <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico" />
         <script type="module" src="js/background.js"></script>
         <script type="module" src="js/map.js"></script>
+        <script type="module" src="js/events.js"></script>
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -55,24 +56,115 @@
             </a>
         </header>
 
-        <div class="pop-up projects_palette">
-            <div class="pop-up__content highlighted-card">
-                <div class="icon-button">
-                    <img src="assets/icons/close-svgrepo-com.svg" alt="" />
-                </div>
-                <video src="assets/videos/kingdomino.mp4" autoplay controls disablepictureinpicture loop muted class="light-source-shadow">
-                    <img src="assets/images/kingdomino.png" alt="" />
-                </video>
-                <h2>Kingdomino</h2>
-                <p>
-                    This is a school project I <strong>co-developed</strong> in a <strong>group of 4</strong> total during my second semester of my first year
-                    at HoGent, following the course Applied Informatics. Created based on <strong>processing Use Cases</strong>, which were partially given by
-                    lecturers, this tested our ability to perform broad <strong>analysis</strong> on expectations of <strong>features</strong> and documenting
-                    them for smooth <strong>collaboration</strong>. The tech stack consisted of <strong>Java</strong> and <strong>MySQL</strong>, where
-                    <strong>JavaFX</strong> was used for the <strong>GUI</strong>, to create a desktop application emulating the board game Kingdomino.
-                </p>
+        <dialog closedby="any" id="dialog-kingdomino" class="projects_palette light-source-shadow">
+            <div class="icon-button">
+                <img src="assets/icons/close-svgrepo-com.svg" alt="" />
             </div>
-        </div>
+            <video
+                src="assets/videos/kingdomino.mp4"
+                id="video-parent-kingdomino"
+                data-target="video-child-kingdomino"
+                autoplay
+                controls
+                disablepictureinpicture
+                loop
+                muted
+                class="">
+                <img src="assets/images/kingdomino.png" alt="" />
+            </video>
+            <h2>Kingdomino</h2>
+            <p>
+                This is a school project I <strong>co-developed</strong> in a <strong>group of 4</strong> total during my second semester of my first year at
+                HoGent, following the course Applied Informatics. Created based on <strong>processing Use Cases</strong>, which were partially given by
+                lecturers, this tested our ability to perform broad <strong>analysis</strong> on expectations of <strong>features</strong> and documenting them
+                for smooth <strong>collaboration</strong>. The tech stack consisted of <strong>Java</strong> and <strong>MySQL</strong>, where
+                <strong>JavaFX</strong> was used for the <strong>GUI</strong>, to create a desktop application emulating the board game Kingdomino.
+            </p>
+        </dialog>
+
+        <dialog closedby="any" id="dialog-pcompose" class="projects_palette light-source-shadow">
+            <div class="icon-button">
+                <img src="assets/icons/close-svgrepo-com.svg" alt="" />
+            </div>
+            <video
+                src="assets/videos/pcompose.mp4"
+                id="video-parent-pcompose"
+                data-target="video-child-pcompose"
+                autoplay
+                controls
+                disablepictureinpicture
+                loop
+                muted
+                class="">
+                <img src="assets/images/pcompose.png" alt="" />
+            </video>
+            <h2>Kingdomino</h2>
+            <p>
+                My first <strong>web development project</strong> assigned in semester one of year 2 at HoGent. This project was solo and free to choose in
+                subject, it was used as vehicle to learn about <strong>API</strong>’s, <strong>RESTful principles</strong> and in general
+                <strong>web architecture</strong> with the use of popular frameworks such as: <strong>React, Koa, Prisma</strong>. A highlight of this project
+                is the use of <strong>Puppeteer to scrape E-commerce sites</strong> to gather data.
+            </p>
+        </dialog>
+
+        <dialog closedby="any" id="dialog-delaware" class="projects_palette light-source-shadow">
+            <div class="icon-button">
+                <img src="assets/icons/close-svgrepo-com.svg" alt="" />
+            </div>
+            <video
+                src="assets/videos/delaware.mp4"
+                id="video-parent-delaware"
+                data-target="video-child-delaware"
+                autoplay
+                controls
+                disablepictureinpicture
+                loop
+                muted
+                class="">
+                <img src="assets/images/delaware.png" alt="" />
+            </video>
+            <h2>Kingdomino</h2>
+            <p>
+                My First project where we based <strong>functional requirements</strong> on the descriptions of a <strong>client</strong>. Done in
+                <strong>groups of 5</strong>, we had to infer the wishes from verbal <strong>meetings with the client</strong> and gain feedback through
+                <strong>presented demo’s</strong>. The core of this project was experiencing a small part of <strong>corporate structure</strong> to
+                development, wherein we followed a <strong>scrum schedule</strong>. Working in <strong>sprints</strong> of 2 weeks,
+                <strong>delivering features</strong> at the end of each and setting new goals for the next, and <strong>presenting</strong> them to the
+                <strong>client</strong> to garner feedback and insights on the clients true wishes was the core of this project. What we delivered was available
+                in two forms, as web app and desktop app. The <strong>web app</strong> was created with <strong>NextJS, Koa and Prisma,</strong> whilst the
+                <strong>desktop app</strong> with <strong>JavaFX and Jakarta</strong>.
+            </p>
+        </dialog>
+
+        <dialog closedby="any" id="dialog-campusapp" class="projects_palette light-source-shadow">
+            <div class="icon-button">
+                <img src="assets/icons/close-svgrepo-com.svg" alt="" />
+            </div>
+            <video
+                src="assets/videos/campusapp.mp4"
+                id="video-parent-campusapp"
+                data-target="video-child-campusapp"
+                autoplay
+                controls
+                disablepictureinpicture
+                loop
+                muted
+                class="">
+                <img src="assets/images/campusapp.png" alt="" />
+            </video>
+            <h2>Kingdomino</h2>
+            <p>
+                The final web development project at Applied Informatics, completed in semester 1 of year 3. Developed in
+                <strong>groups of 6 devs, 1 business analyst and 4 system engineers</strong>. This project served as a simulation of how
+                <strong>development</strong> would be <strong>structured</strong> in a <strong>real world</strong> scenario. We collaborated with a real client,
+                who wanted a proof of concept for a campus app, from which <strong>features and requirements</strong> would be <strong>analyzed</strong>.
+                Analyses consisted of a procedure of <strong>eliciting information</strong> and converting it to <strong>user stories</strong> through talks
+                between the <strong>business analyst</strong> and <strong>devs</strong>, to then be developed as a web app. In cooperation with the
+                <strong>system engineers</strong>, this app would be hosted and backed by a robust <strong>CI/CD pipeline</strong>. This app was created in the
+                .Net ecosystem through: <strong>Blazor, ASP.NET and Entity Framework</strong>. <strong>Jira</strong> was also used for
+                <strong>collaboration management</strong> and structuring as wel as <strong>documenting user stories</strong>.
+            </p>
+        </dialog>
 
         <main>
             <div id="content">
@@ -125,7 +217,7 @@
                                             <div>
                                                 <strong>Industrial ICT</strong>
                                                 <br />
-                                                Secondary Education Degree
+                                                Secondary Education Diploma
                                                 <br />
                                                 <small>2020 - 2023</small>
                                             </div>
@@ -206,11 +298,16 @@
                         <div class="projects__content">
                             <div class="flex-row projects__content__item">
                                 <div class="highlighted-card light-source-shadow">
-                                    <video src="assets/videos/kingdomino.mp4" autoplay disablepictureinpicture loop muted>
+                                    <video src="assets/videos/kingdomino.mp4" id="video-child-kingdomino" autoplay disablepictureinpicture loop muted>
                                         <img src="assets/images/kingdomino.png" alt="" />
                                     </video>
                                     <div class="hover-item">
-                                        <img src="assets/icons/expand-content-svgrepo-com.svg" alt="" class="hover-up" id="expand-kingdomino" />
+                                        <img
+                                            src="assets/icons/expand-content-svgrepo-com.svg"
+                                            alt=""
+                                            class="hover-up"
+                                            id="expand-kingdomino"
+                                            data-target="dialog-kingdomino" />
                                     </div>
                                 </div>
                                 <div>
@@ -242,11 +339,16 @@
 
                             <div class="flex-row projects__content__item">
                                 <div class="highlighted-card light-source-shadow">
-                                    <video src="assets/videos/pcompose.mp4" autoplay disablepictureinpicture loop muted>
+                                    <video src="assets/videos/pcompose.mp4" id="video-child-pcompose" autoplay disablepictureinpicture loop muted>
                                         <img src="assets/images/pcompose.png" alt="" />
                                     </video>
                                     <div class="hover-item">
-                                        <img src="assets/icons/expand-content-svgrepo-com.svg" alt="" class="hover-up" id="expand-pcompose" />
+                                        <img
+                                            src="assets/icons/expand-content-svgrepo-com.svg"
+                                            alt=""
+                                            class="hover-up"
+                                            id="expand-pcompose"
+                                            data-target="dialog-pcompose" />
                                     </div>
                                 </div>
                                 <div>
@@ -277,11 +379,16 @@
 
                             <div class="flex-row projects__content__item">
                                 <div class="highlighted-card light-source-shadow">
-                                    <video src="assets/videos/delaware.mp4" autoplay disablepictureinpicture loop muted>
+                                    <video src="assets/videos/delaware.mp4" id="video-child-delaware" autoplay disablepictureinpicture loop muted>
                                         <img src="assets/images/delaware.png" alt="" />
                                     </video>
                                     <div class="hover-item">
-                                        <img src="assets/icons/expand-content-svgrepo-com.svg" alt="" class="hover-up" id="expand-delaware" />
+                                        <img
+                                            src="assets/icons/expand-content-svgrepo-com.svg"
+                                            alt=""
+                                            class="hover-up"
+                                            id="expand-delaware"
+                                            data-target="dialog-delaware" />
                                     </div>
                                 </div>
                                 <div>
@@ -319,11 +426,16 @@
 
                             <div class="flex-row projects__content__item">
                                 <div class="highlighted-card light-source-shadow">
-                                    <video src="assets/videos/campusapp.mp4" autoplay disablepictureinpicture loop muted>
+                                    <video src="assets/videos/campusapp.mp4" id="video-child-campusapp" disablepictureinpicture loop muted>
                                         <img src="assets/images/campusapp.png" alt="" />
                                     </video>
                                     <div class="hover-item">
-                                        <img src="assets/icons/expand-content-svgrepo-com.svg" alt="" class="hover-up" id="expand-campusapp" />
+                                        <img
+                                            src="assets/icons/expand-content-svgrepo-com.svg"
+                                            alt=""
+                                            class="hover-up"
+                                            id="expand-campusapp"
+                                            data-target="dialog-campusapp" />
                                     </div>
                                 </div>
                                 <div>
