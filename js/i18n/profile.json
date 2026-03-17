@@ -7,7 +7,59 @@
             },
             "body": "A third-year <strong>bachelor</strong> student, studying <strong>Applied Informatics</strong> with a specialization in <strong>Development</strong>, currently <strong>living in <b>Zelzate</b></strong> and studying at <strong>College University Ghent</strong> or HoGent. Through my education I have gained experience in both <strong>Front-End</strong> and <strong>Back-End Web Development</strong>, in addition to <strong>Application Development</strong>."
         },
-        "experiences": {}
+        "experiences": {
+            "tabs": {
+                "education": "Education",
+                "experience": "Experience"
+            },
+            "labels": {
+                "skills": "Skills:",
+                "topics": "Topics:"
+            },
+            "education": {
+                "vlot": {
+                    "school": "VLOT! Campus Sint Laurentius",
+                    "location": "Lokeren - Prosper Thuysbaertlaan 1",
+                    "title": "<strong>Industrial ICT</strong><br />Secondary Education Diploma",
+                    "period": "2020 - 2023",
+                    "skills": {
+                        "cpp": "c++",
+                        "csharp": "c#",
+                        "vb": "Visual Basic",
+                        "assembly": "Assembly",
+                        "electronics": "Electronics",
+                        "plc": "PLC Programming"
+                    }
+                },
+                "hogent": {
+                    "school": "College University Ghent - HoGent",
+                    "location": "Ghent - Valentin Vaerwyckweg 1",
+                    "title": "<strong>Applied Informatics</strong><br />Bachelor Degree",
+                    "period": "2023 - Now",
+                    "skills": {
+                        "threeTier": "Three-Tier Architecture",
+                        "designPatterns": "Design Patterns",
+                        "sysManagement": "System Management",
+                        "collabDev": "Collaborative Development",
+                        "webDev": "Web Development",
+                        "appDev": "App Development"
+                    }
+                }
+            },
+            "work": {
+                "arcelor": {
+                    "company": "Arcelor Mittal",
+                    "location": "Ghent - John Kennedylaan 51",
+                    "title": "<strong>Internship Industrial ICT</strong>",
+                    "description": "Following installment and maintenance of PLC machines.",
+                    "topics": {
+                        "networks": "Networks",
+                        "electronics": "Electronics",
+                        "plc": "PLC Programming"
+                    }
+                }
+            }
+        }
     },
     "nl": {
         "hero": {
@@ -15,8 +67,60 @@
                 "greeting": "<mark>Hallo</mark>!",
                 "intro": "Ik ben Anthony David"
             },
-            "body": "Een derdejaars <strong>bachelor</strong> student, die <strong>Toegepaste Informatica</strong> studeert met een specialisatie in <strong>Development</strong>, momenteel <strong>wonend in <b>Zelzate</b></strong> en studerend aan <strong>Hogeschool Gent</strong> of HoGent. Tijdens mijn opleiding heb ik ervaring opgedaan in zowel <strong>Front-End</strong> als <strong>Back-End Web Development</strong>, en ook <strong>Applicatie Development</strong>."
+            "body": "Een derdejaars <strong>bachelor</strong>student, die <strong>Toegepaste Informatica</strong> studeert met een specialisatie in <strong>Development</strong>, momenteel <strong>wonend in <b>Zelzate</b></strong> en studerend aan <strong>Hogeschool Gent</strong> of HoGent. Tijdens mijn opleiding heb ik ervaring opgedaan in zowel <strong>Front-End</strong> als <strong>Back-End Web Development</strong>, en ook <strong>Application Development</strong>."
         },
-        "experiences": {}
+        "experiences": {
+            "tabs": {
+                "education": "Opleiding",
+                "experience": "Ervaring"
+            },
+            "labels": {
+                "skills": "Vaardigheden:",
+                "topics": "Onderwerpen:"
+            },
+            "education": {
+                "vlot": {
+                    "school": "VLOT! Campus Sint Laurentius",
+                    "location": "Lokeren - Prosper Thuysbaertlaan 1",
+                    "title": "<strong>Industriële ICT</strong><br />Diploma Secundair Onderwijs",
+                    "period": "2020 - 2023",
+                    "skills": {
+                        "cpp": "c++",
+                        "csharp": "c#",
+                        "vb": "Visual Basic",
+                        "assembly": "Assembly",
+                        "electronics": "Elektronica",
+                        "plc": "PLC Programmatie"
+                    }
+                },
+                "hogent": {
+                    "school": "Hogeschool Gent - HoGent",
+                    "location": "Gent - Valentin Vaerwyckweg 1",
+                    "title": "<strong>Toegepaste Informatica</strong><br />Bachelordiploma",
+                    "period": "2023 - Heden",
+                    "skills": {
+                        "threeTier": "Three-Tier Architectuur",
+                        "designPatterns": "Design Patterns",
+                        "sysManagement": "Systeembeheer",
+                        "collabDev": "Collaboratieve Development",
+                        "webDev": "Web Development",
+                        "appDev": "App Development"
+                    }
+                }
+            },
+            "work": {
+                "arcelor": {
+                    "company": "Arcelor Mittal",
+                    "location": "Gent - John Kennedylaan 51",
+                    "title": "<strong>Stage Industriële ICT</strong>",
+                    "description": "Opvolgen van installatie en onderhoud van PLC-machines.",
+                    "topics": {
+                        "networks": "Netwerken",
+                        "electronics": "Elektronica",
+                        "plc": "PLC Programmatie"
+                    }
+                }
+            }
+        }
     }
 }

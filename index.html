@@ -207,40 +207,43 @@
                         </div>
 
                         <div class="experiences_container">
-                            <div class="experiences">
+                            <div class="experiences" id="experiences">
                                 <div class="tab experiences__tab highlighted-card">
                                     <div>
                                         <input type="radio" name="tab" id="education" checked />
-                                        <label for="education">Education</label>
+                                        <label for="education" data-i18n="experiences.tabs.education">Education</label>
                                     </div>
                                     <div>
                                         <input type="radio" name="tab" id="experience" />
-                                        <label for="experience">Experience</label>
+                                        <label for="experience" data-i18n="experiences.tabs.experience">Experience</label>
                                     </div>
                                 </div>
+
                                 <div class="experiences__content" id="education-content">
                                     <div class="experiences__content__item">
                                         <div class="experiences__content__item__subsection">
-                                            <h3>VLOT! Campus Sint Laurentius</h3>
-                                            <small>Lokeren - Prosper Thuysbaertlaan 1</small>
+                                            <h3 data-i18n="experiences.education.vlot.school">VLOT! Campus Sint Laurentius</h3>
+                                            <small data-i18n="experiences.education.vlot.location">Lokeren - Prosper Thuysbaertlaan 1</small>
                                         </div>
                                         <div class="experiences__content__item__subsection">
                                             <div>
-                                                <strong>Industrial ICT</strong>
+                                                <span data-i18n="experiences.education.vlot.title">
+                                                    <strong>Industrial ICT</strong>
+                                                    <br />
+                                                    Secondary Education Diploma
+                                                </span>
                                                 <br />
-                                                Secondary Education Diploma
-                                                <br />
-                                                <small>2020 - 2023</small>
+                                                <small data-i18n="experiences.education.vlot.period">2020 - 2023</small>
                                             </div>
                                             <div>
-                                                <small>Skills:</small>
+                                                <small data-i18n="experiences.labels.skills">Skills:</small>
                                                 <br />
-                                                <span class="topic">c++</span>
-                                                <span class="topic">c#</span>
-                                                <span class="topic">Visual Basic</span>
-                                                <span class="topic">Assembly</span>
-                                                <span class="topic">Electronics</span>
-                                                <span class="topic">PLC Programming</span>
+                                                <span class="topic" data-i18n="experiences.education.vlot.skills.cpp">c++</span>
+                                                <span class="topic" data-i18n="experiences.education.vlot.skills.csharp">c#</span>
+                                                <span class="topic" data-i18n="experiences.education.vlot.skills.vb">Visual Basic</span>
+                                                <span class="topic" data-i18n="experiences.education.vlot.skills.assembly">Assembly</span>
+                                                <span class="topic" data-i18n="experiences.education.vlot.skills.electronics">Electronics</span>
+                                                <span class="topic" data-i18n="experiences.education.vlot.skills.plc">PLC Programming</span>
                                             </div>
                                         </div>
                                     </div>
@@ -249,26 +252,28 @@
 
                                     <div class="experiences__content__item">
                                         <div class="experiences__content__item__subsection">
-                                            <h3>College University Ghent - HoGent</h3>
-                                            <small>Ghent - Valentin Vaerwyckweg 1 </small>
+                                            <h3 data-i18n="experiences.education.hogent.school">College University Ghent - HoGent</h3>
+                                            <small data-i18n="experiences.education.hogent.location">Ghent - Valentin Vaerwyckweg 1 </small>
                                         </div>
                                         <div class="experiences__content__item__subsection">
                                             <div>
-                                                <strong>Applied Informatics</strong>
+                                                <span data-i18n="experiences.education.hogent.title">
+                                                    <strong>Applied Informatics</strong>
+                                                    <br />
+                                                    Bachelor Degree
+                                                </span>
                                                 <br />
-                                                Bachelor Degree
-                                                <br />
-                                                <small>2023 - Now</small>
+                                                <small data-i18n="experiences.education.hogent.period">2023 - Now</small>
                                             </div>
                                             <div>
-                                                <small>Skills:</small>
+                                                <small data-i18n="experiences.labels.skills">Skills:</small>
                                                 <br />
-                                                <span class="topic">Three-Tier Architecture</span>
-                                                <span class="topic">Design Patterns</span>
-                                                <span class="topic">System Management</span>
-                                                <span class="topic">Collaborative Development</span>
-                                                <span class="topic">Web Development</span>
-                                                <span class="topic">App Development</span>
+                                                <span class="topic" data-i18n="experiences.education.hogent.skills.threeTier">Three-Tier Architecture</span>
+                                                <span class="topic" data-i18n="experiences.education.hogent.skills.designPatterns">Design Patterns</span>
+                                                <span class="topic" data-i18n="experiences.education.hogent.skills.sysManagement">System Management</span>
+                                                <span class="topic" data-i18n="experiences.education.hogent.skills.collabDev">Collaborative Development</span>
+                                                <span class="topic" data-i18n="experiences.education.hogent.skills.webDev">Web Development</span>
+                                                <span class="topic" data-i18n="experiences.education.hogent.skills.appDev">App Development</span>
                                             </div>
                                         </div>
                                     </div>
@@ -277,21 +282,25 @@
                                 <div class="experiences__content" id="experience-content">
                                     <div class="experiences__content__item">
                                         <div class="experiences__content__item__subsection">
-                                            <h3>Arcelor Mittal</h3>
-                                            <small>Ghent - John Kennedylaan 51</small>
+                                            <h3 data-i18n="experiences.work.arcelor.company">Arcelor Mittal</h3>
+                                            <small data-i18n="experiences.work.arcelor.location">Ghent - John Kennedylaan 51</small>
                                         </div>
                                         <div class="experiences__content__item__subsection">
                                             <div>
-                                                <strong>Intership Industrial ICT</strong>
+                                                <span data-i18n="experiences.work.arcelor.title">
+                                                    <strong>Internship Industrial ICT</strong>
+                                                </span>
                                                 <br />
-                                                Following installment and maintenance of PLC machines.
+                                                <span data-i18n="experiences.work.arcelor.description"
+                                                    >Following installment and maintenance of PLC machines.</span
+                                                >
                                             </div>
                                             <div>
-                                                <small>Topics:</small>
+                                                <small data-i18n="experiences.labels.topics">Topics:</small>
                                                 <br />
-                                                <span class="topic">Networks</span>
-                                                <span class="topic">Electronics</span>
-                                                <span class="topic">PLC Programming</span>
+                                                <span class="topic" data-i18n="experiences.work.arcelor.topics.networks">Networks</span>
+                                                <span class="topic" data-i18n="experiences.work.arcelor.topics.electronics">Electronics</span>
+                                                <span class="topic" data-i18n="experiences.work.arcelor.topics.plc">PLC Programming</span>
                                             </div>
                                         </div>
                                     </div>
@@ -305,7 +314,7 @@
 
                 <div class="content_section projects_palette">
                     <div id="projects" class="projects">
-                        <div><h1>Projects</h1></div>
+                        <div><h1 data-i18n="projects.title">Projects</h1></div>
                         <div class="projects__content">
                             <div class="flex-row projects__content__item">
                                 <div class="highlighted-card light-source-shadow">
@@ -322,15 +331,15 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <h2>Kingdomino</h2>
+                                    <h2 data-i18n="projects.kingdomino.title">Kingdomino</h2>
                                     <details>
                                         <summary class="hover-up">
-                                            <span>
+                                            <span data-i18n="projects.kingdomino.summary">
                                                 A digitised board game, where 3-4 players aim to expand their kingdom efficiently by strategically placing
                                                 randomized tiles adjacent to its castle or other connected tiles.
                                             </span>
                                         </summary>
-                                        <small>
+                                        <small data-i18n="projects.kingdomino.details">
                                             This is a school project I <strong>co-developed</strong> in a <strong>group of 4</strong> total during my second
                                             semester of my first year at HoGent, following the course Applied Informatics. Created based on
                                             <strong>processing Use Cases</strong>, which were partially given by lecturers, this tested our ability to perform
@@ -363,19 +372,19 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <h2>PCompose</h2>
+                                    <h2 data-i18n="projects.pcompose.title">PCompose</h2>
                                     <details>
                                         <summary class="hover-up">
-                                            <span>
+                                            <span data-i18n="projects.pcompose.summary">
                                                 A project with the goal of creating a tool to compose a plan for a self built computer by selecting individual
                                                 parts sourced from different sites to find the best offer easily and ensuring part compatibility.
                                             </span>
                                         </summary>
-                                        <small>
+                                        <small data-i18n="projects.pcompose.details">
                                             My first <strong>web development project</strong> assigned in semester one of year 2 at HoGent. This project was
                                             solo and free to choose in subject, it was used as vehicle to learn about <strong>API</strong>’s,
                                             <strong>RESTful principles</strong> and in general <strong>web architecture</strong> with the use of popular
-                                            frameworks such as: <strong>React, Koa, Prisma</strong>. A highlight of this project is the use of
+                                            frameworks and technologies such as: <strong>React, Koa, Prisma</strong>. A highlight of this project is the use of
                                             <strong>Puppeteer to scrape E-commerce sites</strong> to gather data.
                                         </small>
                                     </details>
@@ -403,16 +412,16 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <h2>Delaware Shopfloor App</h2>
+                                    <h2 data-i18n="projects.delaware.title">Delaware Shopfloor App</h2>
                                     <details>
                                         <summary class="hover-up">
-                                            <span>
+                                            <span data-i18n="projects.delaware.summary">
                                                 A management/information platform where metrics or statuses on production facilities and their machines could be
                                                 consulted, created for the company <a href="https://www.delaware.pro" target="_blank">Delaware</a> as a proof of
                                                 concept.
                                             </span>
                                         </summary>
-                                        <small>
+                                        <small data-i18n="projects.delaware.details">
                                             My First project where we based <strong>functional requirements</strong> on the descriptions of a
                                             <strong>client</strong>. Done in <strong>groups of 5</strong>, we had to infer the wishes from verbal
                                             <strong>meetings with the client</strong> and gain feedback through <strong>presented demo’s</strong>. The core of
@@ -422,7 +431,7 @@
                                             <strong>presenting</strong> them to the <strong>client</strong> to garner feedback and insights on the clients true
                                             wishes was the core of this project. What we delivered was available in two forms, as web app and desktop app. The
                                             <strong>web app</strong> was created with <strong>NextJS, Koa and Prisma,</strong> whilst the
-                                            <strong>desktop app</strong> with <strong>JavaFX and Jakarta</strong>.
+                                            <strong>desktop app</strong> with <strong>JavaFX and JDBC</strong>.
                                         </small>
                                     </details>
                                     <div>
@@ -450,15 +459,15 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <h2>Campus App</h2>
+                                    <h2 data-i18n="projects.campusapp.title">Campus App</h2>
                                     <details>
                                         <summary class="hover-up">
-                                            <span>
+                                            <span data-i18n="projects.campusapp.summary">
                                                 An information application designed and created by students for students. Presented as a proof of concept to the
                                                 college itself as a means to streamline the experience of new and current students when searching info.
                                             </span>
                                         </summary>
-                                        <small>
+                                        <small data-i18n="projects.campusapp.details">
                                             The final web development project at Applied Informatics, completed in semester 1 of year 3. Developed in
                                             <strong>groups of 6 devs, 1 business analyst and 4 system engineers</strong>. This project served as a simulation of
                                             how <strong>development</strong> would be <strong>structured</strong> in a <strong>real world</strong> scenario. We
@@ -488,7 +497,7 @@
 
                 <div class="content_section technologies_palette">
                     <div id="technologies">
-                        <h1>Technologies</h1>
+                        <h1 data-i18n="technologies.title">Technologies</h1>
                         <div class="grid">
                             <div class="tech-card highlighted-card light-source-shadow java">
                                 <img src="assets/icons/java-svgrepo-com.svg" alt="" />
@@ -496,12 +505,12 @@
                                 <p></p>
                                 <div class="flex-row">
                                     <div class="tech-card-info">
-                                        <small>Learnt At</small>
+                                        <small data-i18n="technologies.labels.learntAt">Learnt At</small>
                                         <div><img src="assets/icons/school-svgrepo-com.svg" alt="" /></div>
                                     </div>
                                     <div class="tech-card-info">
-                                        <small>Usage</small>
-                                        <div>4 sem.</div>
+                                        <small data-i18n="technologies.labels.usage">Usage</small>
+                                        <div>4 <span data-i18n="technologies.labels.sem">sem.</span></div>
                                     </div>
                                 </div>
                             </div>
@@ -512,12 +521,12 @@
                                 <p></p>
                                 <div class="flex-row">
                                     <div class="tech-card-info">
-                                        <small>Learnt At</small>
+                                        <small data-i18n="technologies.labels.learntAt">Learnt At</small>
                                         <div><img src="assets/icons/school-svgrepo-com.svg" alt="" /></div>
                                     </div>
                                     <div class="tech-card-info">
-                                        <small>Usage</small>
-                                        <div>4 sem.</div>
+                                        <small data-i18n="technologies.labels.usage">Usage</small>
+                                        <div>4 <span data-i18n="technologies.labels.sem">sem.</span></div>
                                     </div>
                                 </div>
                             </div>
@@ -528,12 +537,12 @@
                                 <p></p>
                                 <div class="flex-row">
                                     <div class="tech-card-info">
-                                        <small>Learnt At</small>
+                                        <small data-i18n="technologies.labels.learntAt">Learnt At</small>
                                         <div><img src="assets/icons/school-svgrepo-com.svg" alt="" /></div>
                                     </div>
                                     <div class="tech-card-info">
-                                        <small>Usage</small>
-                                        <div>4 sem.</div>
+                                        <small data-i18n="technologies.labels.usage">Usage</small>
+                                        <div>4 <span data-i18n="technologies.labels.sem">sem.</span></div>
                                     </div>
                                 </div>
                             </div>
@@ -544,12 +553,12 @@
                                 <p></p>
                                 <div class="flex-row">
                                     <div class="tech-card-info">
-                                        <small>Learnt At</small>
+                                        <small data-i18n="technologies.labels.learntAt">Learnt At</small>
                                         <div><img src="assets/icons/school-svgrepo-com.svg" alt="" /></div>
                                     </div>
                                     <div class="tech-card-info">
-                                        <small>Usage</small>
-                                        <div>4 sem.</div>
+                                        <small data-i18n="technologies.labels.usage">Usage</small>
+                                        <div>4 <span data-i18n="technologies.labels.sem">sem.</span></div>
                                     </div>
                                 </div>
                             </div>
@@ -560,12 +569,12 @@
                                 <p></p>
                                 <div class="flex-row">
                                     <div class="tech-card-info">
-                                        <small>Learnt At</small>
+                                        <small data-i18n="technologies.labels.learntAt">Learnt At</small>
                                         <div><img src="assets/icons/school-svgrepo-com.svg" alt="" /></div>
                                     </div>
                                     <div class="tech-card-info">
-                                        <small>Usage</small>
-                                        <div>3 sem.</div>
+                                        <small data-i18n="technologies.labels.usage">Usage</small>
+                                        <div>3 <span data-i18n="technologies.labels.sem">sem.</span></div>
                                     </div>
                                 </div>
                             </div>
@@ -576,12 +585,12 @@
                                 <p></p>
                                 <div class="flex-row">
                                     <div class="tech-card-info">
-                                        <small>Learnt At</small>
+                                        <small data-i18n="technologies.labels.learntAt">Learnt At</small>
                                         <div><img src="assets/icons/school-svgrepo-com.svg" alt="" /></div>
                                     </div>
                                     <div class="tech-card-info">
-                                        <small>Usage</small>
-                                        <div>2 sem.</div>
+                                        <small data-i18n="technologies.labels.usage">Usage</small>
+                                        <div>2 <span data-i18n="technologies.labels.sem">sem.</span></div>
                                     </div>
                                 </div>
                             </div>
@@ -592,12 +601,12 @@
                                 <p></p>
                                 <div class="flex-row">
                                     <div class="tech-card-info">
-                                        <small>Learnt At</small>
+                                        <small data-i18n="technologies.labels.learntAt">Learnt At</small>
                                         <div><img src="assets/icons/school-svgrepo-com.svg" alt="" /></div>
                                     </div>
                                     <div class="tech-card-info">
-                                        <small>Usage</small>
-                                        <div>2 sem.</div>
+                                        <small data-i18n="technologies.labels.usage">Usage</small>
+                                        <div>2 <span data-i18n="technologies.labels.sem">sem.</span></div>
                                     </div>
                                 </div>
                             </div>
@@ -608,12 +617,12 @@
                                 <p></p>
                                 <div class="flex-row">
                                     <div class="tech-card-info">
-                                        <small>Learnt At</small>
+                                        <small data-i18n="technologies.labels.learntAt">Learnt At</small>
                                         <div><img src="assets/icons/school-svgrepo-com.svg" alt="" /></div>
                                     </div>
                                     <div class="tech-card-info">
-                                        <small>Usage</small>
-                                        <div>1 sem.</div>
+                                        <small data-i18n="technologies.labels.usage">Usage</small>
+                                        <div>1 <span data-i18n="technologies.labels.sem">sem.</span></div>
                                     </div>
                                 </div>
                             </div>
@@ -624,12 +633,12 @@
                                 <p></p>
                                 <div class="flex-row">
                                     <div class="tech-card-info">
-                                        <small>Learnt At</small>
+                                        <small data-i18n="technologies.labels.learntAt">Learnt At</small>
                                         <div><img src="assets/icons/school-svgrepo-com.svg" alt="" /></div>
                                     </div>
                                     <div class="tech-card-info">
-                                        <small>Usage</small>
-                                        <div>1 sem.</div>
+                                        <small data-i18n="technologies.labels.usage">Usage</small>
+                                        <div>1 <span data-i18n="technologies.labels.sem">sem.</span></div>
                                     </div>
                                 </div>
                             </div>
@@ -640,12 +649,12 @@
                                 <p></p>
                                 <div class="flex-row">
                                     <div class="tech-card-info">
-                                        <small>Learnt At</small>
+                                        <small data-i18n="technologies.labels.learntAt">Learnt At</small>
                                         <div><img src="assets/icons/school-svgrepo-com.svg" alt="" /></div>
                                     </div>
                                     <div class="tech-card-info">
-                                        <small>Usage</small>
-                                        <div>1 sem.</div>
+                                        <small data-i18n="technologies.labels.usage">Usage</small>
+                                        <div>1 <span data-i18n="technologies.labels.sem">sem.</span></div>
                                     </div>
                                 </div>
                             </div>
@@ -656,12 +665,12 @@
                                 <p></p>
                                 <div class="flex-row">
                                     <div class="tech-card-info">
-                                        <small>Learnt At</small>
+                                        <small data-i18n="technologies.labels.learntAt">Learnt At</small>
                                         <div><img src="assets/icons/school-svgrepo-com.svg" alt="" /></div>
                                     </div>
                                     <div class="tech-card-info">
-                                        <small>Usage</small>
-                                        <div>1 sem.</div>
+                                        <small data-i18n="technologies.labels.usage">Usage</small>
+                                        <div>1 <span data-i18n="technologies.labels.sem">sem.</span></div>
                                     </div>
                                 </div>
                             </div>
@@ -672,12 +681,12 @@
                                 <p></p>
                                 <div class="flex-row">
                                     <div class="tech-card-info">
-                                        <small>Learnt At</small>
+                                        <small data-i18n="technologies.labels.learntAt">Learnt At</small>
                                         <div><img src="assets/icons/school-svgrepo-com.svg" alt="" /></div>
                                     </div>
                                     <div class="tech-card-info">
-                                        <small>Usage</small>
-                                        <div>1 sem.</div>
+                                        <small data-i18n="technologies.labels.usage">Usage</small>
+                                        <div>1 <span data-i18n="technologies.labels.sem">sem.</span></div>
                                     </div>
                                 </div>
                             </div>
@@ -689,7 +698,7 @@
                     <div id="links">
                         <a href="" class="icon-button" target="_blank">
                             <img src="assets/icons/mail-open-alt-svgrepo-com.svg" alt="" class="animation-email" />
-                            <small>Email Me</small>
+                            <small>Email</small>
                         </a>
                         <a href="https://www.linkedin.com/in/anthony-david-777278332" class="icon-button" target="_blank">
                             <img src="assets/icons/linkedin-svgrepo-com.svg" alt="" class="animation-linkedin" target="_blank" />

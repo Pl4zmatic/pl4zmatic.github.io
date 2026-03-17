@@ -1,5 +1,7 @@
 import headerData from "./i18n/header.json" with { type: "json" };
 import profileData from "./i18n/profile.json" with { type: "json" };
+import projectsData from "./i18n/projects.json" with { type: "json" };
+import technologiesData from "./i18n/technologies.json" with { type: "json" };
 
 // ======== projects video events ========
 
@@ -68,6 +70,8 @@ const buttonNL = document.getElementById("button-language-nl");
 
 const headerContainer = document.getElementById("header");
 const profileContainer = document.getElementById("profile");
+const projectsContainer = document.getElementById("projects");
+const technologiesContainer = document.getElementById("technologies");
 
 const i18nData = {
     header: {
@@ -77,6 +81,14 @@ const i18nData = {
     profile: {
         elements: profileContainer.querySelectorAll("[data-i18n]"),
         data: profileData,
+    },
+    projects: {
+        elements: projectsContainer.querySelectorAll("[data-i18n]"),
+        data: projectsData,
+    },
+    technologies: {
+        elements: technologiesContainer.querySelectorAll("[data-i18n]"),
+        data: technologiesData,
     },
 };
 

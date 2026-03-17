@@ -1,0 +1,22 @@
+{
+    "en": {
+        "technologies": {
+            "title": "Technologies",
+            "labels": {
+                "learntAt": "Learnt At",
+                "usage": "Usage",
+                "sem": "sem."
+            }
+        }
+    },
+    "nl": {
+        "technologies": {
+            "title": "Technologieën",
+            "labels": {
+                "learntAt": "Geleerd bij",
+                "usage": "Gebruik",
+                "sem": "sem."
+            }
+        }
+    }
+}
