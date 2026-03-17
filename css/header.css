@@ -36,6 +36,27 @@ header > div label:hover {
   cursor: pointer;
   border: var(--border-width) solid var(--text-main-muted);
 }
+header > span {
+  display: flex;
+  align-items: center;
+}
+header > span:hover {
+  cursor: default;
+}
+header > span input {
+  display: none;
+}
+header > span input:checked + label {
+  cursor: default;
+  color: var(--text-main);
+  font-weight: 500;
+}
+header > span label {
+  color: var(--text-main-muted);
+}
+header > span label:hover {
+  cursor: pointer;
+}
 
 a:hover > .animation-email {
   animation: slide_mail 2s ease 0s 1 normal forwards;

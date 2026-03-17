@@ -1,0 +1,16 @@
+{
+    "en": {
+        "tabs": {
+            "button-profile": "Profile",
+            "button-projects": "Projects",
+            "button-technologies": "Technologies"
+        }
+    },
+    "nl": {
+        "tabs": {
+            "button-profile": "Profiel",
+            "button-projects": "Projecten",
+            "button-technologies": "Technologieën"
+        }
+    }
+}

@@ -1,3 +1,8 @@
+import headerData from "./i18n/header.json" with { type: "json" };
+import profileData from "./i18n/profile.json" with { type: "json" };
+
+// ======== projects video events ========
+
 const expandKingdomino = document.getElementById("expand-kingdomino");
 const expandPcompose = document.getElementById("expand-pcompose");
 const expandDelaware = document.getElementById("expand-delaware");
@@ -55,3 +60,51 @@ videoElements.forEach((video) => {
         follower.playbackRate = leader.playbackRate;
     });
 });
+
+// ======== i18n ========
+
+const buttonEN = document.getElementById("button-language-en");
+const buttonNL = document.getElementById("button-language-nl");
+
+const headerContainer = document.getElementById("header");
+const profileContainer = document.getElementById("profile");
+
+const i18nData = {
+    header: {
+        elements: headerContainer.querySelectorAll("[data-i18n]"),
+        data: headerData,
+    },
+    profile: {
+        elements: profileContainer.querySelectorAll("[data-i18n]"),
+        data: profileData,
+    },
+};
+
+[buttonEN, buttonNL].forEach((button) => {
+    if (button.checked) {
+        const language = button.getAttribute("value");
+        Object.values(i18nData).forEach(({ elements, data }) => {
+            setTextLanguage(language, elements, data);
+        });
+    }
+
+    button.addEventListener("change", () => {
+        const language = button.getAttribute("value");
+        Object.values(i18nData).forEach(({ elements, data }) => {
+            setTextLanguage(language, elements, data);
+        });
+    });
+});
+
+function setTextLanguage(language, elements, data) {
+    elements.forEach((obj) => {
+        const path = obj.dataset.i18n;
+        const textValue = String(path)
+            .split(".")
+            .reduce((prev, next) => {
+                return prev[next];
+            }, data[language]);
+
+        obj.innerHTML = textValue;
+    });
+}

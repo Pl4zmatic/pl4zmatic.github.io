@@ -3,7 +3,7 @@
   --font-family: "Chakra Petch", "Quantico", "Turret Road", sans-serif;
   font-family: var(--font-family);
   font-size: var(--font-size);
-  --radius: 10px;
+  --radius: 5px;
   --border-width: 1px;
   --gap-content-item: 4rem;
   --header-height: 4rem;
@@ -265,17 +265,18 @@ strong b {
 }
 
 .icon-button {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   height: fit-content;
+  padding: 0.5rem;
 }
 .icon-button img {
   aspect-ratio: 1;
-  height: 3rem;
+  height: 2rem;
   box-sizing: border-box;
-  padding: 0.5rem;
   object-fit: contain;
-  backdrop-filter: blur(var(--blur-heavy));
   border-radius: var(--radius);
+  backdrop-filter: blur(var(--blur-heavy));
 }
 
 /* =========== media queries =========== */

@@ -13,8 +13,8 @@
         <link rel="stylesheet" href="css/header.css" />
         <link rel="stylesheet" href="css/links.css" />
         <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico" />
-        <script type="module" src="js/background.js"></script>
-        <script type="module" src="js/map.js"></script>
+        <script type="module" src="js/background/background.js"></script>
+        <script type="module" src="js/map/map.js"></script>
         <script type="module" src="js/events.js"></script>
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -42,18 +42,28 @@
 
             <div>
                 <input type="radio" name="section" id="button-profile" checked />
-                <label for="button-profile">Home</label>
+                <label for="button-profile" data-i18n="tabs.button-profile">Home</label>
 
                 <input type="radio" name="section" id="button-projects" />
-                <label for="button-projects">Projects</label>
+                <label for="button-projects" data-i18n="tabs.button-projects">Projects</label>
 
                 <input type="radio" name="section" id="button-technologies" />
-                <label for="button-technologies">Technologies</label>
+                <label for="button-technologies" data-i18n="tabs.button-technologies">Technologies</label>
             </div>
 
-            <a href="https://github.com/Pl4zmatic" class="icon-button" target="_blank">
-                <img src="assets/icons/github-svgrepo-com.svg" alt="" class="animation-github" />
-            </a>
+            <span>
+                <span>
+                    <input type="radio" name="language" id="button-language-en" value="en" checked />
+                    <label for="button-language-en" class="hover-up">EN</label>
+                    -
+                    <input type="radio" name="language" id="button-language-nl" value="nl" />
+                    <label for="button-language-nl" class="hover-up">NL</label>
+                </span>
+
+                <a href="https://github.com/Pl4zmatic" class="icon-button" target="_blank">
+                    <img src="assets/icons/github-svgrepo-com.svg" alt="" class="animation-github" />
+                </a>
+            </span>
         </header>
 
         <dialog closedby="any" id="dialog-kingdomino" class="projects_palette light-source-shadow">
@@ -174,14 +184,15 @@
                             <div id="map"></div>
                             <div class="profile_container_content flex-row">
                                 <span class="profile_container_content_text">
-                                    <h1><mark>Hey</mark>&nbsp;There!</h1>
+                                    <h1 data-i18n="hero.head.greeting"><mark>Hey</mark>&nbsp;There!</h1>
                                     <h2>
-                                        I'm Anthony David &nbsp;
+                                        <span data-i18n="hero.head.intro">I'm Anthony David</span>
+                                        &nbsp;
                                         <div class="inline-icon profile_container_content_picture-icon highlighted-card">
                                             <img src="assets/images/Anthony-nobg-head.png" alt="" />
                                         </div>
                                     </h2>
-                                    <p>
+                                    <p data-i18n="hero.body">
                                         A third-year <strong>bachelor</strong> student, studying <strong>Applied Informatics</strong> with a specialization in
                                         <strong>Development</strong>, currently <strong>living in <b>Zelzate</b></strong> and studying at
                                         <strong>College University Ghent</strong> or HoGent. Through my education I have gained experience in both

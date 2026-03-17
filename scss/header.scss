@@ -41,6 +41,30 @@ header {
             }
         }
     }
+
+    > span {
+        display: flex;
+        align-items: center;
+        &:hover {
+            cursor: default;
+        }
+
+        input {
+            display: none;
+            &:checked + label {
+                cursor: default;
+                color: var(--text-main);
+                font-weight: 500;
+            }
+        }
+
+        label {
+            color: var(--text-main-muted);
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
 }
 
 a:hover {

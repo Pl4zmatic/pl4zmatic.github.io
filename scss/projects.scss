@@ -156,11 +156,14 @@ dialog {
         position: absolute;
         top: calc((var(--button-size) / 2) * -1);
         right: calc((var(--button-size) / 2) * -1);
+        padding: 0;
 
         img {
+            box-sizing: border-box;
             aspect-ratio: 1;
             border-radius: 50%;
             height: var(--button-size);
+            padding: 0.3em;
             border: solid 1px var(--text-main);
         }
 
