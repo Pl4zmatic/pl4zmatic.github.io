@@ -310,6 +310,16 @@ strong {
     }
 }
 
+.list-end {
+    position: absolute;
+    bottom: 0;
+    z-index: 10;
+    height: calc(0.8em + 0.5em);
+    max-height: calc(0.8em + 0.5em);
+    width: 100%;
+    background-image: linear-gradient(180deg, transparent 0%, hsl(var(--bg) / 0.8) 100%);
+}
+
 /* =========== media queries =========== */
 
 @media screen and (width < 320px) {

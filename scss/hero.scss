@@ -143,6 +143,8 @@
 
     backdrop-filter: blur(var(--blur-light));
 
+    position: relative;
+
     &__tab {
         box-sizing: border-box;
         align-self: center;

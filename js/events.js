@@ -72,6 +72,7 @@ const headerContainer = document.getElementById("header");
 const profileContainer = document.getElementById("profile");
 const projectsContainer = document.getElementById("projects");
 const technologiesContainer = document.getElementById("technologies");
+const dialogs = document.getElementById("dialogsContainer");
 
 const i18nData = {
     header: {
@@ -89,6 +90,10 @@ const i18nData = {
     technologies: {
         elements: technologiesContainer.querySelectorAll("[data-i18n]"),
         data: technologiesData,
+    },
+    dialog: {
+        elements: dialogs.querySelectorAll("[data-i18n]"),
+        data: projectsData,
     },
 };
 

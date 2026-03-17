@@ -126,6 +126,7 @@
   display: flex;
   flex-direction: column;
   backdrop-filter: blur(var(--blur-light));
+  position: relative;
 }
 .experiences__tab {
   box-sizing: border-box;
