@@ -1,13 +1,14 @@
 header {
     height: var(--header-height);
-    width: 100%;
+    width: calc(100% - 1rem * 2);
     position: fixed;
     display: flex;
     align-items: center;
     z-index: 10;
+    margin: 0 1rem;
 
     .icon-button {
-        margin: 0 0.5rem;
+        margin-right: 0.5rem;
     }
 
     > div {

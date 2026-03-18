@@ -137,6 +137,10 @@ b {
 #content > div:last-child {
   padding-bottom: var(--header-gap);
 }
+#content .content_section > div > h1 {
+  text-align: center;
+  margin-top: 0;
+}
 #content .content_section > div {
   width: min(var(--max-width), 100%);
   margin: 0 auto;
@@ -172,13 +176,6 @@ b {
   padding-bottom: var(--gap-content-item) !important;
   border-style: solid;
 }
-#content #profile-projects {
-  background-image: var(--gradient-profile-project);
-}
-#content #projects-technologies {
-  background-image: var(--gradient-project-technologies);
-}
-
 /* =========== classes =========== */
 .flex-row {
   display: flex;

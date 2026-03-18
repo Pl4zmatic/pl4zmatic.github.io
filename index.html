@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="css/header.css" />
         <link rel="stylesheet" href="css/links.css" />
         <link rel="stylesheet" href="css/background-stars.css" />
+        <link rel="stylesheet" href="css/mail.css" />
         <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico" />
         <!-- <script type="module" src="js/background/background.js"></script> -->
         <script type="module" src="js/map/map.js"></script>
@@ -42,9 +43,11 @@
         </div>
 
         <header id="header">
-            <a href="" class="icon-button" target="_blank"><img src="assets/icons/mail-open-alt-svgrepo-com.svg" alt="" class="animation-email" /></a>
             <a href="https://www.linkedin.com/in/anthony-david-777278332" class="icon-button" target="_blank">
                 <img src="assets/icons/linkedin-svgrepo-com.svg" alt="" class="animation-linkedin" target="_blank" />
+            </a>
+            <a href="https://github.com/Pl4zmatic" class="icon-button" target="_blank">
+                <img src="assets/icons/github-svgrepo-com.svg" alt="" class="animation-github" />
             </a>
 
             <div>
@@ -66,10 +69,6 @@
                     <input type="radio" name="language" id="button-language-nl" value="nl" />
                     <label for="button-language-nl" class="hover-up">NL</label>
                 </span>
-
-                <a href="https://github.com/Pl4zmatic" class="icon-button" target="_blank">
-                    <img src="assets/icons/github-svgrepo-com.svg" alt="" class="animation-github" />
-                </a>
             </span>
         </header>
 
@@ -322,7 +321,7 @@
                     </div>
                 </div>
 
-                <!-- <hr id="profile-projects" /> -->
+                <hr id="profile-projects" />
 
                 <div class="content_section projects_palette">
                     <div id="projects" class="projects">
@@ -505,7 +504,7 @@
                     </div>
                 </div>
 
-                <!-- <hr id="projects-technologies" /> -->
+                <hr id="projects-technologies" />
 
                 <div class="content_section technologies_palette">
                     <div id="technologies">
@@ -706,12 +705,31 @@
                     </div>
                 </div>
 
-                <div class="content_section technologies_palette">
+                <hr />
+
+                <div class="content_section">
+                    <div id="mail">
+                        <h1 data-i18n="contact.title">Contact</h1>
+                        <form action="https://api.web3forms.com/submit" method="POST">
+                            <input type="hidden" name="access_key" value="2dd8ceea-617a-4afd-83f2-42615ac77957" />
+
+                            <div>
+                                <input type="text" name="name" data-i18n="contact.namePlaceholder" placeholder="Your Name" required />
+                                <input type="email" name="email" data-i18n="contact.emailPlaceholder" placeholder="mail@example.com" required />
+                            </div>
+                            <textarea
+                                name="message"
+                                data-i18n="contact.messagePlaceholder"
+                                placeholder="Interested in working together or have a question? Leave a message about internships, projects, or just to say hi!"
+                                required></textarea>
+
+                            <button type="submit" class="hover-up" data-i18n="contact.submit">Send</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="content_section">
                     <div id="links">
-                        <a href="" class="icon-button" target="_blank">
-                            <img src="assets/icons/mail-open-alt-svgrepo-com.svg" alt="" class="animation-email" />
-                            <small>Email</small>
-                        </a>
                         <a href="https://www.linkedin.com/in/anthony-david-777278332" class="icon-button" target="_blank">
                             <img src="assets/icons/linkedin-svgrepo-com.svg" alt="" class="animation-linkedin" target="_blank" />
                             <small>LinkedIn</small>
@@ -724,7 +742,5 @@
                 </div>
             </div>
         </main>
-
-        <footer></footer>
     </body>
 </html>

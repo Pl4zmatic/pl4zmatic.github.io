@@ -1,0 +1,20 @@
+{
+    "en": {
+        "contact": {
+            "title": "Contact",
+            "namePlaceholder": "Your Name",
+            "emailPlaceholder": "mail@example.com",
+            "messagePlaceholder": "Interested in working together or have a question? Leave a message about internships, projects, or just to say hi!",
+            "submit": "Send"
+        }
+    },
+    "nl": {
+        "contact": {
+            "title": "Contact",
+            "namePlaceholder": "Jouw naam",
+            "emailPlaceholder": "mail@voorbeeld.be",
+            "messagePlaceholder": "Interesse in een samenwerking of heb je een vraag? Stuur me een bericht over stages, projecten, of gewoon om hallo te zeggen!",
+            "submit": "Verzenden"
+        }
+    }
+}
