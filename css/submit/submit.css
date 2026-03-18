@@ -1,0 +1,31 @@
+body {
+  height: 100vh;
+}
+
+#content > div:first-child, #content > div:last-child {
+  padding: 0;
+}
+#content .content_section {
+  height: 100%;
+}
+#content .content_section > div {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+#content .content_section > div * {
+  margin: 0;
+  text-align: center;
+}
+#content .content_section > div h1:first-child {
+  margin-bottom: 1rem;
+  font-size: 5rem;
+}
+#content .content_section > div p {
+  margin-top: 0;
+}
+
+/*# sourceMappingURL=submit.css.map */

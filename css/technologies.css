@@ -84,14 +84,14 @@
   object-fit: contain;
 }
 
-@media screen and (width < 320px) {
-  :root {
-    --tech-card-size: 75px;
-  }
-}
 @media screen and (width < 768px) {
   :root {
     --tech-card-size: 100px;
+  }
+}
+@media screen and (width < 320px) {
+  :root {
+    --tech-card-size: 75px;
   }
 }
 
