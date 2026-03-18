@@ -18,6 +18,7 @@
         <!-- <script type="module" src="js/background/background.js"></script> -->
         <script type="module" src="js/map/map.js"></script>
         <script type="module" src="js/events.js"></script>
+        <script type="module" src="js/i18n/changeLanguage.js"></script>
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -710,7 +711,7 @@
                 <div class="content_section">
                     <div id="mail">
                         <h1 data-i18n="contact.title">Contact</h1>
-                        <form action="https://api.web3forms.com/submit" method="POST">
+                        <form id="mail-form" action="https://api.web3forms.com/submit" method="POST">
                             <input type="hidden" name="access_key" value="2dd8ceea-617a-4afd-83f2-42615ac77957" />
 
                             <div>
@@ -723,7 +724,7 @@
                                 placeholder="Interested in working together or have a question? Leave a message about internships, projects, or just to say hi!"
                                 required></textarea>
 
-                            <button type="submit" class="hover-up" data-i18n="contact.submit">Send</button>
+                            <button type="submit" class="hover-up button" data-i18n="contact.submit">Send</button>
                         </form>
                     </div>
                 </div>

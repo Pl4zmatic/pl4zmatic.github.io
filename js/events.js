@@ -3,6 +3,7 @@ import profileData from "./i18n/profile.json" with { type: "json" };
 import projectsData from "./i18n/projects.json" with { type: "json" };
 import technologiesData from "./i18n/technologies.json" with { type: "json" };
 import contactData from "./i18n/contact.json" with { type: "json" };
+import { changeLanguage } from "./i18n/changeLanguage.js";
 
 // ======== projects video events ========
 
@@ -104,42 +105,28 @@ const i18nData = {
 };
 
 [buttonEN, buttonNL].forEach((button) => {
-    if (button.checked) {
+    const lang = localStorage.getItem("language");
+
+    if (lang == null) {
+        if (button.checked) {
+            const language = button.getAttribute("value");
+            changeLanguage(i18nData, language);
+            localStorage.setItem("language", language);
+        }
+    } else {
         const language = button.getAttribute("value");
-        Object.entries(i18nData).forEach(([key, { elements, data }]) => {
-            if (key == "contact") {
-                console.log("break");
-            }
-            setTextLanguage(language, elements, data);
-        });
+        if (lang == language) {
+            button.checked = true;
+            changeLanguage(i18nData, language);
+        }
     }
 
     button.addEventListener("change", () => {
         const language = button.getAttribute("value");
-        Object.entries(i18nData).forEach(([key, { elements, data }]) => {
-            setTextLanguage(language, elements, data);
-        });
+        changeLanguage(i18nData, language);
+        localStorage.setItem("language", language);
     });
 });
-
-function setTextLanguage(language, elements, data) {
-    elements.forEach((obj) => {
-        let isPlaceholder = false;
-        const path = obj.dataset.i18n;
-        const textValue = String(path)
-            .split(".")
-            .reduce((prev, next) => {
-                isPlaceholder = next.toLowerCase().includes("placeholder");
-                return prev[next];
-            }, data[language]);
-
-        if (isPlaceholder) {
-            obj.setAttribute("placeholder", textValue);
-        } else {
-            obj.innerHTML = textValue;
-        }
-    });
-}
 
 // ======== viewport ========
 
@@ -223,3 +210,9 @@ sectionButtons.forEach((obj) => {
         );
     });
 });
+
+// ======== mail ========
+
+window.onload = function () {
+    document.getElementById("mail-form").reset();
+};

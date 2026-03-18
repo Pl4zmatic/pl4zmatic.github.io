@@ -26,6 +26,8 @@
   border-radius: var(--radius);
   box-shadow: 0px 0px 5px 5px hsl(var(--highlight)/40%);
   animation: map_fade_in 2s ease-in 1s 1 normal forwards;
+  background-size: cover;
+  background-image: url("../assets/images/fallback.png");
 }
 #map .maplibregl-ctrl-bottom-right {
   bottom: auto;
@@ -145,6 +147,11 @@
   display: none;
 }
 
+@media screen and (width < 768px) {
+  :root {
+    --profile-picture-max-height: 100px;
+  }
+}
 @media screen and (width < 480px) {
   :root {
     --hero-items-height: calc(100vh - var(--header-height) - var(--header-gap) * 2);
@@ -157,11 +164,6 @@
   }
   .inline-icon.profile_container_content_picture-icon {
     display: inline-block;
-  }
-}
-@media screen and (width < 768px) {
-  :root {
-    --profile-picture-max-height: 100px;
   }
 }
 

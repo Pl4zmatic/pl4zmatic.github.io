@@ -178,9 +178,6 @@ dialog {
     }
 }
 
-@media screen and (width < 320px) {
-}
-
 @media screen and (width < 480px) {
     .projects__content__item {
         text-align: left !important;
@@ -193,7 +190,4 @@ dialog {
     .hover-item {
         display: none !important;
     }
-}
-
-@media screen and (width < 768px) {
 }

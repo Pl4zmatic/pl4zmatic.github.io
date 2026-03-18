@@ -1,0 +1,18 @@
+{
+    "en": {
+        "success": {
+            "title": "Message Submitted",
+            "thankYou": "Thank You!",
+            "body": "Message has been received, I will be in touch soon.",
+            "button": "Go Back"
+        }
+    },
+    "nl": {
+        "success": {
+            "title": "Bericht Verzonden",
+            "thankYou": "Bedankt!",
+            "body": "Je bericht is goed ontvangen, ik neem zo snel mogelijk contact met je op.",
+            "button": "Teruggaan"
+        }
+    }
+}
