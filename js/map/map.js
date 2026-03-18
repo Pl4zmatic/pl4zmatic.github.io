@@ -6,7 +6,11 @@ var map = new maplibregl.Map({
     interactive: false,
 });
 
-new maplibregl.Marker().setLngLat([3.8097, 51.2024]).addTo(map);
+new maplibregl.Marker({
+    color: "#5598f6",
+})
+    .setLngLat([3.8097, 51.2024])
+    .addTo(map);
 
 const attributionMap = document.getElementsByClassName("maplibregl-ctrl maplibregl-ctrl-attrib maplibregl-compact");
 attributionMap[0].removeAttribute("open");
@@ -16,7 +20,7 @@ const domMap = document.getElementById("map");
 domMap.addEventListener("animationend", async () => {
     await flyTo(map, 3.73, 51.05, 9, 0.4);
     await flyTo(map, 3.8097, 51.2024, 12, 0.5);
-    await flyTo(map, 3.7745, 51.1372, 9, 0.25);
+    await flyTo(map, 3.7745, 51.1372, 8.5, 0.25);
 });
 
 function round(num, precision) {

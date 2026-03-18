@@ -17,7 +17,7 @@
     --padding-y: 1rem;
 
     --text-main: white;
-    --text-main-muted: rgb(220, 220, 220);
+    --text-main-muted: rgb(200, 200, 200);
 
     --gradient-profile-project: linear-gradient(
         180deg,
@@ -35,6 +35,19 @@
 
     scrollbar-color: #888 transparent;
     scrollbar-width: thin;
+}
+
+:root {
+    --bg-dark: 215 15% 3%;
+    --bg: 215 15% 6%;
+    --bg-light: 215 20% 18%;
+    --text: 215 15% 98%;
+    --text-muted: 215 10% 60%;
+    --border-muted: 215 15% 12%;
+    --border: 215 15% 20%;
+    --highlight: 215 40% 50%;
+    --primary: 215 90% 65%;
+    --secondary: 215 30% 60%;
 }
 
 ::-webkit-scrollbar {
@@ -79,10 +92,10 @@ main {
     height: 100%;
 }
 
-canvas {
-    background-color: var(--bg-hex);
-    transition: background-color 2s ease;
-}
+// canvas {
+//     background-color: var(--bg-hex);
+//     transition: background-color 2s ease;
+// }
 
 h1 {
     font-size: calc(1rem * pow(var(--golden-ratio), 2));
@@ -103,16 +116,16 @@ p {
 
 mark {
     background-color: transparent;
-    color: hsl(var(--secondary));
+    color: hsl(var(--primary));
 }
 
 strong {
-    color: hsl(var(--primary));
+    color: hsl(var(--secondary));
     font-weight: 700;
+}
 
-    b {
-        color: hsl(var(--secondary));
-    }
+b {
+    color: hsl(var(--primary));
 }
 
 /* =========== ID's =========== */
@@ -139,7 +152,7 @@ strong {
     }
 
     .content_section {
-        background-color: hsl(var(--bg) / var(--background-opacity));
+        // background-color: hsl(var(--bg) / var(--background-opacity));
 
         > div {
             width: min(var(--max-width), 100%);
@@ -218,10 +231,15 @@ strong {
 
 .topic {
     display: inline-block;
-    background-color: hsl(var(--secondary));
     padding: 0 0.75em;
     border-radius: var(--radius);
     margin: 0.2em 0;
+    color: hsl(var(--text));
+
+    border: 1px solid transparent;
+    background:
+        linear-gradient(hsl(var(--bg-light)), hsl(var(--bg-light))) padding-box,
+        linear-gradient(135deg, hsl(var(--primary)), hsl(var(--border))) border-box;
 }
 
 .tab {
@@ -318,6 +336,10 @@ strong {
     max-height: calc(0.8em + 0.5em);
     width: 100%;
     background-image: linear-gradient(180deg, transparent 0%, hsl(var(--bg) / 0.8) 100%);
+}
+
+.muted {
+    color: var(--text-main-muted);
 }
 
 /* =========== media queries =========== */

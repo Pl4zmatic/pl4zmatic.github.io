@@ -1,22 +1,5 @@
 :root {
-  --technologies-bg: 330 0% 4%;
-  --technologies-primary: 0 0% 95%;
   --tech-card-size: 150px;
-}
-
-.background-technologies-theme {
-  --bg-hex: #0a0a0a;
-  --primary-hex: #f2f2f2;
-}
-
-.technologies_palette {
-  --bg-dark: 336 0% 1%;
-  --bg: var(--technologies-bg);
-  --bg-light: 0 0% 9%;
-  --highlight: 330 0% 39%;
-  --border: 0 0% 28%;
-  --border-muted: 300 0% 18%;
-  --primary: var(--technologies-primary);
 }
 
 .content_section:has(#technologies) {
@@ -59,6 +42,7 @@
   fill: var(--primary);
 }
 .tech-card b {
+  color: var(--text-main);
   display: block;
   text-align: right;
 }

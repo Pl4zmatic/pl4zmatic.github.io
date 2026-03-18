@@ -1,29 +1,29 @@
 :root {
-    --projects-bg: 236 41% 6%;
-    --projects-primary: 235 71% 79%;
+    //     --projects-bg: 236 41% 6%;
+    //     --projects-primary: 235 71% 79%;
 }
 
-.background-projects-theme {
-    --bg-hex: #090a16;
-    --primary-hex: #a3aaef;
-}
+// .background-projects-theme {
+//     --bg-hex: #090a16;
+//     --primary-hex: #a3aaef;
+// }
 
-.projects_palette {
-    --bg-dark: 239 61% 3%;
-    --bg: var(--projects-bg);
-    --bg-light: 235 26% 10%;
-    --text: 234 100% 100%;
-    --text-muted: 234 30% 74%;
-    --highlight: 235 16% 43%;
-    --border: 235 20% 32%;
-    --border-muted: 236 27% 22%;
-    --primary: var(--projects-primary);
-    --secondary: 51 42% 57%;
-    --danger: 9 26% 64%;
-    --warning: 52 19% 57%;
-    --success: 146 17% 59%;
-    --info: 217 28% 65%;
-}
+// .projects_palette {
+//     --bg-dark: 239 61% 3%;
+//     --bg: var(--projects-bg);
+//     --bg-light: 235 26% 10%;
+//     --text: 234 100% 100%;
+//     --text-muted: 234 30% 74%;
+//     --highlight: 235 16% 43%;
+//     --border: 235 20% 32%;
+//     --border-muted: 236 27% 22%;
+//     --primary: var(--projects-primary);
+//     --secondary: 51 42% 57%;
+//     --danger: 9 26% 64%;
+//     --warning: 52 19% 57%;
+//     --success: 146 17% 59%;
+//     --info: 217 28% 65%;
+// }
 
 .content_section:has(#projects) {
     box-sizing: border-box;

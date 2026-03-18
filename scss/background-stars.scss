@@ -20,7 +20,7 @@ $animation-duration-mult: 1;
     width: 100vw;
     position: fixed;
     z-index: -10;
-    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    background: radial-gradient(ellipse at center, hsl(var(--bg-light)) 0%, hsl(var(--bg-dark)) 100%);
 }
 
 #stars {
