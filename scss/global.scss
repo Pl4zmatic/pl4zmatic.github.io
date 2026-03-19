@@ -367,26 +367,8 @@ b {
 
 /* =========== media queries =========== */
 
-@media screen and (width < 1024px) {
-    :root {
-        --font-size: 14px;
-    }
-}
-
 @media screen and (width < 768px) {
     :root {
-        --font-size: 12px;
-    }
-}
-
-@media screen and (width < 480px) {
-    :root {
-        --font-size: 8px;
-    }
-}
-
-@media screen and (width < 320px) {
-    :root {
-        --font-size: 6px;
+        --font-size: 14px;
     }
 }
