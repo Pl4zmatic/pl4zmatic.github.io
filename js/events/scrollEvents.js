@@ -1,4 +1,6 @@
-import { vh, vw } from "./window.js";
+import { vh, vw } from "./windowEvents.js";
+import { videoKingdomino, videoPcompose, videoDelaware, videoCampusapp } from "./video.js";
+import IntersectionElement from "./intersectionElement.js";
 
 const header = document.getElementById("header");
 const headerButtonProfile = document.getElementById("button-profile");
@@ -6,7 +8,6 @@ const headerButtonProjects = document.getElementById("button-projects");
 const headerButtonTechnologies = document.getElementById("button-technologies");
 let headerButtonPressed = false;
 
-// # provided above
 const profileContainer = document.getElementById("profile");
 const projectsContainer = document.getElementById("projects");
 const technologiesContainer = document.getElementById("technologies");
@@ -17,33 +18,40 @@ const sectionButtons = [
     { target: technologiesContainer, button: headerButtonTechnologies },
 ];
 
-const videoKingdomino = document.getElementById("video-child-kingdomino");
-const videoPcompose = document.getElementById("video-child-pcompose");
-const videoDelaware = document.getElementById("video-child-delaware");
-const videoCampusapp = document.getElementById("video-child-campusapp");
-
 const targets = [
-    { target: technologiesContainer, threshold: getIntersectionThreshold(technologiesContainer.clientHeight), callbackFunction: sectionInViewChangeHeader },
-    { target: projectsContainer, threshold: getIntersectionThreshold(projectsContainer.clientHeight), callbackFunction: sectionInViewChangeHeader },
-    { target: profileContainer, threshold: getIntersectionThreshold(profileContainer.clientHeight), callbackFunction: sectionInViewChangeHeader },
+    {
+        target: new IntersectionElement(technologiesContainer),
+        threshold: getIntersectionThreshold(technologiesContainer.clientHeight),
+        callbackFunction: sectionInViewChangeHeader,
+    },
+    {
+        target: new IntersectionElement(projectsContainer),
+        threshold: getIntersectionThreshold(projectsContainer.clientHeight),
+        callbackFunction: sectionInViewChangeHeader,
+    },
+    {
+        target: new IntersectionElement(profileContainer),
+        threshold: getIntersectionThreshold(profileContainer.clientHeight),
+        callbackFunction: sectionInViewChangeHeader,
+    },
     {
         target: videoKingdomino,
-        threshold: getIntersectionThreshold(videoKingdomino.clientHeight),
+        threshold: getIntersectionThreshold(videoKingdomino.followerVideo.clientHeight),
         callbackFunction: videoInViewChangePlaystate,
     },
     {
         target: videoPcompose,
-        threshold: getIntersectionThreshold(videoPcompose.clientHeight),
+        threshold: getIntersectionThreshold(videoPcompose.followerVideo.clientHeight),
         callbackFunction: videoInViewChangePlaystate,
     },
     {
         target: videoDelaware,
-        threshold: getIntersectionThreshold(videoDelaware.clientHeight),
+        threshold: getIntersectionThreshold(videoDelaware.followerVideo.clientHeight),
         callbackFunction: videoInViewChangePlaystate,
     },
     {
         target: videoCampusapp,
-        threshold: getIntersectionThreshold(videoCampusapp.clientHeight),
+        threshold: getIntersectionThreshold(videoCampusapp.followerVideo.clientHeight),
         callbackFunction: videoInViewChangePlaystate,
     },
 ];
@@ -53,11 +61,11 @@ function getIntersectionThreshold(clientHeight) {
 }
 
 const observerProfileProject = new IntersectionObserver(observerFunction, { threshold: targets.map((obj) => obj.threshold) });
-targets.forEach((obj) => observerProfileProject.observe(obj.target));
+targets.forEach((obj) => observerProfileProject.observe(obj.target.element));
 
 function observerFunction(entries, observer) {
     entries.forEach((entry, index) => {
-        const target = targets.find((obj) => obj.target == entry.target);
+        const target = targets.find((obj) => obj.target.element == entry.target);
         target.callbackFunction(entry, target);
     });
 }
@@ -81,11 +89,14 @@ function sectionInViewChangeHeader(entry, target) {
 
 function videoInViewChangePlaystate(entry, targetObj) {
     if (entry.isIntersecting) {
-        targetObj.target.play();
+        targetObj.target.followerVideo.play();
+        if (targetObj.target.isDialogOpen) {
+            targetObj.target.followerVideo.currentTime = targetObj.target.leaderVideo.currentTime;
+        }
     }
 
     if (!entry.isIntersecting) {
-        targetObj.target.pause();
+        targetObj.target.followerVideo.pause();
     }
 }
 
