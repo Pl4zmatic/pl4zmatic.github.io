@@ -85,7 +85,7 @@ dialog {
   --button-size: 2rem;
   color: var(--text-main);
   background-color: hsl(var(--bg));
-  max-height: calc(100vh - var(--header-gap) * 2 - var(--header-height));
+  max-height: fit-content;
   max-width: min(var(--max-width), 100vw - var(--button-size) * 2);
   box-sizing: border-box;
   border: none;
