@@ -164,9 +164,6 @@
   }
   .profile_container_content_text {
     width: 100%;
-    /* on very small viewports allow the text to grow past the container
-       (no inner scroll) so it can expand beyond the fold when needed */
-    overflow: visible;
   }
   .profile_container_content_picture {
     display: none;
