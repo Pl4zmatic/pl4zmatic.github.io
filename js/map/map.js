@@ -1,3 +1,5 @@
+import * as maplibregl from "https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.mjs";
+
 var map = new maplibregl.Map({
     container: "map",
     style: "./js/map/map_style.json", // stylesheet location
